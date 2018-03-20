@@ -65,33 +65,31 @@ body {
 
 
 .footer{
-	position: relative;
-	margin-top: 40%;
-	margin-left: -10%;
-	float: left;
-	font-family: Maitree, serif;
-	font-size: .5em;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: 300;
-	text-align: center;
-	padding: 2% 20%;
-	width: 100%;
-	height: auto;
+  position: absolute;
+  margin-top: 400px;
 
+  float: left;
+  font-family: Maitree, serif;
+  font-size: .5em;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 300;
+  text-align: left;
+  padding: 2% 20% 2% 0%;
+  width: 100%;
+  height: auto;
 
-	/*background-color: #e7e7e7;*/
-	color: black;
+  color: #87485D;
 
 
 
-	-webkit-user-select: none; /* Chrome/Safari */        
-	-moz-user-select: none; /* Firefox */
-	-ms-user-select: none; /* IE10+ */
+  -webkit-user-select: none; /* Chrome/Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
 
-	/* Rules below not implemented in browsers yet */
-	-o-user-select: none;
-	user-select: none;
+  /* Rules below not implemented in browsers yet */
+  -o-user-select: none;
+  user-select: none;
 }
 
 
@@ -299,3 +297,35 @@ textarea:hover {
 
 } 
 
+@media screen and (min-width: 350px) and (max-width: 922px) {
+
+.contact-form{
+  margin-top: 20%;
+  
+}
+#contactform {
+  position: absolute;
+  width: 300px;
+  margin: 10px auto 20px auto;
+}
+
+.contact-info{
+  margin-top: 14%;
+}
+
+input{
+  width: 350px;
+  max-width: 350px;
+}
+
+#comments{
+  width: 350px;
+  max-width: 350px;
+}
+
+#submit{
+  width: 350px;
+  max-width: 350px;
+}
+
+}

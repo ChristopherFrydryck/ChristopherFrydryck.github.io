@@ -96,9 +96,38 @@ body {
 
 }
 
+.MiscDesignDiv{
+	margin: 13% 0% 0% 55%;
+}
+
+
+.MiscDesignDiv img{
+	position:absolute;
+	width: 40%;
+	height: auto;
+	opacity: 1;
+
+	-webkit-transition: opacity 1s ease-in-out;
+	-moz-transition: opacity 1s ease-in-out;
+	-o-transition: opacity 1s ease-in-out;
+	transition: opacity 1s ease-in-out;
+}
+
+
+.MiscDesignDiv img.Misctop:hover {
+
+  opacity:0;
+	
+
+}
+
+
+
+
+
 .ComingSoonDiv{
 	/*margin-top: 10%;*/
-	 margin: 13% 0% 0% 55%;
+	 margin: 37% 0% 0% 0%;
 }
 
 
@@ -144,7 +173,7 @@ body {
 
 .ComingSoonDiv{
 	/*margin-top: 10%;*/
-	 margin: 55% 0% 0% 0%;
+	 margin: 97% 0% 0% 0%;
 }
 
 
@@ -167,6 +196,19 @@ body {
   height: auto;
 
 }
+
+.MiscDesignDiv{
+	/*margin-top: 10%;*/
+	 margin: 55% 0% 0% 0%;
+}
+
+
+.MiscDesignDiv img {
+	position:absolute;
+	width: 80%;
+	height: auto;
+}
+
 }
 
 
@@ -174,7 +216,7 @@ body {
 
 .ComingSoonDiv{
 	/*margin-top: 10%;*/
-	 margin: 70% 0% 0% 0%;
+	 margin: 107% 0% 0% 0%;
 }
 
 
@@ -192,6 +234,20 @@ body {
 }
 
 .HumanIntrusionDiv img {
+  position:absolute;
+  width: 80%;
+  height: auto;
+
+}
+
+
+.MiscDesignDiv{
+	margin-top: 65%;
+	
+
+}
+
+.MiscDesignDiv img {
   position:absolute;
   width: 80%;
   height: auto;
