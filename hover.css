@@ -2465,7 +2465,7 @@
   left: 50%;
   right: 50%;
   bottom: 0;
-  background: #2098d1;
+  background:  #b260bb;
   height: 4px;
   -webkit-transition-property: left, right;
   transition-property: left, right;
@@ -2669,7 +2669,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: #87485D;
+  background: #b260bb;
   height: 4px;
   -webkit-transform: translateY(4px);
   transform: translateY(4px);

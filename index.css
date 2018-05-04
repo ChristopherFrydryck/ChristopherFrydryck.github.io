@@ -1,21 +1,28 @@
 html {
     padding:0;
-    margin:0;
-    width:100%; /* 100% of window with, so the body width of 80% will work as expected */
-    overflow-x: hidden !important;
-
+    margin:0 auto;
+    width: 100%; /* 100% of window with, so the body width of 80% will work as expected */
+   
 }
 
 body {
-	background: url(mountainhomeback.jpg);
+	background: url(WaveBackground.jpg);
 	background-repeat: no-repeat;
-	background-position: -2%;
+	background-position: top left;
 	background-size: 100%;
 	background-color: #f2f2f2;
-	overflow-x: hidden !important;
+	
 
 }
 
+a.link{
+	color: #b260bb !important;
+	font-weight: bold;
+}
+
+a.link:hover{
+	cursor: pointer;
+}
 
 ::-webkit-scrollbar { 
     display: none; 
@@ -57,38 +64,53 @@ body {
 	user-select: none;
 }
 
-.hometitle {
-	color:#e7e7e7;
-	
-
-	/* makes text unselectable */
-	-webkit-user-select: none; /* Chrome/Safari */        
-	-moz-user-select: none; /* Firefox */
-	-ms-user-select: none; /* IE10+ */
-
-	/* Rules below not implemented in browsers yet */
-	-o-user-select: none;
-	user-select: none;
+.fadeInIntro{
+	margin-top: 75px;
+	width: 80%;
+	position: absolute;
 }
 
-.continueBTN {
-	text-decoration: none;
-	position: absolute;
-	margin-left: -12%;
-	width: 4%;
-	height: auto;
-	margin-top: 6%;
-	float: left;
-	padding: .5%
-	display: inline-block;
-	margin-bottom: 2%;
+.welcome-one{
+	font-family: 'Questrial', sans-serif;
+	position: relative;
+	width: 100%;
+	text-align: center;
+	position: right;
+	display: none;
+}
+
+
+.getStarted{
+	font-family: 'Questrial', sans-serif;
+	position: relative;
+	position: left;
+	margin-top: 5px;
+	width: 100%;
+	text-align: center;
+	display: none;
+	animation-delay: 1.5s;
+}	
+
+.arrow{
+		display: absolute;
+		margin-left: 47.25%;
+		align-self: center;
+		width: 60px;
+		height: 60px;
+		background: linear-gradient(#4a75c7, #b260bb);
+		padding-left: 3px;
+		padding-top: 15px;
+		border-radius: 50%;
+		margin-top: -20px;
+		transition: .75s;
+		animation: bounce .75s ease-in-out forwards;
+		-webkit-box-shadow: 3px 3px 15px 2px rgba(209,209,209,0.75);
+-moz-box-shadow: 3px 3px 15px 2px rgba(209,209,209,0.75);
+box-shadow: 3px 3px 15px 2px rgba(209,209,209,0.75);
 	}
 
-.continueBTN:hover{
-	text-decoration: none;
-	margin-bottom: 2%;
-	
-	
+.arrow:hover{
+	transform: scale(1.15);
 }
 
 .maincolor{
@@ -103,7 +125,8 @@ body {
 .imgLogo{
 	width:20%;
 	height: auto;
-	margin-top: 2%;
+	margin-top: 8%;
+	margin-left: 60%;
 	position: absolute;
 
 }
@@ -160,9 +183,15 @@ body {
 	color: black;
 }
 
+#content{
+	padding-top: 20%;
+	position: relative;
+}
+
 .indexpara{
-	font-family: 'Raleway', sans-serif;
-	margin-top: 38%;
+	font-family: 'Questrial', sans-serif;
+	margin-top: 60%;
+	margin-bottom: 10%;
 	position: absolute;
 	margin-right: 10%;
 	margin-left:0%;
@@ -174,22 +203,28 @@ body {
 
 }
 
-.indexpara::first-letter{
-	font-size: 1.5em
+.indexpara:first-letter{
+	font-size: 2em
+}
+
+#wordChange{
+	font-size: 3.5em;
+	color: #4a75c7;
+
 }
 
 .quote001{
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Lora', serif;
 	font-size: 1.5em;
 	word-spacing:.2em;
 }
 
 .footer{
 	position: absolute;
-	margin-top: 5%;
+	margin-top: 12%;
 
 	float: left;
-	font-family: Maitree, serif;
+	font-family: 'Questrial', sans-serif;
 	font-size: .8em;
 	font-style: normal;
 	font-variant: normal;
@@ -199,7 +234,7 @@ body {
 	width: 100%;
 	height: auto;
 
-	color: #87485D;
+	color: #b260bb;
 
 
 
@@ -212,27 +247,70 @@ body {
 	user-select: none;
 }
 
-
+ @keyframes bounce{
+		to{
+			margin-top: 30px;
+		}from{
+			margin-top: 45px;
+		}
+	}
 
 
 
 
 /* For Less than 769 */
 
-@media screen and (min-width: 376px) and (max-width: 768px) {
+@media screen and (min-width: 1px) and (max-width: 890px) {
 
 body {
-	background: url(mountainhomeback.jpg);
 	background-repeat: no-repeat;
-	background-position: -2%;
+	background-position: 0px -135px;
 	background-size: 100%;
 	background-color: #f2f2f2;
 	overflow-x: hidden !important;
 
 }
 
+#wrapper{
+	padding-top: 10%;
+	
+}
+
+.fadeInIntro{
+	margin-top: 45%;
+	margin-left: 10%;
+	position: relative;
+
+}
+
+.welcome-one{
+	font-size: 2em;
+	background-color: white;
+}
+
+.letsGetStarted{
+	font-size: 1.25em;
+}
+
+.arrow{
+	margin: 0 auto;
+	
+}
+
+.arrowContainer{
+	margin-left: -12%;
+	width: 120%;
+}
+
+#content{
+	padding-top: 35%;
+}
+
 .indexpara{
-	margin-top: 38%;
+	margin-top: 20%;
+	margin-right: 0;
+	position: relative;
+	
 }
 
 .homename{
@@ -253,26 +331,71 @@ body {
 }
 }
 
+@media screen and (min-width: 391px) and (max-width: 501px) {
+	body{
+	background-repeat: no-repeat;
+	background-position: 0px -95px;
+	background-size: 100%;
+	background-color: #f2f2f2;
+	overflow-x: hidden !important;
+	}
+
+	.welcome-one{
+		font-size: 1.65em;
+		background-color: white;
+}
+
+	.letsGetStarted{
+		font-size: 1em;
+}
+
+	#content{
+		padding-top: 40%;
+}
+
+
+}
+
+
 
 /* For less than 375 */
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 390px) {
+
+body{
+	background-repeat: no-repeat;
+	background-position: 0px -50px;
+	background-size: 100%;
+	background-color: #f2f2f2;
+	overflow-x: hidden !important;
+	}
+
+	.welcome-one{
+		font-size: 1.65em;
+		background-color: white;
+}
+
+	.letsGetStarted{
+		font-size: 1em;
+}
+	#content{
+			padding-top: 50%;
+	}
+
+	#wordChange{
+		font-size: 2em;
+	}
+
 
 .homename{
 	font-size: 1.5em;
 	margin-top: 7%;
 }
 
-.indexpara{
-	margin-top: 38%;
-}
 
 .continueBTN{
 	display: none !important;
 }
 
-body{
-	background-position: -2%;
-}
 
 .imgLogo{
 	width:25%;

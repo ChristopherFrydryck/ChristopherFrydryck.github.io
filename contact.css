@@ -1,8 +1,11 @@
-html {
+html body{
     padding:0;
-    margin:0;
+    margin:0 auto;
     width:100%; /* 100% of window with, so the body width of 80% will work as expected */
-    overflow-x: hidden !important;
+    max-width: 100%;
+    overflow-x: hidden;
+
+
 
 }
 
@@ -10,7 +13,8 @@ body {
 	background-color: #f0f0f0;
 	/*background-image: url("gradientbackground.jpg");*/
 	background-position: 0 950px;
-	overflow-x: hidden !important;
+  overflow-x: hidden;
+
 
 }
 
@@ -22,64 +26,33 @@ body {
     margin-left:auto;
     margin-right:auto;
     width:80%;
+    overflow-x: hidden;
 }
 
 
 
 
-.navtabs{
-	position: absolute;
-	margin-top: 5%;
-	float:left;
-	margin-left: 35%;
-	width: 55%;
-	background-color: #e7e7e7;
-	padding-left: 1%;
-	padding-right: 1%;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	overflow-x: hidden;
-
-	-webkit-user-select: none; /* Chrome/Safari */        
-	-moz-user-select: none; /* Firefox */
-	-ms-user-select: none; /* IE10+ */
-
-	/* Rules below not implemented in browsers yet */
-	-o-user-select: none;
-	user-select: none;
-
-}
-
-
-.navbutton{
-	position: relative;
-	padding: 1% 2%;
-	color: black;
-	text-decoration: none;
-	font-family: 'Raleway', sans-serif;
-	font-size: 1.35em;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: 300;
-}
 
 
 
 .footer{
-  position: absolute;
-  margin-top: 400px;
-
+  position: fixed;
+  height: 60px;
+  bottom: 0;
+  background-color: #F8F8F8;
   float: left;
-  font-family: Maitree, serif;
-  font-size: .5em;
+  font-family: 'Questrial', sans-serif;
+  font-size: .8em;
   font-style: normal;
   font-variant: normal;
   font-weight: 300;
-  text-align: left;
-  padding: 2% 20% 2% 0%;
+  text-align: center;
+  padding: 20px 0%;
   width: 100%;
   height: auto;
 
-  color: #87485D;
+  /*background-color: #e7e7e7;*/
+  color: black;
 
 
 
@@ -91,134 +64,181 @@ body {
   -o-user-select: none;
   user-select: none;
 }
-
+/*
 
 .contact-info{
 	line-height: 1.2em;
 	position: absolute;
 	text-align: justify;
-	margin-top: 8%;
-	font-family: 'Raleway', sans-serif;
+	margin-top: 100px;
+	font-family: 'Questrial', sans-serif;
 	margin-left: 0%;
 	width: 100%;
 	font-size: 1.5em;
+} */
+
+.firstpara{
+  font-size: 2em;
+  font-family: 'Questrial', sans-serif;
+  margin-top: 100px;
+  position: relative;
 }
 
 .firstpara::first-letter{
-	font-size:1.2em;
-}
-
-
-
-
-
-
-
-
-
-
-@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400);
-
-input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-  color: #aca49c;
-  font-size: 0.875em;
-}
-
-input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
-  color: #bbb5af;
-}
-
-input::-moz-placeholder, textarea::-moz-placeholder {
-  color: #aca49c;
-  font-size: 0.875em;
-}
-
-input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {
-  color: #bbb5af;
-}
-
-input::placeholder, textarea::placeholder {
-  color: #aca49c;
-  font-size: 0.875em;
-}
-
-input:focus::placeholder, textarea::focus:placeholder {
-  color: #bbb5af;
-}
-
-input::-ms-placeholder, textarea::-ms-placeholder {
-  color: #aca49c;
-  font-size: 0.875em;
-}
-
-input:focus::-ms-placeholder, textarea:focus::-ms-placeholder {
-  color: #bbb5af;
-}
-
-/* on hover placeholder */
-
-input:hover::-webkit-input-placeholder, textarea:hover::-webkit-input-placeholder {
-  color: #e2dedb;
-  font-size: 0.875em;
+	font-size:1.25em;
 
 }
 
-input:hover:focus::-webkit-input-placeholder, textarea:hover:focus::-webkit-input-placeholder {
-  color: #cbc6c1;
+
+#socialMediaIcons{
+
 }
 
-input:hover::-moz-placeholder, textarea:hover::-moz-placeholder {
-  color: #e2dedb;
-  font-size: 0.875em;
+.contactIcon{
+  opacity: 0;
+  width: 60px;
+  height: auto;
+  margin-right: 10px;
+
 }
 
-input:hover:focus::-moz-placeholder, textarea:hover:focus::-moz-placeholder {
-  color: #cbc6c1;
+.contactIconGradient{
+  width: 60px;
+  height: auto;
+  margin-right: 10px;
+
 }
 
-input:hover::placeholder, textarea:hover::placeholder {
-  color: #e2dedb;
-  font-size: 0.875em;
-}
-
-input:hover:focus::placeholder, textarea:hover:focus::placeholder {
-  color: #cbc6c1;
-}
-
-input:hover::placeholder, textarea:hover::placeholder {
-  color: #e2dedb;
-  font-size: 0.875em;
-}
-
-input:hover:focus::-ms-placeholder, textarea:hover::focus:-ms-placeholder {
-  color: #cbc6c1;
+#linkedIn{
+  transition: .5s ease-in-out;
 }
 
 
+#linkedIn:hover{
+  fill: #0077B5;
+}
+
+#instaDiv{
+  position: absolute;
+  margin-top: 0px;
+  max-width: 60px;
+  height: auto;
+  margin-right: 10
+
+  background-color: green;
+}
+
+#instagram-black{
+  z-index: 10;
+  transition: .5s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#instagram-black:hover{
+  opacity: 0;
+  
+}
+
+#instagram{
+   fill: url(#Gradient1);
+   transition: .5s ease-in-out;
+   position: absolute;
+   top: 0;
+   left: 0;
+   margin-left: 0px;
+   z-index: -10;
+   
+
+}
+
+.stop1{
+  stop-color: #002aff;
+}
+
+.stop2{
+  stop-color: #ee2a7b;
+}
+
+.stop3{
+  stop-color: #f9ed32;
+}
 
 
+#twitter{
+  margin-left: 75px;
+  transition: .5s ease-in-out;
+}
+
+#twitter:hover{
+  fill: #00aced;
+}
+
+#facebook{
+  transition: .5s ease-in-out;
+}
+
+#facebook:hover{
+  fill: #3B5998;
+}
+
+#email{
+  transition: .5s ease-in-out;
+}
+
+#email:hover{
+  fill: #b260bb;
+  cursor: pointer;
+}
+
+#jsfiddle{
+  transition: .5s ease-in-out;
+}
+
+#jsfiddle:hover{
+  fill: #0078c9;
+}
+
+#github{
+  transition: .5s ease-in-out;
+}
+
+#github:hover{
+  fill: #6e5494;
+}
+
+.noHover{
+  transition: .5s ease-in-out;
+}
+
+.noHover:hover{
+  fill: black !important;
+}
 
 .contact-form{
 	position: absolute;
 	margin-left: 0%;
-	margin-top: 10%;
-}
+	margin-top: 0%;
+} 
 
 
 #contactform {
   position: absolute;
   width: 500px;
   margin: 50px auto 100px auto;
-}
+} 
 
-label {
-	font-family: 'Raleway';
+
+
+.labelName {
+	font-family: 'Questrial', sans-serif;
 	font-size:1em;
 	padding: .2%;
-}
+} 
 
-input {
-  font-family: 'Raleway';
+.inputName {
+  font-family: 'Lora', sans-serif;
   font-size: 0.875em;
   width: 470px;
   height: 50px;
@@ -237,13 +257,13 @@ input {
   -ms-transition: all 0.3s ease-in-out;
 }
 
-input:hover {
-  background: #adadad;
+.inputName:hover {
+  background: #F8F8F8;
   opacity: .5;
   color: black;
-}
+} 
 
-textarea {
+.inputComment {
   width: 470px;
   max-width: 470px;
   height: 110px;
@@ -253,12 +273,13 @@ textarea {
   background: transparent;
   outline: none;
   
-  color: #726659;
-  font-family: 'Lato', sans-serif;
+  color: black;
+  font-family: 'Lora', sans-serif;
   font-size: 0.875em;
   opacity: .5;
   
-  border: solid 1px #adadad;
+  border-left: solid 1px #adadad;
+  border-right: solid 1px #adadad;
   
   transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
@@ -266,20 +287,21 @@ textarea {
   -ms-transition: all 0.3s ease-in-out;
 }
 
-textarea:hover {
-  background: #adadad;
+.inputComment:hover {
+  background: #f8f8f8;
   color: black;
 }
 
 #submit {
   width: 502px;
   
-  padding: 0;
+  padding: 10px 0px;
   margin: 5px 0px 0px 0px;
-  
+  background-color: #e8e8e8;
   font-family: 'Raleway', sans-serif;
   font-size: 0.875em;
-  color: #adadad;
+  color: black;
+ 
   
   outline:none;
   cursor: pointer;
@@ -288,32 +310,44 @@ textarea:hover {
   border-top: none;	
   width: 94%;
 
+  transition: .5s ease-in-out;
+  -webkit- transition: .5s ease-in-out;
+
 }
 
 #submit:hover {
-	background: #87485D;
+	background: #b260bb;
  	color: white;
  	opacity: 1;
 
-} 
 
-@media screen and (min-width: 350px) and (max-width: 922px) {
+
+} 
+@media screen and (min-width: 600px) and (max-width: 922px) {
+
+
+
+#wrapper{
+  width: 95%;
+}
 
 .contact-form{
-  margin-top: 20%;
+  margin-top: 5%;
+
   
 }
 #contactform {
   position: absolute;
   width: 300px;
   margin: 10px auto 20px auto;
+  margin-bottom: 20%;
 }
 
 .contact-info{
   margin-top: 14%;
 }
 
-input{
+.inputName{
   width: 350px;
   max-width: 350px;
 }
@@ -326,6 +360,109 @@ input{
 #submit{
   width: 350px;
   max-width: 350px;
+}
+}
+
+
+
+@media screen and (min-width: 340px) and (max-width: 599px) {
+
+ #wrapper{
+  width: 98%;
+}
+
+.firstpara{
+  font-size: 1.6em;
+  align-self: center;
+  margin-left: 10%;
+}
+
+#socialMediaIcons{
+  max-width: 340px;
+  width: 90%;
+  margin-left: 10%;
+}
+
+.contact-form{
+  margin-top: 10%;
+  margin-left: 10%;
+
+
+  
+}
+
+#contactform {
+  position: absolute;
+
+  width: 300px;
+  max-width: 500px;
+  margin: 10px auto 20px auto;
+  margin-bottom: 20%;
+}
+
+.inputName{
+  
+  max-width: 340px;
+}
+
+#comments{
+  
+  max-width: 340px;
+}
+
+#submit{
+  width: 340px;
+  max-width: 340px;
+}
+}
+
+@media screen and (min-width: 0px) and (max-width: 339px) {
+  #wrapper{
+  width: 95%;
+}
+
+.firstpara{
+  font-size: 1.6em;
+  align-self: center;
+  margin-left: 10%;
+}
+
+#socialMediaIcons{
+  max-width: 90%;
+  width: 90%;
+  margin-left: 10%;
+}
+
+.contact-form{
+  margin-top: 10%;
+  margin-left: 0%;
+
+  
+}
+
+#contactform {
+  position: absolute;
+
+  width: 300px;
+  max-width: 500px;
+  margin: 10px auto 20px auto;
+  margin-bottom: 20%;
+}
+.inputName{
+  width: 300px;
+  max-width: 500px;
+}
+
+#comments{
+  width: 300px;
+  max-width: 500px;
+}
+
+#submit{
+  width: 300px;
+  max-width: 500px;
+}
+
 }
 
 }

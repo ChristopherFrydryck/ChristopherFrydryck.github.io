@@ -35,13 +35,14 @@ body {
 
 .homename {
 	position: relative;
-	font-family: Maitree, serif;
+	font-family: 'Questrial', sans-serif;
 	font-size: 3em;
 	font-style: normal;
 	font-variant: normal;
-	font-weight: 300;
+	font-weight: 10;
 	position: relative;
-	margin-top: 3%;
+	margin-top: 5%;
+	margin-bottom: -5%;
 	margin-left: 0%;
 	float: left;
 	color: black;
@@ -214,6 +215,10 @@ body {
 
 
 @media screen and (max-width: 504px) {
+
+.homename{
+	padding-top: 6%;
+}
 
 .ComingSoonDiv{
 	/*margin-top: 10%;*/

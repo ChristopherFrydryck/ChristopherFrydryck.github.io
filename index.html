@@ -23,95 +23,21 @@
 
 
 <!-- Linking Font -->
-<link href='https://fonts.googleapis.com/css?family=Maitree:300' rel='stylesheet' type='text/css'>
-<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
 <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 </head>
 <body>
 <div id="wrapper">
 
+	<!--<img src="CFRYDRYCKLOGO.png" class="imgLogo" alt="The CFrydryck Logo">-->
 
-<!--Smooth Scroll-->
-<script>
-		$(function() {
-		var $window = $(window), $document = $(document),
-			transitionSupported = typeof document.body.style.transitionProperty === "string", // detect CSS transition support
-			scrollTime = 1; // scroll time in seconds
-
-		$(document).on("click", "a[href*=#]:not([href=#])", function(e) {
-			var target, avail, scroll, deltaScroll;
-	    
-			if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname) {
-				target = $(this.hash);
-				target = target.length ? target : $("[id=" + this.hash.slice(1) + "]");
-
-				if (target.length) {
-					avail = $document.height() - $window.height();
-
-					if (avail > 0) {
-						scroll = target.offset().top;
-	          
-						if (scroll > avail) {
-							scroll = avail;
-						}
-					} else {
-						scroll = 0;
-					}
-
-					deltaScroll = $window.scrollTop() - scroll;
-
-					// if we don't have to scroll because we're already at the right scrolling level,
-					if (!deltaScroll) {
-						return; // do nothing
-					}
-
-					e.preventDefault();
-					
-					if (transitionSupported) {
-						$("html").css({
-							"margin-top": deltaScroll + "px",
-							"transition": scrollTime + "s ease-in-out"
-						}).data("transitioning", scroll);
-					} else {
-						$("html, body").stop(true, true) // stop potential other jQuery animation (assuming we're the only one doing it)
-						.animate({
-							scrollTop: scroll + "px"
-						}, scrollTime * 1000);
-						
-						return;
-					}
-				}
-			}
-		});
-
-		if (transitionSupported) {
-			$("html").on("transitionend webkitTransitionEnd msTransitionEnd oTransitionEnd", function(e) {
-				var $this = $(this),
-					scroll = $this.data("transitioning");
-				
-				if (e.target === e.currentTarget && scroll) {
-					$this.removeAttr("style").removeData("transitioning");
-					
-					$("html, body").scrollTop(scroll);
-				}
-			});
-		}
-	});
-	</script> 
-
-
-	<img src="CFRYDRYCKLOGO.png" class="imgLogo" alt="The CFrydryck Logo">
 	
-	<div class="page-header" id="topofpage">
-  		<h1 class="homename" >Fred Frydryck <small class="hometitle">Photography</small></h1>
- 
-	</div>
+	
 
-
-
-	<!--<a href="#pagetwo" style="font-size:2em;" class="glyphicon glyphicon-chevron-down continueBTN hvr-sink maincolor" alt="Down Arrow"></a>-->
 
 
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -161,26 +87,29 @@
 
 
 
-	<!--	Old Nav Tabs 
 
-	<div class="homeinfo">
+	<div class="fadeInIntro">
+	<h1 class="welcome-one">Welcome to my website</h1>
+			<div class="getStarted">
+			<h3 class="letsGetStarted">Let's get started.</h3>
+			<a href="#content">
+				<div class="arrowContainer">
+					<div class="arrow"><i class="fa fa-angle-double-down" style="font-size:36px; color: white"></i></a></div>
+				</div>
+			</a>
+		</div>
+	</div>	
 
-	<div class="navtabs" id="navbar-main">
-	<a href="index.html" class="navbutton hvr-underline-reveal"> Home </a>
-	<a href="biography.html" class="navbutton hvr-underline-reveal"> Biography </a>
-	<a href="artwork.html" class="navbutton hvr-underline-reveal"> Fine Art </a>
-	<a href="contact.html" class="navbutton hvr-underline-reveal"> Contact </a></div>
+			
+	<div class="indexpara">
+		<div id="content"><br/></div>
+		<h1 id="wordChange">Hello</h1>
+		<p>My name is Christopher, but most of my friends call me Fred. I am a web/app designer and developer from Pittsburgh, PA.  I plan to use this website to host my photography and graphic design work, as well as a great place to contact me.</p>
+		<p>I am a tinkerer and always will be.  You may catch me messing with a Raspberry Pi to modify my graduation cap or building apps for Google Glass, but either way I enjoy it.  When I am not fiddling with techy stuff, I am either playing guitar, petting dogs or indulging myself in wholesome memes about dogs.</p>
+		<p>Photography is another muse of mine, especially desert landscapes.  I find that getting away from an extroverted lifestyle to spend time with nature is important to me.  <blockquote class="quote001">“Some of the best designs can be found in White Sands, New Mexico and other natural wonders that have withstood the test of time and human intrusion."</blockquote></p>
+		<p>But enough about me. If you want to know more, visit my <a class="link" href="biography.html">about</a> section, or <a class="link" href="contact.html">contact</a> me and send pictures of dogs (please).</p>
 
-	</div>-->
-
-	
-
-	<div class="indexpara" id="pagetwo">
-		<p>Christopher “Fred” Frydryck is a firm believer in capturing the only means of perfection:  natural wildlife.  Sadly, over the years, this nature is far and few between.  Over commercialization, population growth and ignorance to what is natural have been ongoing issues that previous conservation photographers such as Ansel Adams or Edward Weston had never encountered.  </p>
-		<p>Since the turn of the century, a rapid increase in human exploration to unknown territory has been prevalent due to the increase of technology.  Automobiles, GPS, mobile phones and much more have made exploration a breeze for the modern day Lewis and Clark.  This is what Frydryck likes to call “human intrusion.”  The act of altering nature and forbidding it from ever reaching the utmost perfect state because of human interaction.  </p>
-		<p>This human intrusion can create abstracism in nature, however nature sometimes defies what humans could establish on a canvas.  This inspired Frydryck to capture these obscure abstract tendencies in nature.  Christopher exclaims, <blockquote class="quote001">“I love photographing things that abstract in nature.  Abstractism has always been associated with human creation, and I find it unfair to nature that it has been disassociated with such obscure beauty in modern society."</blockquote>  </p>
-		<p>For now, Frydryck has travelled to the southwestern United States to study conservation photography, and intends to continue further human intrusion photographs through eastern Canada and the Midwestern national parks of the United States.</p>
-
+		
 		<p class="footer">Copyright <script type="text/javascript">
   			document.write(new Date().getFullYear());
 		</script> &copy;. Christopher Frydryck. All Rights Reserved.</p>
@@ -190,8 +119,53 @@
 	
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
 <script src="js/bootstrap.min.js"></script>
+
+<script>
+	$(function(){
+		$(".welcome-one").delay(500).fadeIn(1000);
+		$(".getStarted").delay(1500).fadeIn(1000);
+		$(".indexpara").hide().delay(2500).fadeIn(1000);
+  
+
+	});
+
+	$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+
+	var helloArray = ['Hello','Bonjour','Hola','Nǐ hǎo','Ciao','Dobrý den','Guten Tag','Namasté','Kon\'nichiwa','Olá','Aloha','Xin chào','Shalom','Hallo','Dia duit'], i = 0;
+	var colorArray = ['green', '#4a75c7', '#b260bb', 'orange', 'red', '#f4da55', '#cc1c85', 'pink'], i = 0;
+	//console.log(helloArray);
+	setInterval(function () {       // \/ \/ callback function
+		$('#wordChange').fadeOut(800, function() {
+		var rand = colorArray[Math.floor(Math.random() * colorArray.length)];
+	  	$(this).text( helloArray[(i === helloArray.length-1) ? i = 0 : i += 1 ]).fadeIn(800).css('color', rand);
+	  });
+	}, 3500);
+
+</script>
 
 </body>
 </html>
