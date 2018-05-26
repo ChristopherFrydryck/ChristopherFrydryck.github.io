@@ -221,8 +221,7 @@ var wasClicked = false;
 
 $(function(){
 
-  $('#socialMediaIcons').removeClass('hiddenOnLoad');
-  $('.contact-form').removeClass('hiddenOnLoad');
+  
   $('.contact-form').hide();
 
   $("#emailLink").click(function(){
@@ -267,6 +266,8 @@ $('.contactIcon').each(function(i) {
 	  $(this).css('opacity', 0);
       $('.contactIconGradient').hide()
       $('.footer').hide();
+      $('#socialMediaIcons').removeClass('hiddenOnLoad');
+      $('.contact-form').removeClass('hiddenOnLoad');
       $(this).delay(250*(i+1)).fadeTo(200, 1);
       $('.contactIconGradient').delay(1500).fadeIn(1000);
       $('.footer').delay(2500).fadeIn(1000);
