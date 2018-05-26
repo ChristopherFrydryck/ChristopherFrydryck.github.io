@@ -92,7 +92,7 @@
   <p class="firstpara">Let's get in contact.</p>  
 
 <!-- Begin Icons -->
-  <div id="socialMediaIcons">
+  <div id="socialMediaIcons" class="hiddenOnLoad">
 
   <!-- LinkedIn Icon -->
   <a href="https://www.linkedin.com/in/christopher-frydryck-857171a5/" target="_blank">
@@ -160,7 +160,7 @@
 
 
 <!-- Begin hidden email form -->
-	<div class="contact-form">	
+	<div class="contact-form hiddenOnLoad">	
 
 		<form action="//formspree.io/cfrydryck@gmail.com" method="POST" id="contactform">
     	<input type="hidden" name="_next" value="index.html">
@@ -220,13 +220,16 @@ var wasClicked = false;
 
 
 $(function(){
+
+  $('#socialMediaIcons').removeClass('hiddenOnLoad');
+  $('.contact-form').removeClass('hiddenOnLoad');
   $('.contact-form').hide();
 
   $("#emailLink").click(function(){
     if( $(window).width() > 599){
       $('#emailLink').attr("href", "#");
       $('#emailLink').attr("target", "");
-      if(wasClicked === false){
+      if(wasClicked == false){
         $('.contact-form').fadeIn(500);
          wasClicked = true;
          $('#email').removeClass('noHover')
@@ -245,6 +248,8 @@ $(function(){
         $('.contact-form').hide();
       }
   
+
+
 });
 
 
@@ -259,7 +264,7 @@ $("#instagram-black").hover(function(){
 });
 
 $('.contactIcon').each(function(i) {
-      $(this).css('opacity', 0);
+	  $(this).css('opacity', 0);
       $('.contactIconGradient').hide()
       $('.footer').hide();
       $(this).delay(250*(i+1)).fadeTo(200, 1);
@@ -268,4 +273,7 @@ $('.contactIcon').each(function(i) {
     });
 
 });
+
+
+
 </script>

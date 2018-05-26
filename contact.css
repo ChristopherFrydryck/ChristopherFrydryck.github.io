@@ -94,6 +94,10 @@ body {
 
 }
 
+.hiddenOnLoad{
+  display: none;
+}
+
 .contactIcon{
   opacity: 0;
   width: 60px;
