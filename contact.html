@@ -215,6 +215,8 @@
 </html>
 
 <script>
+$('#socialMediaIcons').removeClass('hiddenOnLoad');
+$('.contact-form').removeClass('hiddenOnLoad');
 
 var wasClicked = false;
 
@@ -266,8 +268,6 @@ $('.contactIcon').each(function(i) {
 	  $(this).css('opacity', 0);
       $('.contactIconGradient').hide()
       $('.footer').hide();
-      $('#socialMediaIcons').removeClass('hiddenOnLoad');
-      $('.contact-form').removeClass('hiddenOnLoad');
       $(this).delay(250*(i+1)).fadeTo(200, 1);
       $('.contactIconGradient').delay(1500).fadeIn(1000);
       $('.footer').delay(2500).fadeIn(1000);
