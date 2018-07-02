@@ -730,6 +730,7 @@ a {
 	}
 	.portSub{
 		font-size: 1.5em;
+		width: 80%;
 	}
 	
 	#contactDiv p{
@@ -799,6 +800,7 @@ a {
 	}
 	.portSub{
 		font-size: 1.5em;
+		width: 80%;
 	}
 	.arrowDownContact{
 		margin-left: 43%;

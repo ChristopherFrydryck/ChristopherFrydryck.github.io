@@ -8,7 +8,8 @@
     $("#portfolioDiv").delay(2600).fadeIn(1000);
     $("#contactDiv").delay(2600).fadeIn(1000);
     $(".arrowDownContact").delay(2600).fadeIn(1000);
-    $("#footer").delay(2600).fadeIn(1000);
+    $("#bottomDiv").delay(2600).fadeIn(1000);
+
 
   
 
