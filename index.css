@@ -411,7 +411,7 @@ a {
 .arrowDownContact{
 	font-size: 5em !important;
 	float: left;
-	margin-top: -50px;
+	margin-top: -50px !important;
 	margin-left: 47%;
 	color: #b260bb !important;
 	z-index: 8;
