@@ -675,7 +675,7 @@ a {
 
 }
 .arrowDownContact{
-	margin-left: 44%;
+	margin-left: 46%;
 
 
 }#bottomDiv{
@@ -736,6 +736,7 @@ a {
 		font-size: 1.5em;
 		width: auto;
 	}
+
 	
 	#contactDiv p{
 		font-size: 2em;
@@ -746,6 +747,9 @@ a {
 		font-size: 2em;
 		margin-top: 7%;
 		color: white;
+	}
+	#contactDiv p:last-child{
+		padding-bottom: 4vh;
 	}
 	#footer{
 		margin-top: -200px;
@@ -819,5 +823,8 @@ a {
 	#contactDiv p + p{
 		font-size: 2em;
 		margin-top: 7%;
+	}
+	#contactDiv p:last-child{
+		padding-bottom: 4vh;
 	}
 }
