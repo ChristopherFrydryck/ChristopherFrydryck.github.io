@@ -736,7 +736,11 @@ a {
 		font-size: 1.5em;
 		width: auto;
 	}
+	.arrowDownContact{
+	margin-left: 44%;
 
+
+}
 	
 	#contactDiv p{
 		font-size: 2em;
@@ -799,6 +803,9 @@ a {
 	#spacerOne {
 		padding-top: 10%;
 	}
+	#spacerThree{
+		padding-top: 5vh;
+	}
 	#wordChange{
 		font-size: 2.5em;
 	}
@@ -815,6 +822,7 @@ a {
 	}
 	#contactDiv h1{
 		font-size: 3em;
+		padding-top: 2vh;
 	}
 	#contactDiv p{
 		font-size: 2em;
