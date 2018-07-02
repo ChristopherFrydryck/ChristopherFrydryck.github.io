@@ -10,7 +10,6 @@
     $(".arrowDownContact").delay(2600).fadeIn(1000);
     $("#bottomDiv").delay(2600).fadeIn(1000);
 
-
   
 
 	});

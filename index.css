@@ -352,6 +352,7 @@ a {
 	
 #contactDiv{
 	position: relative;
+	overflow: hidden;
 	float: left;
 	width: 100%;
 	display: none;
@@ -400,7 +401,8 @@ a {
 }
 
 #contactDiv p:last-child{
-	margin-bottom: 10%;
+	padding-bottom: 5%;
+	margin-bottom: 0;
 }
 
 #contactDiv a, #contactDiv a:hover, #contactDiv a:visited, #contactDiv a:focus {
@@ -411,7 +413,8 @@ a {
 .arrowDownContact{
 	font-size: 5em !important;
 	float: left;
-	margin-top: 0%;
+	margin-top: -40px !important;
+	padding-top: 0;
 	margin-left: 47%;
 	color: #b260bb !important;
 	z-index: 8;
@@ -437,6 +440,7 @@ a {
 
 #bottomDiv{
 	position: relative;
+	display: none;
 	float: left;
 	width: 100%;
 	overflow: hidden;
@@ -463,7 +467,7 @@ a {
 
 .footer {
 	position: relative;
-	display: none;
+	
 	margin-top: 5%;
 	margin-bottom: 0;
 	float: left;
@@ -730,7 +734,6 @@ a {
 	}
 	.portSub{
 		font-size: 1.5em;
-		width: 80%;
 	}
 	
 	#contactDiv p{
@@ -800,7 +803,6 @@ a {
 	}
 	.portSub{
 		font-size: 1.5em;
-		width: 80%;
 	}
 	.arrowDownContact{
 		margin-left: 43%;
