@@ -411,11 +411,12 @@ a {
 .arrowDownContact{
 	font-size: 5em !important;
 	float: left;
-	margin-top: -35px;
+	margin-top: -50px;
 	margin-left: 47%;
 	color: #b260bb !important;
 	z-index: 8;
 	position: relative;
+	display: none;
 	-webkit-transform:scale(2.5,1); /* Safari and Chrome */
     -moz-transform:scale(2.5,1); /* Firefox */
     -ms-transform:scale(2.5,1); /* IE 9 */
@@ -462,6 +463,7 @@ a {
 
 .footer {
 	position: relative;
+	display: none;
 	margin-top: 5%;
 	margin-bottom: 0;
 	float: left;
