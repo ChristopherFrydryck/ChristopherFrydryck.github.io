@@ -16,16 +16,16 @@
   <link href="hover.css" rel="stylesheet" type="text/css">
   <!-- Style for Bootstrap -->
   <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-  
+  <!-- Linking JS -->
   <!-- Linking Font -->
   <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet">
   <script src="https://use.fontawesome.com/17f20be63e.js"></script>
 </head>
 <body id='top'>
   <header>
     <div class="rownav">
-      <a class="name">Christopher Frydryck</a>
+      <a class="name" href="#top">Christopher Frydryck</a>
       <div class="mobile-toggle">
         <span class="bar1"></span> <span class="bar2"></span> <span class="bar3"></span>
       </div>
@@ -46,226 +46,70 @@
         </li>
       </ul>
     </nav>
-    <div id="appearBox">
-        <p>&#9650;</p>
-        <a href="https://github.com/ChristopherFrydryck"><i class="fa fa-github fa-2x" aria-hidden="true" style="color: #b260bb;"></i></a>
-        <a href="https://jsfiddle.net/user/ChrisFred96/fiddles/"><i class="fa fa-jsfiddle fa-2x" aria-hidden="true" style="color: #b260bb;"></i></a>
-        <a href="https://www.linkedin.com/in/christopher-frydryck-857171a5/"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true" style="color: #b260bb;"></i></a>
-        <a href="https://www.instagram.com/chrisfrydryck/?hl=en"><i class="fa fa-instagram fa-2x" aria-hidden="true" style="color: #b260bb;"></i></a>
-        <a href="https://www.facebook.com/chris.frydryck"><i class="fa fa-facebook-square fa-2x" aria-hidden="true" style="color: #b260bb;"></i></a>
-    </div>
   </header>
- 
-  <div id="wrapperFade">
 
 
-  <div class="fadeInIntro">
-    <h1 class="welcome-one">Welcome to my website</h1>
-    <div class="getStarted">
-      <h3 class="letsGetStarted">Let's get started.</h3>
-      <div class="arrowContainer">
-        <a href="#spacerOne">
-        <div class="arrow">
-          <i aria-hidden="true" class="fa fa-angle-double-down" style="font-size:36px; color: white"></i>
-        </div></a>
-      </div>
-    </div>
-  </div><img alt="Synesthesia design" id="bkgImg" src="WaveBackground.jpg">
-  <div class="indexpara">
-  <div id="spacerOne">
-    <br>
-  </div>
-  <h1 id="wordChange">Hello</h1>
-  <p>My name is Christopher, but most of my friends call me Fred. I am a web/app UX designer and developer from Pittsburgh, PA. I plan to use this website to host my portfolio, as well as a great place to contact me.</p>
-  <p>I am a tinkerer and always will be. You may catch me messing with a Raspberry Pi to modify my graduation cap or building apps for Google Glass, but either way I enjoy it.</p>
-  <p>
-    Most of my inspiration for my designs are a mix between my synesthesia and my conservation photography. Both are so beautiful and raw in their own way.
-  <p>
-  <p>
-    For more information, feel welcome to <a href="#spacerThree" style="color: #b260bb; text-decoration: underline;">contact</a> me any time.
-  </p>
- 
-  <!--<img class="aboutPic" src="./img/biopicture.png" >-->
-  </div>
-  </div>
+<div class="intro">
+	<div class="box">
+		<h1>Welcome <br>to my <br>website.</h1>
+		<a href="#spacerTwo" style="text-decoration: underline; text-decoration-color: #b260bb;"><h2>View my portfolio &#187;</h2></a>
+	</div>
+</div>
 
-  
-  <div id="portfolioDiv">
+<div class="aboutDiv">
+	<div id="spacerOne">
+    	<br>
+	</div>
+	<img id="bioPic" src="./img/biopicture.png" alt="A bio picture of me">
+	<h1 id="wordChange">Hello</h1>
+	<p>My name is Christopher, but most of my friends call me Fred. I am a front-end designer and developer that specializes in UI/UX from Pittsburgh, PA. I plan to use this website to host my portfolio, as well as a great place to contact me.</p>
+  	<p>I am a tinkerer and always will be. You may catch me messing with a Raspberry Pi to modify my graduation cap or building apps for Google Glass, but either way I enjoy it.</p>
+  	<p>Most of my inspiration for my designs are a mix between my synesthesia and my conservation photography. Both are so beautiful and raw in their own way.</p>
+    <p>For more information, feel welcome to <a href="#spacerThree" style="color: #b260bb; text-decoration: underline;">contact</a> me any time.</p>
+</div>
+
+<div id="portfolioDiv">
   <div id="spacerTwo">
     <br>
   </div>
     <h1>My Portfolio.</h1>
-    <p class='portSub portValet portActive'><i class="fa fa-car fa-port" aria-hidden="true"></i>Valet App Design &#187;</p>
-    <p class='portSub portLiveTracking'><i class="fa fa-map-o fa-port" aria-hidden="true"></i>Live Tracking Project &#187;</p>
+    <div class="tileBox">
     
-    <p class='portSub portHumanIntrusion'><i class="fa fa-camera fa-port" aria-hidden="true"></i>Human Intrusion Photography &#187;</p>
-    <p class='portSub portMega'><i class="fa fa-upload fa-port" aria-hidden="true"></i>Mega Pamphlet Design &#187;</p>
-    <p class="portInfo">Valet is an app design I am working on that is a parking solutions app for the public.  From early stages to logo design, Valet was a barebones challenge to redesign what never existed in the first place.  The design is an attempt at minimalist and flat design to maximize usability without providing a three dimensional hierarchy.</p>
-    <p class="port-fsinfo" >Click on images to make fullscreen.</p>
+    	<a href="FreedomTransit.html">
+    	<span class="tile">
+    		<h1 class="ftHead orange">Freedom <br>Transit <br>Project</h1>
+    		<img src="./img/FT-backgroundTile.JPG">
+    	</span>
+    	</a>
+    	<a href="Valet.html">
+    	<span class="tile">
+    		<h1 class="ftHead red">Valet <br>Parking <br>App</h1>
+    		<img src="./img/Valet-backgroundTile.jpg" style="width: auto">
+    	</span>
+    	</a>
+    	<a >
+    	<span class="tile">
+    		<h1 class="ftHead purple">Coming <br>Soon</h1>
+    		<img class="HT-image" src="./img/HTPhoto-backgroundTile.jpg" style="width: auto; max-width: 685px;">
+    	</span>
+    	</a>
 
-    <div class="container containerHumanIntrusion" style="position: relative; margin-top: 0px; margin-left: 0%; width: 100%; max-width: 100%; font-family: 'Questrial', sans-serif; font-size: 1.25em; color: #bababa">
-      
-  
-  <div class="row" style="margin-top: 2%">
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="./img/DeadTree001_small.jpg" target="_blank">
-          <img src="./img/DeadTree001_small.jpg" alt="Dead tree black and white" style="width:100%">
-          <div class="caption">
-            <p style="color: #bababa"><span style="color: #b260bb;">Dead winding tree </span> Las Cruces, NM</p>
-          </div>
-        </a>
-      </div>
     </div>
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="./img/BarbedWire_small.jpg" target="_blank">
-          <img src="./img/BarbedWire_small.jpg" alt="Barbed wire in Sepia" style="width:100%">
-          <div class="caption">
-            <p style="color: #bababa"><span style="color: #b260bb;">Sepia barbed wire </span> Dripping Springs, NM</p>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="./img/SandSled001_large.jpg" target="_blank">
-          <img src="./img/SandSled001_large.jpg" alt="Fjords" style="width:100%">
-          <div class="caption">
-            <p style="color: #bababa"><span style="color: #b260bb;">Sand sledding </span> White Sands, NM</p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
 </div>
-<div class="container containerValet" style="position: relative; margin-top: 0px; margin-left: 0%; width: 100%; max-width: 100%; font-family: 'Questrial', sans-serif; font-size: 1.25em; color: #bababa">
-  
-  
-  <div class="row" style="margin-top: 2%">
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="./img/ValetLogoFinal300DPI.jpg" target="_blank">
-          <img src="./img/ValetLogoFinal300DPI.jpg" alt="Valet logo design" style="width:100%">
-          <div class="caption">
-            <p style="color: #bababa"><span style="color: #b260bb;">A print logo design for Valet </span> Adobe Photoshop</p>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="./img/ValetShowcase.jpg" target="_blank">
-          <img src="./img/ValetShowcase.jpg" alt="Showcasing a few screens on Valet app" style="width:100%">
-          <div class="caption">
-            <p style="color: #bababa"><span style="color: #b260bb;">Valet high-fidelity mockup </span> Adobe Photoshop</p>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="./img/ValetShowcase002.jpg" target="_blank">
-          <img src="./img/ValetShowcase002.JPG" alt="Showcasing high fidelity mockup" style="width:100%">
-          <div class="caption">
-            <p style="color: #bababa"><span style="color: #b260bb;">Fully functioning Valet high-fidelity mockup two </span> Adobe XD</p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="container containerMega" style="position: relative; margin-top: 0px; margin-left: 0%; width: 100%; max-width: 100%; font-family: 'Questrial', sans-serif; font-size: 1.25em; color: #bababa">
-  
-  
-  <div class="row" style="margin-top: 2%">
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="TechnicalWriteup-Mega.pdf" target="_blank">
-          <img src="./img/MegaNZ-TechnicalWriteup.JPG" alt="MegaNZ UX Security Technical Writeup" style="width:100%">
-          <div class="caption">
-            <p style="color: #bababa"><span style="color: #b260bb;">A security and UX writeup to understand the product better </span> Microsoft Word</p>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="./img/Pamphlet-FrontCover-MegaNZ.jpg" target="_blank">
-          <img src="./img/Pamphlet-FrontCover-MegaNZ.jpg" alt="MegaNZ Security Pamphlet Design" style="width:100%">
-          <div class="caption">
-            <p style="color: #bababa"><span style="color: #b260bb;">A MegaNZ security pamphlet design </span> Adobe Photoshop & Illustrator</p>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="./img/Pamphlet-BackCover-MegaNZ.jpg" target="_blank">
-          <img src="./img/Pamphlet-BackCover-MegaNZ.jpg" alt="MegaNZ Security Pamphlet Design (back)" style="width:100%">
-          <div class="caption">
-            <p style="color: #bababa"><span style="color: #b260bb;">A MegaNZ security pamphlet design (back) </span> Adobe Photoshop & Illustrator</p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="container containerLiveTracking" style="position: relative; margin-top: 0px; margin-left: 0%; width: 100%; max-width: 100%; font-family: 'Questrial', sans-serif; font-size: 1.25em; color: #bababa">
  
-  
-  <div class="row" style="margin-top: 2%">
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="./img/FreedomMockup.JPG" target="_blank">
-          <img src="./img/FreedomMockup.JPG" alt="Freedom Transit Live Tracker early design" style="width:100%">
-          <div class="caption">
-            <p style="color: #bababa"><span style="color: #b260bb;">An early high-fidelity prototype </span> Adobe Experience Design</p>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="https://jsfiddle.net/ChrisFred96/ohtuxybv/" target="_blank">
-              
 
-<iframe
-  style="width: 100%; height: 400px"
-  src="http://jsfiddle.net/ChrisFred96/ohtuxybv/embedded/result,html,css/">
-</iframe>
-
-          <div class="caption">
-            <p style="color: #bababa"><span style="color: #b260bb;">Working mockup of an early button design </span> HTML & CSS</p>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="https://ft-testing.github.io" target="_blank">
-          <img src="./img/mockuper.png" alt="Final showcase of responsive website" style="width:100;">
-          <div class="caption">
-            <p style="color: #bababa"><span style="color: #b260bb;">Final Development of live tracking project </span> HTML, CSS, Javascript, JQuery, Java & Google Firebase</p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-    
-  </div>
 <div id="contactDiv">
     <div id="spacerThree">
     <br>
     </div>
+    <div id="contactContent">
     <h1>Let's get in touch.</h1>
     <p><a href="mailto:cfrydryck@gmail.com?Subject=Hello%20Christopher"><i class="fa fa-envelope" aria-hidden="true" style="color: white;"></i> Email &#187;</a></p>
     <p><a href="ChristopherFrydryckResume.pdf" target="_blank"><i class="fa fa-file-text" aria-hidden="true" style="color: white;"></i> Resume &#187;</a></p>
     <p><a href="https://www.linkedin.com/in/christopher-frydryck-857171a5/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true" style="color: white;"></i> Linkedin &#187;</a></p>
     <p><a href="https://github.com/ChristopherFrydryck" target="_blank"><i class="fa fa-github-square" aria-hidden="true" style="color: white;"></i> Github &#187;</a></p>
     <p><a href="https://jsfiddle.net/user/ChrisFred96/fiddles/" target="_blank"><i class="fa fa-jsfiddle" aria-hidden="true" style="color: white;"></i> JsFiddle &#187;</a></p>
-
+    </div>
 
 </div>
 <p class="arrowDownContact"> &#9660;</p>
@@ -276,7 +120,6 @@
 
  <div id="bottomDiv">
 
-  <img id="bkgImgBottom" src="WaveBackground.jpg">
   <p class="footer">Copyright <script type="text/javascript">document.write(new Date().getFullYear());</script> &copy;. Christopher Frydryck. All Rights Reserved.</p>
 </div>
 
@@ -285,6 +128,18 @@
   <script src="js/bootstrap.min.js">
   </script> 
   <script src="js/smoothScroll.js">
+  </script>
+  <script>
+  		console.log("%c Hey you!", "font-size: 2em; color: red; font-family: 'Montserrat', sans-serif; font-weight: 700; width: 100%;");
+  		console.log("%c Yeah, I am talking to you!", "font-size: 1.25em; color: red; font-family: 'Montserrat', sans-serif; font-weight: 700; text-decoration: underline; width: 100%;");
+  		console.log("%c Seeing you made it here, I am guessing you are either", "font-size: 1.25em; color: #333333; font-family: 'Questrial', sans-serif;");
+  		console.log("%c 1.) A developer that stumbled upon my website", "font-size: 1.25em; color: #333333; font-family: 'Questrial', sans-serif;");
+  		console.log("%c 2.) A recruiter or HR looking to hire me", "font-size: 1.25em; color: #333333; font-family: 'Questrial', sans-serif;");
+  		console.log("%c 3.) A master of finding easter eggs", "font-size: 1.25em; color: #333333; font-family: 'Questrial', sans-serif;");
+  		console.log("%c 4.) All of the above", "font-size: 1.25em; color: #333333; font-family: 'Questrial', sans-serif;");
+  		console.log('');
+  		console.log("%c Anyways, thanks for finding my easter egg! I'm always looking for work and side projects.  Email me at cfrydryck@gmail.com and tell me you found my easter egg :).", "font-size: 1.25em; color: #333333; font-family: 'Questrial', sans-serif;");
+
   </script>
 </body>
 </html>

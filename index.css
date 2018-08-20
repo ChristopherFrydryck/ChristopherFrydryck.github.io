@@ -12,22 +12,6 @@ body {
 	overflow-x: hidden;
 }
 
-
-#wrapperFade {
-	margin: 0 auto;
-	width: 80%;
-	height: 100vh;
-}
-#bkgImg {
-	display: none;
-	position: absolute;
-	width: 100%;
-	height: auto;
-	margin-left: -10%;
-	margin-top: 6%;
-	z-index: -10;
-}
-
 /*nav begin */
 
 header {
@@ -36,11 +20,14 @@ header {
 	background-color: white;
 	width: 100%;
 	height: 50px;
+
 }
 .rownav {
 	margin-top: 0;
 	width: 100%;
 	height: 50px;
+	margin-left: auto;
+	margin-right: auto;
 }
 .name {
 	position: absolute;
@@ -71,9 +58,10 @@ nav {
 	padding-top: 10px;
 	margin-top: -45px;
 	text-decoration: none;
-	color: #575757;
+	
 	font-family: 'Questrial', sans-serif;
 	font-size: .9em;
+	
 }
 nav ul {
 	margin-right: 30px;
@@ -133,250 +121,195 @@ a {
 ::-webkit-scrollbar {
 	display: none;
 }
-#appearBox{
-	position: static;
-	display: none;
-	z-index: 10;
-	margin-top: 35px;
-	margin-left: 35px;
-	width: 208px;
-	padding: 12px 12px 0px 12px;
-	height: 50px;
-	background-color: #ebebeb;
-	opacity: .8;
-	
-}
 
-#appearBox i {
-	margin-right: 8px;
-	
-}
-
-#appearBox p{
-	position: fixed;
-	margin-top: -30px;
-	margin-left: 80px;
-	color: #ebebeb;
-	font-size: 1.25em;
-	}
-
-.fadeInIntro {
-	margin-top: 75px;
+.intro{
 	width: 80%;
-	position: absolute;
-}
-.welcome-one {
-	font-family: 'Questrial', sans-serif;
-	position: relative;
-	width: 100%;
-	text-align: center;
-	display: none;
-}
-.getStarted {
-	font-family: 'Questrial', sans-serif;
-	position: relative;
-	margin-top: 5px;
-	width: 100%;
-	text-align: center;
-	display: none;
-	animation-delay: 1.5s;
-}
-.arrow {
-	
-	margin-left: 47.25%;
-	align-self: center;
-	width: 60px;
-	height: 60px;
-	background: linear-gradient(#4a75c7, #b260bb);
-	padding-left: 3px;
-	padding-top: 15px;
-	border-radius: 50%;
-	margin-top: -20px;
-	transition: .75s;
-	animation: bounce .75s ease-in-out forwards;
-	-webkit-box-shadow: 3px 3px 15px 2px rgba(209, 209, 209, 0.75);
-	-moz-box-shadow: 3px 3px 15px 2px rgba(209, 209, 209, 0.75);
-	box-shadow: 3px 3px 15px 2px rgba(209, 209, 209, 0.75);
-}
-.arrow:hover {
-	transform: scale(1.15);
-}
-.maincolor {
-	color: #87485D;
-}
-.down {
-	margin-left: 3%;
-}
-.imgLogo {
-	width: 20%;
+	max-width: 1400px;
 	height: auto;
-	margin-top: 8%;
-	margin-left: 60%;
-	position: absolute;
-}
-.logo {
-	display: none;
-	margin-left: -12%;
-	margin-top: 7%;
-	float: left;
-	position: relative;
-	height: auto;
-	width: 10%;
-}
-
-#spacerOne {
-	padding-top: 20vh;
-	position: relative;
-}
-.indexpara {
-	background-image: url("./img/biopicture.png");
+	min-height: 550px;
+	padding-top: 100px;
+	margin: 0 auto;
+	background-image: url('WaveBackground.jpg');
 	background-repeat: no-repeat;
-	background-position: 0% 35%;
-	background-size: 30%;
-	font-family: 'Questrial', sans-serif;
-	font-size: 1.25em;
-	margin-top: 70%;
-	float: left;
-	position: relative;
-	margin-right: 0%;
-	padding-left: 35%;
-	margin-bottom: 0%;
-	text-align: justify;
-	height: auto;
-	min-height: 100vh;
-	display: none;
-
-}
-.indexpara:first-letter {
-	font-size: 2em
-}
-#wordChange {
-	font-size: 3em;
-	color: #4a75c7;
-	padding-top: 0px;
-}
-
-.aboutPic{
-	position: absolute;
-	width: 50%;
-	height:auto;
-	margin-left: -60%;
-	margin-top: -30%;
-
-}
-#portfolioDiv{
-	position: relative;
-	float: left;
-	
-	
-	width: 100%;
-	
-	padding-left: 0%;
-	padding-right: 0%;
-	padding-top: 0%;
-	
-	height: auto;
-	min-height: 100vh;
-	padding-bottom: 10%;
-	display: none;
+    background-size: 100%;
+    background-position: 0px -50px;
 	
 }
 
-#portfolioDiv h1 {
-	font-family: 'Questrial', sans-serif;
-	font-size: 3.5em;
+.intro .box{
+	background-color: white;
+	padding: 20px;
+	border: 4px solid #b260bb;
+	width: 500px;
+	/*-webkit-box-shadow: 5px 5px 15px 3px rgba(209, 209, 209, 0.75);
+	-moz-box-shadow: 5px 5px 15px 3px rgba(209, 209, 209, 0.75);
+	box-shadow: 5px 5px 15px 3px rgba(209, 209, 209, 0.75);*/
+	margin: 0 auto;
+	margin-bottom: 5%;
+
+
+}
+
+.intro h1{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 5em;
+	
+	background: -webkit- linear-gradient(#4a75c7, #b260bb);
 	background: linear-gradient(#4a75c7, #b260bb);
 	-webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   	color: #b260bb;
-	margin-left: 10%;
-	margin-top: 5%;
+  	  	
 }
 
-.portSub {
+.intro h2{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 2em;
 	
-	font-family: 'Questrial', sans-serif;
-	font-size: 1.25em;
-	color: #bababa;
-	margin-left: 10%;
-	margin-top: 10px;
-	padding-top: 10px;
-	transition: .75s;
-	width: 225px;
-	max-width: 300px;
+  	color: #b260bb;
+  	  	
+}
+
+.aboutDiv{
+	width: 80%;
+	max-width: 1400px;
+	height: auto;
+	min-height: 450px;
+	margin: 0 auto;
+}
+
+#spacerOne{
+	padding-top: 75px;
+	background-color: none;
 	position: relative;
-	overflow-x: hidden;
-	z-index: 3;
 }
-.portSub:hover, .portSub:active, .portSub:focus{
+
+#bioPic{
+	width: 400px;
+	height: auto;
+	float: left;
+	padding-right: 30px;
+}
+
+#wordChange{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 4em;
 	color: #b260bb;
-	cursor: pointer;
 }
 
-.portActive{
-	color: #b260bb;
-	pointer-events: none;
-
-}
-
-.portInfo{
-	border-top: solid 3px #ebebeb;
+.aboutDiv p{
 	font-family: 'Questrial', sans-serif;
 	font-size: 1.25em;
-	text-align: justify;
-	margin-top: -190px;
-	padding-top: 10px;
-	margin-right: 10%;
-	margin-bottom: 3%;
-	transition: .75s;
-	margin-left: 38%;
-	max-width: 60%;
-	float: left;
+	margin-bottom: 5px;
+}
+
+#spacerTwo{
+	padding-top: 75px;
+	background-color: none;
+	position: relative;
+}
+
+#portfolioDiv{
+	
+	width: 80%;
+	max-width: 1400px;
+	height: auto;
+
+	margin: 0 auto;
+}
+
+#portfolioDiv h1{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 3.5em;
+	color: #b260bb;
+}
+
+.tileBox{
+	width: 100%;
+	height: auto;
+	
+
+
+}
+
+.tile{
+	display: inline-block;
+	width: calc(50% - 12px);
+	height: 300px;
+	margin: 5px;
+	overflow: hidden;
+	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    transition: .75s;
+    -webkit- transition: .75s;
+}
+
+.tile:hover{
+	-webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: none;
+}
+
+.tile h1{
 	position: absolute;
+	margin-left: 20px;
+	padding: 5px;
+	background-color: white;
+	width: auto;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 3em !important;
+	transition: .75s;
+	-webkit- transition: .75s;
+	color: lightgrey;
+
+	
 }
 
-.port-fsinfo{
-	margin-top: 100px; 
-	margin-left: 10%; 
-	color: #bababa; 
-	font-family: 'Questrial', sans-serif; 
-	font-size: 1.25em;
+.tile:hover .orange{
+	color: orange !important;
 }
 
-.fa-port{
-	margin-right: 10px;
+.tile:hover .red{
+	color: #d64e4e !important;
 }
-.containerLiveTracking, .containerMega, .containerHumanIntrusion{
-		display: none;
-	}
+
+.tile:hover .purple{
+	color: #b260bb !important;
+}
+
+
+
+
+
+
 	
 #contactDiv{
 	position: relative;
 	overflow: hidden;
-	float: left;
-	width: 100%;
-	display: none;
+	
+	width: 80%;
+	max-width: 1400px;
+	
 	background-color: #b260bb;
 	background: linear-gradient(#4a75c7, #b260bb);
-	padding-left: 0%;
-	padding-right: 0%;
-	padding-top: 0%;
-	padding-bottom: 0%;
-	margin-left: 0%;
+	
+	
 	
 	
 	height: auto;
-	min-height: 65vh;
-	
-	
-	margin-bottom: 0%;
+	margin-left: auto;
+	margin-right: auto;
+
 	
 }
 
+#contactContent{
+	max-width: 1400px;
+}
+
 #contactDiv h1{
-	font-family: 'Questrial', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	margin: 0 auto;
-	padding-top: 8vh;
+	padding-top: 40px;
 	font-size: 3.5em;
 	color: white;
 	text-align: center;
@@ -385,6 +318,7 @@ a {
 
 }
 #contactDiv p{
+	font-family: 'Questrial', sans-serif;
 	margin-top: 5%;
 	font-size: 2.25em;
 	color: white;
@@ -415,11 +349,11 @@ a {
 	float: left;
 	margin-top: -40px !important;
 	padding-top: 0;
-	margin-left: 47%;
+	width: 50px;
+	margin-left: calc(50% - 50px);
 	color: #b260bb !important;
 	z-index: 8;
 	position: relative;
-	display: none;
 	-webkit-transform:scale(2.5,1); /* Safari and Chrome */
     -moz-transform:scale(2.5,1); /* Firefox */
     -ms-transform:scale(2.5,1); /* IE 9 */
@@ -432,38 +366,20 @@ a {
 }
 
 #spacerThree{
-	
-	padding-top: 6vh;
+	padding-top: 75px;
 	background-color: white;
 	position: relative;
 }
 
 #bottomDiv{
 	position: relative;
-	display: none;
 	float: left;
 	width: 100%;
 	overflow: hidden;
-	margin-top: -50px;
+	margin-top: 0px;
 	height: auto;
 }
 
-#bkgImgBottom {
-	visibility: hidden;
-	display: none;
-	position: absolute;
-	width: 100%;
-	transform: scale(2) rotate(180deg);
-	-webkit-transform: scale(2) rotate(180deg); /* Safari and Chrome */
-    -moz-transform: scale(2) rotate(180deg); /* Firefox */
-    -ms-transform: scale(2) rotate(180deg); /* IE 9 */
-    -o-transform: scale(2) rotate(180deg); /* Opera */
-	overflow-x: hidden;
-	height: auto;
-	margin-left: -6%;
-	margin-top: 100px;
-	z-index: -5;
-}
 
 .footer {
 	position: relative;
@@ -505,7 +421,7 @@ a {
 
 /* For Less than 890 */
 
-@media screen and (min-width: 1px) and (max-width: 890px) {
+@media screen and (min-width: 621px) and (max-width: 890px) {
 	body {
 		background-repeat: no-repeat;
 		background-position: 0px 400px;
@@ -513,14 +429,12 @@ a {
 		background-color: #f2f2f2;
 		overflow-x: hidden !important;
 	}
-	#wrapperFade {
-		padding-top: 10%;
-	}
+
 	.rownav {
 		margin-top: 0;
 		width: 105%;
 		height: 50px;
-		background-color: #efefef;
+		background-color: white;
 	}
 	.name {
 		position: absolute;
@@ -560,7 +474,7 @@ a {
 		width: 100%;
 		padding: 20px 0px;
 		background-color: #efefef;
-		margin-top: -16px;
+		margin-top: 0px;
 		text-decoration: none;
 		color: #575757;
 		font-family: 'Questrial', sans-serif;
@@ -595,106 +509,83 @@ a {
 		transform: rotate(45deg) translate(-7.5px, -7px);
 		background-color: #b260bb;
 	}
-	#appearBox{
-		margin-left: 10px;
-		margin-top: 15px;
-	}
-	.fadeInIntro {
-		margin-top: 10%;
-		margin-left: 10%;
-		position: relative;
-	}
-	.welcome-one {
-		font-size: 2em;
-		background-color: white;
-	}
-	.letsGetStarted {
-		font-size: 1.25em;
-	}
-	.arrow {
-		margin: 0 auto;
-	}
-	.arrowContainer {
-		margin-left: -12%;
-		width: 120%;
-	}
-	#bkgImg {
-		margin-top: 0;
-		visibility: visible;
-	}
-	
-	#spacerOne {
-		margin-top: 25%;
-		padding-top: 10%;
-	}
-	#spacerTwo {
-		padding-top: 10%;
-	}
-	.indexpara {
-		background-image: none;
-		margin-right: 5%;
-		width: 115%;
-		margin-left: -7.5%;
-		padding-left: 0%;
-		padding-top: 30%;
-		margin-top: 5%;
-		padding-left: 0%;
-		margin-right: 0;
-		position: relative;
-	}
-	.homename {
-		font-size: 2em;
-		margin-top: 5%;
-	}
-	
-	.continueBTN {
-		display: none !important;
-	}
-	.container{
-		width: 100vw;
-		padding: 0;
-	}
-	
-	.portInfo{
 
-	font-family: 'Questrial', sans-serif;
-	font-size: 1.25em;
-	margin-top: 20px;
-	margin-right: 5%;
-	transition: .75s;
-	margin-left: 5%;
-	max-width: 90%;
-	float: left;
-	position: relative;
-}
-	#portfolioDiv h1{
-		margin-left: 5%;
+	.intro{
+		width: 90%;
+		height: auto;
+		min-height: 450px;
 	}
-	.port-fsinfo{
-	margin-left: 5%; 
+
+	.aboutDiv{
+		width: 90%;
+		height: auto;
+		min-height: 450px;
+	}
+
+	#bioPic{
+		display: none;
+	}
+
+	#portfolioDiv{
+	
+	width: 90%;
 
 }
-.arrowDownContact{
-	margin-left: 46%;
+
+.tile{
+	-webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: none;
+}
+
+.tile:hover{
+	
+}
+
+.tile h1{
+		font-size: 2.5em !important;
 
 
-}#bottomDiv{
+	}
+
+.tile .orange{
+	color: orange !important;
+}
+
+.tile .red{
+	color: #d64e4e !important;
+}
+
+.tile .purple{
+	color: #b260bb !important;
+}
+
+.tile:hover .orange{
+	
+}
+
+.tile:hover .red{
+	
+}
+
+
+
+
+#contactDiv{
+	width: 90%;
+}
+	
+#bottomDiv{
 	height: auto;
 }
 
-#bkgImgBottom {
-		position: relative;
-		margin-top: 210px;
-		visibility: visible;
-		display: show;
-	}
+
 
  #footer{
 	margin-top: 0%;
 }
 
 }
-@media screen and (min-width: 390px) and (max-width: 501px) {
+@media screen and (min-width: 1px) and (max-width: 620px) {
 	body {
 		background-repeat: no-repeat;
 		background-position: center bottom;
@@ -702,46 +593,174 @@ a {
 		background-color: #f2f2f2;
 		overflow-x: hidden !important;
 	}
-	.fadeInIntro {
-		width: auto;
-		font-size: 1.5em;
-		margin-top: 20%;
-		margin-left: 0%;
-		position: relative;
-	}
-	#bkgImg {
-		visibility: hidden;
-	}
-	#bkgImgBottom {
-		position: relative;
-		visibility: visible;
-		display: show;
-		margin-top: 100px;
-	}
-	.welcome-one {
-		font-size: 1.65em;
+
+	.rownav {
+		margin-top: 0;
+		width: 105%;
+		height: 50px;
 		background-color: white;
 	}
-	.letsGetStarted {
+	.name {
+		position: absolute;
+		text-decoration: none;
+		color: #575757;
+		font-family: 'Questrial', sans-serif;
 		font-size: 1.25em;
+		margin-top: 15px;
+		margin-left: 15px;
 	}
-
-	.indexpara{
-		margin-top: 50%;
+	.mobile-toggle {
+		display: block;
+		cursor: pointer;
+		font-size: 20px;
+		position: absolute;
+		right: 22px;
+		top: 15px;
+		width: 30px;
+		-webkit-transition: all 200ms ease-in;
+		-moz-transition: all 200ms ease-in;
+		transition: all 200ms ease-in;
 	}
-	#spacerOne {
-		padding-top: 10%;
+	.bar1, .bar2, .bar3 {
+		width: 30px;
+		height: 4px;
+		margin-bottom: 6px;
+		border-radius: 1000px;
+		background: #575757;
+		display: block;
+		-webkit-transition: all 200ms ease-in;
+		-moz-transition: all 200ms ease-in;
+		transition: all 200ms ease-in;
 	}
-	.portSub{
+	nav {
+		visibility: hidden;
+		display: none;
+		width: 100%;
+		padding: 20px 0px;
+		background-color: #efefef;
+		margin-top: 0px;
+		text-decoration: none;
+		color: #575757;
+		font-family: 'Questrial', sans-serif;
 		font-size: 1.5em;
-		width: auto;
 	}
-	.arrowDownContact{
-	margin-left: 44%;
+	nav ul {
+		list-style: none;
+		text-align: right;
+		line-height: 1.6em;
+	}
+	nav ul a {
+		float: none;
+		text-decoration: none;
+		color: #575757;
+		margin-right: 0px;
+	}
+	nav ul a:hover {}
+	.active {
+		color: #b260bb;
+		font-weight: bold;
+	}
+	.change .bar1 {
+		-webkit-transform: rotate(-45deg) translate(-8px, 6px);
+		transform: rotate(-45deg) translate(-8px, 6px);
+		background-color: #b260bb;
+	}
+	.change .bar2 {
+		opacity: 0;
+	}
+	.change .bar3 {
+		-webkit-transform: rotate(45deg) translate(-7.5px, -7px);
+		transform: rotate(45deg) translate(-7.5px, -7px);
+		background-color: #b260bb;
+	}
 
+	.intro{
+		width: 95%;
+		height: auto;
+		min-height: 350px;
+		background-position: 0px 35px;
 
-}
 	
+	}
+
+	.intro .box{
+	padding: 20px;
+	width: 300px;
+	}
+
+
+	.intro h1{
+		font-size: 3em;
+	}
+
+	.intro h2{
+		font-size: 1.5em;
+	}
+	
+
+	.aboutDiv{
+		width: 95%;
+	}
+	
+	#wordChange{
+		font-size: 3em;
+	}
+
+	#bioPic{
+		display: none;
+	}
+
+	#portfolioDiv{
+	
+	width: 95%;
+	
+
+}#portfolioDiv h1{
+	
+	font-size: 3em;
+	
+}
+
+	.tile{
+	width: 98%;
+	height: 150px;
+	-webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: none;
+	}
+
+
+
+	.tile h1{
+		font-size: 2em !important;
+	}
+
+	.tile .orange{
+		color: orange !important;
+	}
+
+	.tile .red{
+		color: #d64e4e !important;
+	}
+
+	.tile .purple{
+		color: #b260bb !important;
+	}
+
+	.HT-image{
+		margin-top: -170px;
+	}
+
+
+
+
+	#contactDiv{
+	width: 95%;
+	}
+
+	#contactDiv h1{
+		font-size: 3em;
+	}
+
 	#contactDiv p{
 		font-size: 2em;
 		margin-top: 10%;
@@ -752,12 +771,11 @@ a {
 		margin-top: 7%;
 		color: white;
 	}
-	#contactDiv p:last-child{
-		padding-bottom: 4vh;
-	}
 	#footer{
 		margin-top: -200px;
 	}
+
+
 	
 }
 /* For less than 375 */
@@ -770,59 +788,10 @@ a {
 		background-color: #f2f2f2;
 		overflow-x: hidden !important;
 	}
-	.fadeInIntro {
-		width: auto;
-		font-size: 1.5em;
-		margin-top: 30%;
-		margin-left: 0%;
-		position: relative;
-	}
-	.welcome-one {
-		font-size: 2em;
-		background-color: white;
-	}
-	#bkgImg {
-		visibility: hidden;
-	}
-	#bkgImgBottom {
-		position: relative;
-		visibility: visible;
-		display: show;
-		margin-top: 100px;
-	}
-	.welcome-one {
-		font-size: 1.65em;
-		background-color: white;
-	}
-	.letsGetStarted {
-		font-size: 1em;
-	}
-	.indexpara{
-		margin-top: 50%;
-	}
-	#spacerOne {
-		padding-top: 10%;
-	}
-	#spacerThree{
-		padding-top: 5vh;
-	}
-	#wordChange{
-		font-size: 2.5em;
-	}
 	
-	#portfolioDiv h1{
-		font-size: 3em;
-	}
-	.portSub{
-		font-size: 1.5em;
-		width: auto;
-	}
-	.arrowDownContact{
-		margin-left: 43%;
-	}
+	
 	#contactDiv h1{
 		font-size: 3em;
-		padding-top: 2vh;
 	}
 	#contactDiv p{
 		font-size: 2em;
@@ -831,8 +800,5 @@ a {
 	#contactDiv p + p{
 		font-size: 2em;
 		margin-top: 7%;
-	}
-	#contactDiv p:last-child{
-		padding-bottom: 4vh;
 	}
 }
