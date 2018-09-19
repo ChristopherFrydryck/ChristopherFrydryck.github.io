@@ -25,7 +25,7 @@
 });
 
 	var helloArray = ['Hello','Bonjour','Hola','Nǐ hǎo','Ciao','Dobrý den','Guten Tag','Namasté','Kon\'nichiwa','Olá','Aloha','Xin chào','Shalom','Hallo','Dia duit'], i = 0;
-	var colorArray = ['green', '#4a75c7', '#b260bb', 'orange', 'red', '#f4da55', '#cc1c85', 'pink'], i = 0;
+	var colorArray = ['#4d69a0', '#4a75c7', '#b260bb', '#85348e', '#d66691', '#e892c1', '#cc1c85', '#a675d1'], i = 0;
 	//console.log(helloArray);
 	setInterval(function () {       // \/ \/ callback function
 		$('#wordChange').fadeOut(800, function() {

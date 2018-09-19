@@ -60,16 +60,21 @@ nav {
 	text-decoration: none;
 	
 	font-family: 'Questrial', sans-serif;
-	font-size: .9em;
+	font-size: 1.25em;
 	
 }
 nav ul {
 	margin-right: 30px;
 	overflow: hidden;
 	list-style: none;
+	float: right;
+}
+
+nav ul li{
+	float: left;
 }
 nav ul a {
-	float: right;
+	
 	text-decoration: none;
 	color: #575757;
 	margin-right: 25px;
@@ -88,12 +93,12 @@ nav ul a:hover {
 	text-decoration: none;
 	color: #575757;
 }
-nav ul a:active, nav ul a:focus {
+nav ul a:active, nav ul a:focus, nav ul a:selected {
 	text-decoration: none;
 	color: #b260bb;
 }
 .active {
-	color: #b260bb;
+	color: #b260bb !important;
 	font-weight: bold;
 	text-decoration: none;
 }
@@ -122,6 +127,18 @@ a {
 	display: none;
 }
 
+#waveImg{
+	left: 50%; transform: translate(-50%,0);
+	position:center;
+	margin-top: -25%;
+	width: 100%;
+	height: auto;
+	max-height: 1440px;
+	max-width: 2560px;
+	position: absolute;
+	z-index: -10;
+}
+
 .intro{
 	width: 80%;
 	max-width: 1400px;
@@ -129,10 +146,7 @@ a {
 	min-height: 550px;
 	padding-top: 100px;
 	margin: 0 auto;
-	background-image: url('WaveBackground.jpg');
-	background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: 0px -50px;
+	
 	
 }
 
@@ -218,7 +232,7 @@ a {
 	margin: 0 auto;
 }
 
-#portfolioDiv h1{
+#portHead{
 	font-family: 'Montserrat', sans-serif;
 	font-size: 3.5em;
 	color: #b260bb;
@@ -264,6 +278,13 @@ a {
 	
 }
 
+.tile h1:after{
+	content:'Learn more >';
+	font-size: 2rem;
+	line-height: 1em;
+}
+
+
 .tile:hover .orange{
 	color: orange !important;
 }
@@ -276,6 +297,9 @@ a {
 	color: #b260bb !important;
 }
 
+.tile:hover .blue{
+	color: #4679bd !important;
+}
 
 
 
@@ -286,8 +310,8 @@ a {
 	position: relative;
 	overflow: hidden;
 	
-	width: 80%;
-	max-width: 1400px;
+	width: 100%;
+	
 	
 	background-color: #b260bb;
 	background: linear-gradient(#4a75c7, #b260bb);
@@ -304,6 +328,7 @@ a {
 
 #contactContent{
 	max-width: 1400px;
+	margin: 0 auto;
 }
 
 #contactDiv h1{
@@ -407,14 +432,7 @@ a {
 	-o-user-select: none;
 	user-select: none;
 }
-@keyframes bounce {
-	to {
-		margin-top: 30px;
-	}
-	from {
-		margin-top: 45px;
-	}
-}
+
 
 
 
@@ -483,8 +501,12 @@ a {
 	nav ul {
 		list-style: none;
 		text-align: right;
-		line-height: 1.6em;
+		line-height: 1.8em;
+		float: none;
 	}
+	nav ul li{
+	float: none;
+}
 	nav ul a {
 		float: none;
 		text-decoration: none;
@@ -509,6 +531,14 @@ a {
 		transform: rotate(45deg) translate(-7.5px, -7px);
 		background-color: #b260bb;
 	}
+
+	#waveImg{
+	margin-top: 0%;
+	width: 100%;
+	height: auto;
+	position: absolute;
+	z-index: -10;
+}
 
 	.intro{
 		width: 90%;
@@ -543,6 +573,7 @@ a {
 
 .tile h1{
 		font-size: 2.5em !important;
+		color: ;
 
 
 	}
@@ -558,6 +589,9 @@ a {
 .tile .purple{
 	color: #b260bb !important;
 }
+.tile .blue{
+	color: #4679bd !important;
+}
 
 .tile:hover .orange{
 	
@@ -566,13 +600,13 @@ a {
 .tile:hover .red{
 	
 }
-
-
-
-
-#contactDiv{
-	width: 90%;
+.tile:hover .purple{
+	
 }
+.tile:hover .blue{
+	
+}
+
 	
 #bottomDiv{
 	height: auto;
@@ -647,7 +681,11 @@ a {
 	nav ul {
 		list-style: none;
 		text-align: right;
-		line-height: 1.6em;
+		line-height: 1.8em;
+		float: none;
+	}
+	nav ul li{
+		float: none;
 	}
 	nav ul a {
 		float: none;
@@ -674,11 +712,19 @@ a {
 		background-color: #b260bb;
 	}
 
+	#waveImg{
+	margin-top: 5%;
+	width: 100%;
+	height: auto;
+	position: absolute;
+	z-index: -10;
+}
+
 	.intro{
 		width: 95%;
 		height: auto;
 		min-height: 350px;
-		background-position: 0px 35px;
+		
 
 	
 	}
@@ -715,7 +761,7 @@ a {
 	width: 95%;
 	
 
-}#portfolioDiv h1{
+}#portHead{
 	
 	font-size: 3em;
 	
@@ -731,7 +777,13 @@ a {
 
 
 	.tile h1{
+		margin-top: 10px;
+		margin-left: 10px;
 		font-size: 2em !important;
+	}
+
+	.tile h1:after{
+		font-size: 1.2rem;
 	}
 
 	.tile .orange{
@@ -746,6 +798,10 @@ a {
 		color: #b260bb !important;
 	}
 
+	.tile .blue{
+		color: #4679bd !important;
+	}
+
 	.HT-image{
 		margin-top: -170px;
 	}
@@ -753,9 +809,7 @@ a {
 
 
 
-	#contactDiv{
-	width: 95%;
-	}
+	
 
 	#contactDiv h1{
 		font-size: 3em;
