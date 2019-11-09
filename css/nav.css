@@ -38,7 +38,8 @@
         visibility: visible;
         align-content: center;
         font-family: 'Questrial', sans-serif;
-	    font-size: 1.25em;
+        font-size: 1.25em;
+        text-align: right;
         
     }
 
@@ -138,20 +139,26 @@
         }
 
         #nav {
+            left: 0;
             margin-top: 50px;
             display: none;
+            position: absolute;
+            z-index: -99;
+            width: 100%;
+            margin-top: 40px;
+            background-color: white;
         }
 
         #nav ul{
             flex-direction: column;
-            text-align: right;
-            width: auto;
-            padding-right: 15%;
-            width: 100%;
+            /* width: auto; */
+            padding-right: 5%;
+            width: 100vw;
         }
 
         #nav ul li{
             margin: 7px 0;
+            text-align: right;
         }
 
     }

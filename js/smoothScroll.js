@@ -45,9 +45,9 @@ $(document).ready(function() {
   $('.mobile-toggle').click(function() {
     if (showing == false) {
       $('#nav').css('visibility', 'visible');
-      $('#nav').css('display', 'flex')
+      $('#nav').css('display', 'block')
       showing = !showing;
-      $('#nav').slideDown(300);
+      // $('#nav').slideDown(300);
       this.classList.toggle('change');
       //alert(showing);
 
@@ -55,7 +55,7 @@ $(document).ready(function() {
       showing = !showing;
       $('#nav').css('visibility', 'hidden');
       $('#nav').css('display', 'none')
-      $('#nav').slideUp();
+      // $('#nav').slideUp();
       this.classList.toggle('change');
      // alert(showing);
 
