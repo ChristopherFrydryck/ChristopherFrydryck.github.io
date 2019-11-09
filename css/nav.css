@@ -33,8 +33,9 @@
         color: #b260bb;
     }
 
-    nav{
+    #nav{
         display: flex;
+        visibility: visible;
         align-content: center;
         font-family: 'Questrial', sans-serif;
 	    font-size: 1.25em;
@@ -45,14 +46,14 @@
         margin-bottom: 0 !important;
     }
 
-    nav ul{
+    #nav ul{
         display: flex;
         flex-direction: row;
         list-style: none;
         width: 350px;
     }
 
-    nav ul a {
+    #nav ul a {
 	
         text-decoration: none;
         color: #575757;
@@ -66,18 +67,18 @@
         user-select: none;
     }
 
-    nav ul a:hover {
+    #nav ul a:hover {
         transform: scale(1.05);
         -webkit-transform: scale(1.05);
         text-decoration: none;
         color: #b260bb;
     }
-    nav ul a:active, nav ul a:focus, nav ul a:selected {
+    #nav ul a:active, nav ul a:focus, nav ul a:selected {
         text-decoration: none;
         color: #b260bb;
     }
 
-    nav ul li{
+    #nav ul li{
        margin: 0 4%;
     }
 
@@ -136,19 +137,20 @@
             background-color: #b260bb;
         }
 
-        nav {
+        #nav {
             margin-top: 50px;
+            display: none;
         }
 
-        nav ul{
+        #nav ul{
             flex-direction: column;
             text-align: right;
             width: auto;
-            padding-right: 10%;
+            padding-right: 15%;
             width: 100%;
         }
 
-        nav ul li{
+        #nav ul li{
             margin: 7px 0;
         }
 
