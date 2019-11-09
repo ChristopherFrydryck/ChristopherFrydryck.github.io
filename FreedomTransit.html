@@ -11,11 +11,12 @@
   <meta content="index, follow" name="robots">
   <!-- Linking CSS -->
   <!-- Style for homepage -->
-  <link href="Portfolio.css" rel="stylesheet" type="text/css">
+  <link href="css/Portfolio.css" rel="stylesheet" type="text/css">
+  <!-- <link href="./css/nav.css" rel="stylesheet" type="text/css"> -->
   <!-- Style for hover animation -->
-  <link href="hover.css" rel="stylesheet" type="text/css">
+  <link href="css/hover.css" rel="stylesheet" type="text/css">
   <!-- Style for Bootstrap -->
-  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/bootstrap/bootstrap.css" rel="stylesheet" type="text/css">
   <!-- Linking JS -->
   <!-- Linking Font -->
   <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
@@ -23,90 +24,261 @@
   <script src="https://use.fontawesome.com/17f20be63e.js"></script>
 </head>
 <body id='top'>
-  <header>
-    <div class="rownav">
+  <nav>
       <a href="#top" class="name">Christopher Frydryck</a>
-      <div class="mobile-toggle">
-        <span class="bar1"></span> <span class="bar2"></span> <span class="bar3"></span>
-      </div>
-    </div>
-    <nav>
-      <ul>
-        <li>
-          <a class="m-link home active" href="index.html">< back</a>
-        </li>
-        </ul>
-    </nav>
-  </header>
+      <a href="index.html" class="back">< Back</a>
+  </nav>
   
+  <div id="intro">
+      <div class="flexCont">
+
   <div class="topInfo">
-    <h1 class="main-head">Freedom <br><span style="color: orange;">Transit</span>.</h1>
-    <h3>February 2018 - May 2018</h3>
+    <div class="head">
+      <h1 class="main-head" style="color: #ffa600; 	background: -webkit- linear-gradient(#6b2b59, #af4591);
+      background: linear-gradient(#d88c00, #ffa600); 	-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;">Freedom Transit</h1>
+      <h3 class="sub-head">A live tracking system for <br>commuters.</h3>
+    </div>
+    <div class="lists">
+      <span class="list">
+        <p>Roles</p>
+        <h6>UI/UX, Project Mgmt, Front-end Dev </h6>
+      </span>
+      <span class="list">
+          <p>Duration</p>
+          <h6>Feb. 2018 - May 2018</h6>
+        </span>
+      <span class="list">
+          <p>Tools</p>
+          <h6>Adobe XD, HTML, CSS, JS, Java, Firebase</h6>
+        </span>
+    </div>
   </div>
-  <div class="videoDiv">
-   
-    <img class="iphoneTemplate" src="./img/IPhone_X.png">
-    <video id="video-FT" width="340px" height="655px" controls autoPlay loop>
-      <source src="videotest.mp4" type="video/mp4">
-  <source src="videotest.ogg" type="video/ogg">
-      Your browser does not support the video tag.
-    </video>
+  <image class="heroImg" src="./img/FT-backgroundTile.jpg" alt="A map view of where the bus is on the map"></image>
+  <div class="postHeroImage">
+    <blockquote>The biggest problem users face is that if their bus is early or late, they will never know until they catch the next bus and arrive late to their 
+        destination.</blockquote>
+    <span>
+        <p>Freedom Transit approached myself and two of my peers to design and develop a live bus tracker for our senior capstone project. We had under three months to 
+          design, test and develop both a web app and a native Android app and ship it out. Long nights and 23 highly caffenated espressos later, we had a final
+          capstone completed and spent none of our $10,000 budget.
+        </p>
+        <p>Going into the project, we were graciously handed a 30+ page packet of their recent research they conducted on their current riders. From demographic
+          information to route rider count, we were very pleased to have this data that was recently conducted one month prior to our involvement. 
+        </p>
+    </span>
+  </div>
+  </div>
+</div>
+<div class="contentDiv" style="background-color: #ffa600;">
+  <div class="mainCont">
+    <div class="flexCont">
+      <h2 style="color: #d47c18;">Defining <br>The User.</h2>
+      <div class="text">
+        <h3 style="color: #d47c18;" class="subHead">Even though we had a large packet of research, that wasn't enough for me...</h3>
+        <p>It isn't uncommon to stumble upon a multiple user market. Sure, there is a primary user in mind, but others also take up a portion 
+          of the usership. One key demographic was international students, however our primary focus was their loyal riders.
+        </p>
+        <p>Freedom Transit is the top transit authority in Washington, PA. It is no surpsie that apart from nine-to-five workers, students 
+          without vehicles are the next largest demographic since Washington & Jefferson College is at the epicenter of the city.  With limited 
+          college shuttles and foreign students staying on campus during holiday break, their best escape is taking the shuttle to the downtown Pittsburgh
+          area.
+        </p>
+      </div>
+    </div> 
+    </div>
+    <div class="mediaCont" style="margin: 0 auto; width: 100vw; display: flex; justify-content: center;">
+          <div class="mediaCont" style="margin: 0 auto; width: 100vw; display: flex; justify-content: center;">
+              <img src="./img/FT-userpersona.jpg" alt="A user persona I constructed from our research"></img>
+          </div>
+    </div>
+ </div>
+ <div class="contentDiv" style="background-color:white">
+    <div class="mainCont">
+      <div class="flexCont">
+        <h2 style="color: rgb(194, 194, 194)">The<br>Problem.</h2>
+        <div class="text">
+          <h3 style="color: #aaaaaa" class="subHead">Imagine Queueing Theory, but like, forever...</h3>
+          <p>Picture this: you are going through your morning routine. You think to yourself, wake up, shower, change, eat breakfast and get out the door. 
+            But once you get up and get in the shower, your water doesn't turn on. And you can't leave your shower until the water turns back on.  That 
+            is the frustration their riders are facing daily. They have a routine they like to go through only to have something entirely out of 
+            their control mess up their entire routine. 
+          </p>
+          <p>We are creatures of habit. We like to eat the same breakfast, get out the door by a certain time and walk that same path to work each day. 
+            When something impedes our ability to perform our daily practices, we get frustrated. Sadly, the answer to this isn't "become more flexible". 
+            Instead, we should ask ourselves "how might we make people's daily variables more predictable?" We knew now what our problem was.  
+          </p>
+          <p>From here, we devised a mental model of how we might do this. We would need two apps. One web app that is user facing, and one native app on 
+            the tablets on the busses that pings its GPS coordinates everyth three to five seconds.  Then, our web app would gather this data and display it 
+            in the UI.  
+            </p>
+        </div>
+      </div> 
+      </div>
+      <div class="mediaCont" style="margin: 0 auto; width: 100vw; display: flex; justify-content: center;">
+          <img src="img/FT-softwarestack.png" alt="We used javascript, Java and Firebase for this project"></img>
+      </div>
+   </div>
+   <div class="contentDiv" style="background-color: rgb(63, 63, 63)">
+      <div class="mainCont">
+        <div class="flexCont">
+          <h2 style="color: #7f7b7d">Paper<br>Prototype.</h2>
+          <div class="text">
+            <h3 style="color: #7f7b7d" class="subHead">Who said flat design goes out of style?</h3>
+            <p style="color: white;">All kidding aside, we had brainstormed, researched live trackers, devised a mental model and wanted to create a lo-fi 
+              paper prototype.  We designed it knowing our constraints and user's low tech savvyness. </p>
+              <p style="color: white;">After synthesizing our findings and clustering them, we found where our opportunities are and we aligned it with our 
+              skillset. I focused heavily on the design (HTML & CSS) as well as programming the tablets in Java, while my teammate put together the logic 
+              of the bus routes using Firebase, Google Maps and GIS data we had collected on the bus routes.
+            </p>
+          </div>
+        </div> 
+        </div>
+        <!-- <div class="mediaCont" style="margin: 0 auto; width: 100vw; display: flex; justify-content: center;">
+            <img src="img/FT-softwarestack.png"></img>
+        </div> -->
+     </div>
+     <div class="contentDiv" style="background-color:white">
+        <div class="mainCont">
+          <div class="flexCont">
+            <h2 style="color: rgb(194, 194, 194)">Closer To<br>The End.</h2>
+            <div class="text">
+              <h3 style="color: #aaaaaa" class="subHead">Don't panic. Don't panic. Don't panic.</h3>
+              <p>At this point, my fellow teammate and I got to buisness with the final product. I first took the results from 
+                our paper prototyping session and constructed a rough design in Adobe XD. The overall goal of this was to help 
+                align my design with my code. While the designs I put together were not pretty, we had to ensure that it 
+                had large touch targets for older users, met the current design of Freedom Transit's website and was 
+                able to be completed in a few weeks.
+              </p>
+              <p>While I began the design session and also the Java app that ran on the bus tablets, my teammate began hooking
+                up the web app to Firebase and setting up Google Maps API to showcase the routes using GIS data we had collected
+                for Freedom Transit.  This task was daunting for the two of us, but we found that coffee and
+                fresh air did the trick to keep us sane.
+              </p>
+            </div>
+          </div> 
+          </div>
+          <div class="mediaCont" style="margin: 0 auto; width: 100vw; display: flex; justify-content: center;">
+              <img src="img/FreedomMockup.JPG" alt="Early stage high-fidelity designs we tested with users"></img>
+          </div>
+        </div>
+        <div class="contentDiv" style="background-color: #ffa600;">
+            <div class="mainCont">
+              <div class="flexCont">
+                <h2 style="color: #d47c18;">The<br>Handoff.</h2>
+                <div class="text">
+                  <h3 style="color: #d47c18;" class="subHead">Let's future proof this thing!</h3>
+                  <p>Before we delivered the final product, we knew we had one final step: documentation. We know, this isn't the most exciting work,
+                    but it is important nonetheless. 
+                  </p>
+                  <p>We crafted together several documents including a budget breakdown, installation guide for new tablets, adding a new route guide 
+                    and other artifacts along the way from our risk analysis to early designs. Handing off the project smootly is something 
+                    even large design and development firms have issues with. We wanted to ensure that when we graduated, their lead developer 
+                    could take over without needing to call us at a moment's notice. You can view our entire project report <a style="color: white; text-decoration: underline;" href="artifacts/Freedom_ProjectReport.pdf" target="_blank">here</a>.
+                  </p>
+                </div>
+              </div> 
+              </div>
+              <div class="mediaCont" style="margin: 0 auto; width: 100vw; display: flex; justify-content: center;">
+                    <div class="mediaCont" style="margin: 0 auto; width: 100vw; display: flex; justify-content: center;">
+                        <img src="./img/FT-guide.jpg" alt="A photo of our 'Adding A Route Guide' we handed off to Freedom Transit"></img>
+                    </div>
+              </div>
+           </div> 
+           <div class="contentDiv" style="background-color:white">
+              <div class="mainCont">
+                <div class="flexCont">
+                  <h2 style="color: rgb(194, 194, 194)">And<br> Voila!</h2>
+                  <div class="text">
+                    <h3 style="color: #aaaaaa" class="subHead">We did it!</h3>
+                    <p>After our final presentation in front of a panel of professors at the college, we were excited to hear we 
+                      passed with flying colors. Afterwards we had a short retrospective on our journey and how much we accomplished 
+                      in such a short time.
+                    </p>
+                    <p>I'm very glad to have taken on the most technical capstone project offered during my final semester at Washington 
+                      & Jefferson College. It truly paid off in the end because it helped me further reassure that I love both UX and coding, 
+                      and I should use both of those skills to continue making stuff of my own. But for now, here is a quick video demo of our 
+                      final product: 
+                    </p>
+                  </div>
+                </div> 
+                </div>
+                <div class="mediaCont" style="margin: 0 auto; width: 100vw; display: flex; justify-content: center;">
+                    <video aria-label="A video demo of our final prototype" no-controls autoPlay loop>
+                        <source src="/img/FT-FinalDemo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                </div>
+              </div>
+       <div id="bottomDiv">
+          <p class="footer">Copyright <script type="text/javascript">document.write(new Date().getFullYear());</script> &copy; All Rights Reserved.</p>
+          <div style="display: flex; flex-direction: row;"><p class="footer">This website was written by hand with love from Christopher<span class="floatAnimate">❤️</span></p></div>
+        </div>
   
-    <p>Working with Freedom Transit in Washington, Pennsylvania to design and develop a live tracking web app was a challenge myself and my teammates were willing to step up to. Using Google Firebase, Java, Javascript, HTML, CSS and JQuery to match their current website aesthetic, we accomplished and successfully completed a responsive web app that works for most devices, regardless of their browser or operating system.</p>
-    <h2>Resources Used:</h2>
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>Javascript/JQuery</li>
-      <li>Java</li>
-      <li>XML</li>
-      <li>Google Firebase</li>
-      <li>Adobe XD</li>
-      <li>Adobe Photoshop</li>
-    </ul>
-  </div>
 
-  <div class="divStyleOne" style="background-color: orange;">
-    <div class="content">
-      <h1 class="main-head">Defining The <br><span style="color: white;">User</span>.</h1>
-      <a href="./img/FT-userpersona.png" target="_blank"><img src="./img/FT-userpersona.png" id="userPersona"></a>
-      
-      <p>When defining the user and their story, we were graced with Freedom Transit’s recent study in January 2018 that helped us begin to understand the user.  While other studies also took place, the document from Freedom transit helped gauge the pain-points of the product and establish a place to start.  From why they use Freedom Transit to how tech savvy they are, we compiled evidence about the users of the service to better understand what we were designing and developing. This led to two major issues within Freedom’s primary user:  how to interpret the bus schedule and how to be informed about delays?</p>
-      <p>Veterans of Freedom Transit do not ever read the bus schedule.  They know the time the bus arrives at their specific stop, plain and simple.  But what if the user is unfamiliar with other stops, or a bus has delays?  We wanted to seamlessly integrate the bus tracker by showing the bus names organized by route, the route itself and update in a fixed interval of five seconds.  We chose this interval because it was feasible for Freedom Transit to function on a budget with cloud storage while keeping users engaged for a short period of time and grasp important knowledge for their daily commute.</p>
-      
-    </div>
-  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+  </script> 
+  <script src="js/bootstrap.min.js">
+  </script>
 
-  <div class="divStyleTwo">
-    <div class="content">
-      <h1 class="main-head">Early <br><span style="color: orange;">Designs</span>.</h1>
-      <a href="./img/FT-lowfidelity.jpg" target="_blank"><img src="./img/FT-lowfidelity.jpg" id="lowFidelity"></a>
-      
-      <p>Susan M. Weinschenk’s book, <i>100 Things Every Designer Needs to Know About People</i> and Don Norman's <i>The Design of Everyday Things</i>, had a substantial influence on the Freedom Transit project design.  While the design is still not fully complete, the viewpoint of both authors on design has been greatly considered along the process on properly implementing a design process that is user friendly. However, I will also stand by the argument that design is subjective based on the user and it also cannot be brought to a quantitative science.</p>
-      <p>The Yerkes-Dodson Law states that when someone’s arousal increases, so does performance, but only to a certain degree.  This optimal amount of stress is based on task difficulty.   Weinschenk exclaims that typically, the simpler the task, the more arousal it will take to reach peak performance before performance begins to plummet. This law helps explain why when frustrated, performance may lack under what is called “tunnel action.”  This is when the same task is repeated multiple times with the same failed outcome.  </p>
-      <p>Now that we know a stressed user is a clumsy user, we must analyze the three “loads” of Fitt's Law that humans encounter:  cognitive, visual and motor loads.  These are demands that a person may take to complete a task successfully.  Cognitive loads regard memory and brain function, visual loads are eye movements and perception and motor loads are movement of the hands or other necessary body parts.  These loads values or mental resources may vary by person, and some may value their cognitive ability more than their motor ability and vice-versa.  </p>
-      <p>Our first attempt to reduce human error took advantage of human tendencies to lean towards categorization.  Organizing data or touchpoints for users was found to successfully help improve user experience since what users interact with on a physical level is directly correlated with their mental model.  This way, we introduced a system that recognizes the day through JavaScript and hides categories based on the day.  This way, we reduce human error by categorizing bus routes to specific days that they are active.</p>
-      <p>Another design tactic we used was one that is popular in modern psychology of operant conditioning.  Similar to B.F. Skinner’s operant chamber, rewards for certain behavior can vary widely at different rates.  We took these studies to implement a system of rewards for feedback from the bus on the map in the web app.  Our bus refresh rate is a variable interval between 3000ms and 5000ms.  We see similar addictive variable interval uses in email and app notifications.  </p>
+  
+</body>
+<script>
 
-    </div>
-  </div>
+  $(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
 
-  <div class="divStyleThree" style="background-color: #333333">
-    <div class="content">
-      <h1 class="main-head">Closing The <br><span style="color: orange;">Project</span>.</h1>
-      
-      <p>Along with our design and development choices were many other moments in the project that had risen that could have delayed the project if it were not for our agile process.  We had to implement features late in the development stage that we never expected and had to change our mental model several times before making a working alpha stage SaaS product. </p>
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
 
-      <p>Below will be a link of several deliverables as well as a master copy of our write up of the project report.  These deliverables, while important, could not all be outlined on my portfolio, but they do help envision the entire process.  I invite you to visit these links and learn more about the project.</p>   
-      
-      <a href="https://ft-testing.github.io" target="_blank"><h2 class="link" style="color: orange; text-decoration: underline; margin-top: 50px; margin-bottom: 20px;">Final Product &#187;</h2></a> 
-      <a href="Freedom_ProjectReport.pdf" target="_blank"><h2 class="link" style="color: orange; text-decoration: underline; margin-top: 0px; margin-bottom: 20px;">Full Project Report &#187;</h2></a> 
-      <a href="Freedom_GanttChart.pdf" target="_blank"><h2 class="link" style="color: orange; text-decoration: underline; margin-bottom: 20px;">Gantt Chart &#187;</h2></a>  
-      <a href="Freedom_AllProgressReports.pdf" target="_blank"><h2 class="link" style="color: orange; text-decoration: underline; padding-bottom: 25px;">All Project Reports &#187;</h2></a>         
+      // Store hash
+      var hash = this.hash;
 
-      
-    </div>
-  </div>
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+
+ $('.list').each(function(i) {
+    $(this).delay(300*(i+1)).fadeTo(600, 1); //Uses the each methods index+1 to create a multiplier on the delay
+});
+
+$(window).scroll(function(){
+  $('.contentDiv').each(function(){
+    var bottomOfDiv = $(this).offset().top + $(this).outerHeight();
+    var bottomWindow = $(window).scrollTop() + $(window).height();
+    if(bottomWindow > bottomOfDiv - $(window).height()){
+      $(this).fadeTo(300, 1);
+    }
+  })
+})
+   
+});
+</script>
+<script>
+      console.log("%c Hey you!", "font-size: 2em; color: red; font-family: 'Montserrat', sans-serif; font-weight: 700; width: 100%;");
+      console.log("%c Yeah, I am talking to you!", "font-size: 1.25em; color: red; font-family: 'Montserrat', sans-serif; font-weight: 700; text-decoration: underline; width: 100%;");
+      console.log("%c Seeing you made it here, I am guessing you are either", "font-size: 1.25em; color: #333333; font-family: 'Questrial', sans-serif;");
+      console.log("%c 1.) A developer that stumbled upon my website", "font-size: 1.25em; color: #333333; font-family: 'Questrial', sans-serif;");
+      console.log("%c 2.) A recruiter or HR looking to hire me", "font-size: 1.25em; color: #333333; font-family: 'Questrial', sans-serif;");
+      console.log("%c 3.) A master of finding easter eggs", "font-size: 1.25em; color: #333333; font-family: 'Questrial', sans-serif;");
+      console.log("%c 4.) All of the above", "font-size: 1.25em; color: #333333; font-family: 'Questrial', sans-serif;");
+      console.log('');
+      console.log("%c Anyways, thanks for finding my easter egg! I'm always looking for work and side projects.  Email me at cfrydryck@gmail.com and tell me you found my easter egg :).", "font-size: 1.25em; color: #333333; font-family: 'Questrial', sans-serif;");
+
+  </script>
+
+</html>
   
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">

@@ -24,7 +24,7 @@
   });
 });
 
-	var helloArray = ['Hello','Bonjour','Hola','Nǐ hǎo','Ciao','Dobrý den','Guten Tag','Namasté','Kon\'nichiwa','Olá','Aloha','Xin chào','Shalom','Hallo','Dia duit'], i = 0;
+	var helloArray = ['Hello','Bonjour','Hola','Nǐ hǎo','Ciao','Dobrý den','Guten Tag','Namasté','Kon\'nichiwa','Olá','Aloha','Xin chào','Shalom','Hallo','Dia duit', 'Ahlan', 'Yassas'], i = 0;
 	var colorArray = ['#4d69a0', '#4a75c7', '#b260bb', '#85348e', '#d66691', '#e892c1', '#cc1c85', '#a675d1'], i = 0;
 	//console.log(helloArray);
 	setInterval(function () {       // \/ \/ callback function
@@ -44,7 +44,7 @@ $(document).ready(function() {
   function myTimer() {
    w = $(window).width();
 
-   if (w > 890) {
+   if (w > 768) {
      $('nav').css('display', 'block');
   }
 
@@ -83,7 +83,7 @@ $(document).ready(function() {
 
 $(window).resize(function(){
 
-  if (w <= 890) {
+  if (w <= 769) {
     $('nav').css('display', 'none');
     $('.mobile-toggle').removeClass('change');
     showing = false;
@@ -97,9 +97,9 @@ $(window).resize(function(){
 
 $(document).scroll(function() {
   var y = $(this).scrollTop();
-  var about = $('#spacerOne').offset();
-  var portfolio = $('#spacerTwo').offset();
-  var contact = $('#spacerThree').offset();
+  var about = $('#aboutDiv').offset();
+  var portfolio = $('#portfolioDiv').offset();
+  var contact = $('#contactDiv').offset();
 
   $('#appearBox').fadeOut(300);
 

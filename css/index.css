@@ -1,0 +1,496 @@
+html {
+	padding: 0;
+	margin: 0 auto;
+	width: 100%;
+	
+	/* 100% of window with, so the body width of 80% will work as expected */
+}
+body {
+	background-color: #f2f2f2;
+	background-size: 100%;
+	display: block;
+	overflow-x: hidden;
+}
+
+/*nav end */
+
+a {
+	color: inherit;
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+#waveImg{
+	left: 50%; transform: translate(-50%,0);
+	position:center;
+	margin-top: -25%;
+	width: 100%;
+	height: auto;
+	max-height: 1440px;
+	max-width: 2560px;
+	position: absolute;
+	z-index: -10;
+}
+
+.intro{
+	width: 80%;
+	max-width: 1400px;
+	height: 100vh;
+	min-height: 900px;
+	padding-top: 100px;
+	margin: 0 auto;
+	
+	
+}
+
+
+
+.intro h3{
+	font-family: 'Questrial', sans-serif;
+    font-size: 1.25em;
+    color: #575757
+	
+}
+
+#wordChange{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 8em;
+	color: #b260bb;
+}
+
+#aboutDiv{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-top: 100px;
+}
+
+#aboutPic{
+    -webkit-flex: 1;  /* Safari 6.1+ */
+    -ms-flex: 1;  /* IE 10 */  
+    flex: 1;
+    display: -webkit-flex; /* Safari */
+    /* width: 300px; */
+    border-radius: 50%;
+    max-height: 350px;
+    max-width: 350px;
+    height: 45%;
+    width: auto;
+}
+
+#aboutText{
+    -webkit-flex: 1;  /* Safari 6.1+ */
+    -ms-flex: 1;  /* IE 10 */  
+    flex: 1;
+    padding-left: 5%;
+    align-self: center;
+}
+
+#aboutText p {
+    font-family: 'Questrial', sans-serif;
+	font-size: 1.25em;
+}
+
+
+
+#portfolioDiv{
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    margin-top: 50px;
+    
+}
+
+#portfolioHead{
+    font-family: 'Montserrat', sans-serif;
+	font-size: 4em;
+	color: #b260bb;
+}
+
+.portfolioItems{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.tile{
+    
+    width: 48.5%;
+    height: 250px;
+    align-self: flex-start;
+    overflow: hidden;
+    margin: 20px 0;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    transition: filter .75s, box-shadow .25s;
+    -webkit-transition: filter .75s, box-shadow .25s;
+	-moz-transition: filter .75s, box-shadow .25s;
+	-o-transition: filter 0.75, box-shadow .25s;
+    
+}
+
+.tile:hover{
+    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: none;
+    box-shadow: 3px 3px 3px lightgray;
+}
+
+
+
+.tile h2{
+    color: #4a75c7;
+    position: absolute;
+    margin-left: 20px;
+    background-color: white;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+	font-size: 2em;
+	text-decoration: none;
+}
+
+
+.tile h2::after{
+    content:"Learn More ➜";
+    font-size: .75em;
+    font-family: 'Questrial', sans-serif;
+
+    background: -webkit- linear-gradient(#4a75c7, #b260bb);
+	background: linear-gradient(#4a75c7, #b260bb);
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  	color: #b260bb;
+}
+
+.soon{
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+.soon h2::after{
+    content:"Coming Soon" !important;
+}
+
+
+.tile img{
+    height: 300px; 
+    width: auto;
+    overflow: hidden;
+}
+
+
+
+
+#bottomDiv{
+	position: relative;
+	float: left;
+	width: 100%;
+	overflow: hidden;
+	margin-top: 0px;
+	height: auto;
+}
+
+
+
+#contactDiv {
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+  
+}
+
+#contactContainer{
+    
+    width: 100%;
+    
+}
+
+#contactBgDiv{
+    padding: 20px 20px 60px 20px;
+    background-color: #cc1c85;
+}
+
+
+
+.contactPreLinkDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.contactPreLink{
+    color: white;
+    font-family: 'Questrial', sans-serif;
+    font-size: 1.5em;
+    width: 300px;
+    
+}
+
+.contactResume{
+    background-color: white;
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px;
+    align-self: flex-start;
+}
+
+.contactResume a{
+    text-decoration: none;
+    color:   #b260bb;
+    font-family: "Questrial", sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.contactResume a:hover{
+    text-decoration: none;
+    color:  #b260bb;
+    cursor: pointer;
+}
+
+.contactBorder{
+    height: 10px;
+    width: 40px;
+    border-top: 2px solid white;
+}
+
+#contactLinks{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+}
+
+.contactLink{
+    text-decoration: none;
+    text-align: center;
+    fill:  #cc1c85;
+    align-self: center;
+    width: 92px;
+    height: 92px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    margin-top: -30px;
+    margin-right: 20px;
+    box-shadow: 5px 10px #efefef;
+    
+    transition: margin-top .3s;
+    -webkit-transition: margin-top .3s;
+	-moz-transition: margin-top .3s;
+	-o-transition:margin-top  .3s;
+
+}
+
+#contactLinks a{
+    text-decoration: none;
+    color: #cc1c85;
+}
+
+#contactLinks .contactLink:hover {
+    text-decoration: none;
+    color: #cc1c85;
+    margin-top: -50px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+#bottomDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.footer{
+    font-family: 'Questrial', sans-serif;
+	font-size: .8em;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 300;
+    text-align: center;
+    color: #b260bb;
+    -webkit-user-select: none;
+	/* Chrome/Safari */
+	-moz-user-select: none;
+	/* Firefox */
+	-ms-user-select: none;
+	/* IE10+ */
+	/* Rules below not implemented in browsers yet */
+	-o-user-select: none;
+	user-select: none;
+}
+
+.floatAnimate{
+    animation: float 1.5s infinite ease-in-out;
+    -webkit-animation: float 1.5s infinite ease-in-out; /* Safari 4+ */
+  -moz-animation: float 1.5s infinite ease-in-out; /* Fx 5+ */
+  -o-animation: float 1.5s infinite ease-in-out; /* Opera 12+ */
+    position: relative;
+    margin-left: 5px;
+
+    -webkit-user-select: none;
+	/* Chrome/Safari */
+	-moz-user-select: none;
+	/* Firefox */
+	-ms-user-select: none;
+	/* IE10+ */
+	/* Rules below not implemented in browsers yet */
+	-o-user-select: none;
+	user-select: none;
+
+}
+
+@keyframes float {
+    0% {top: 0px;}
+    50% {top: -5px;}
+    100% {top: 0px;}
+  }
+
+  @-webkit-keyframes float {
+    0% {top: 0px;}
+    50% {top: -5px;}
+    100% {top: 0px;}
+  }
+  @-moz-keyframes float {
+    0% {top: 0px;}
+    50% {top: -5px;}
+    100% {top: 0px;}
+  }
+  @-o-keyframes float {
+    0% {top: 0px;}
+    50% {top: -5px;}
+    100% {top: 0px;}
+  }
+
+
+
+
+
+
+
+/* For Less than 769 */
+@media screen and (min-width: 1px) and (max-width: 768px) {
+	body {
+		background-repeat: no-repeat;
+		background-position: 0px 400px;
+		background-size: 100%;
+		background-color: #f2f2f2;
+		overflow-x: hidden !important;
+	}
+
+    #wordChange{
+        font-size: 5em;
+    }
+
+    .intro{
+        height: 100vh;
+        min-height: 550px;
+    }
+
+    .intro h3{
+        text-align: center;
+        line-height: 25px;
+    }
+    
+    #waveImg{
+        margin-top: 10vh;
+    }
+
+    #aboutDiv{
+        flex-direction: column;
+    }
+
+    #aboutPic{
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        margin-bottom: 30px;
+        align-self: center;
+    }
+
+    #portfolioHead{
+        font-size: 3em;
+    }
+
+    .tile{
+    
+        width: 100%;
+        height: 175px;
+        align-self: flex-start;
+        overflow: hidden;
+        margin: 20px 0;
+        -webkit-filter: none; /* Safari 6.0 - 9.0 */
+        filter: none;
+        
+    }
+
+    .tile h2{
+        align-self: center;
+        margin: 7.5px 0 0 7.5px;
+        box-shadow: 6px 6px lightgray;
+    }
+
+    .tile img{
+        height: auto;
+        width: 768px;
+        max-width: 768px;
+        object-fit: cover;
+        object-position: 90px -120px;
+        
+    }
+    
+    .tile:hover{}
+
+    #bottomDiv{
+        padding: 0 20px;
+    }
+
+    .footer{
+        font-size: 1em;
+    }
+
+
+}
+
+
+@media screen and (min-width: 1px) and (max-width: 480px) {
+	body {
+		background-repeat: no-repeat;
+		background-position: center bottom;
+		background-size: 100%;
+		background-color: #f2f2f2;
+		overflow-x: hidden !important;
+	}
+    
+    #wordChange{
+        font-size: 3em;
+    }
+
+    .intro{
+        height: 100vh;
+        min-height: 500px;
+    }
+
+    #contactLinks{
+        margin-left: 10px;
+    }
+
+    .contactLink{
+        width: 75px;
+        height: 75px;
+        padding: 15px;
+    }
+
+	
+}
