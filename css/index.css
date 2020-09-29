@@ -56,8 +56,13 @@ a {
 
 #wordChange{
 	font-family: 'Montserrat', sans-serif;
-	font-size: 8em;
+	font-size: 7em;
 	color: #b260bb;
+}
+.main-container{
+    width: 80%;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 #aboutDiv{
@@ -83,7 +88,7 @@ a {
 #aboutText{
     -webkit-flex: 1;  /* Safari 6.1+ */
     -ms-flex: 1;  /* IE 10 */  
-    flex: 1;
+    flex: 2;
     padding-left: 5%;
     align-self: center;
 }
@@ -179,6 +184,111 @@ a {
     width: auto;
     overflow: hidden;
 }
+
+
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    justify-self: flex-start;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    box-shadow: rgba(37, 37, 37, 0.26) 0px 0px 4px 0px;
+    width: 33.3333%;
+    grid-column: span 3;
+    position: relative;
+    z-index: 11;
+    overflow: hidden;
+    text-decoration: none;
+    color: black;
+
+    transition: box-shadow .3s;
+    -webkit-transition: box-shadow .3s;
+	-moz-transition: box-shadow .3s;
+	-o-transition: box-shadow  .3s;
+}
+
+.card:hover{
+    cursor: pointer;
+    box-shadow: rgba(37, 37, 37, 0.26) 0px 0px 4px 1px;
+    text-decoration: none;
+    color: black;
+}
+
+.card .contentPad{
+    padding: 4px 8px 8px 8px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card .image{
+    width: 100%;
+    padding-bottom: 56.25%;
+    align-self: flex-start;
+    
+}
+
+.card .overline{
+    margin: 12px 4px 0px 4px;
+    font-size: .85em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card .overline .cat{
+    margin: 0 4px 4px 4px;
+    padding: 4px 8px;
+    border-radius: 20px;
+}
+
+.card .overline .cat.des{
+    color: white;
+    background-color: rgb(38, 117, 236);
+}
+.card .overline .cat.dev{
+    color: white;
+    background-color: rgb(41, 165, 16);
+}
+.card .overline .cat.res{
+    color: white;
+    background-color: rgb(147, 9, 189);
+}
+.card .overline .cat.tool{
+    color: white;
+    background-color: rgb(231, 2, 14);
+}
+
+
+
+.card .image::after{
+    content: "";
+    position: absolute;
+    width: 98%;
+    padding-bottom: 56.25%;
+    top: 0.5%;
+    left: 0%;
+    z-index: -1;
+    border-radius: 15px;
+    background: inherit;
+    filter: blur(6px);
+    opacity: 1;
+    box-shadow: 0 -4px 1px #a1a1a1;    
+  }
+
+  .card .body{
+    width: 100%; 
+    line-height: 1.2em;
+    height: 3.6em;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3
+  }
+
 
 
 

@@ -98,16 +98,16 @@ $(document).scroll(function() {
 
   $('#appearBox').fadeOut(300);
 
-  if(y < about.top - 120){
+  if(y < portfolio.top - 120){
     $('.m-link').removeClass('active');
     $('.home').addClass('active')
   }
-  if(y >= about.top - 120){
-    $('.m-link').removeClass('active');
-    $('.about').addClass('active')
-  }if (y >= portfolio.top - 120){
+  if(y >= portfolio.top - 120){
     $('.m-link').removeClass('active');
     $('.portfolio').addClass('active')
+  }if (y >= about.top - 120){
+    $('.m-link').removeClass('active');
+    $('.about').addClass('active')
   }if (y >= contact.top - 120 || $(window).scrollTop() + $(window).height() == $(document).height()){
     $('.m-link').removeClass('active');
     $('.contact').addClass('active')

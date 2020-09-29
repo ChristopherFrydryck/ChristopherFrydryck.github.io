@@ -38,10 +38,10 @@
           <a class="m-link home active" href="#top">Home</a>
         </li>
         <li>
-          <a class="m-link about" href="#aboutDiv">About</a>
+          <a class="m-link portfolio" href="#portfolioDiv">Portfolio</a>
         </li>
         <li>
-          <a class="m-link portfolio" href="#portfolioDiv">Portfolio</a>
+          <a class="m-link about" href="#aboutDiv">About</a>
         </li>
         <li>
           <a class="m-link contact" href="#contactDiv">Contact</a>
@@ -54,29 +54,26 @@
 
 
 
+
 <div class="intro">
-    <div style="display: flex; flex-direction: column; margin-top: 5vh; align-items: center;">
+    <!-- <div style="display: flex; flex-direction: column; margin-top: 5vh; align-items: center;">
             <h2 id="wordChange">Hello</h2>
-            <h3>I'm Chris, and I am a UX designer and front-end developer. 👋</h3>
-    </div>
-    <img src="WaveBackground.jpg" id="waveImg" />
-</div>
-
-<div class="container">
-
-
-
-<div id="aboutDiv">
-    <img  id="aboutPic" src="./img/biopicture2.jpg" alt="A bio picture of me">
-    <div id="aboutText">
-        <p>My name is Christopher, but most of my friends call me Fred. I am a designer and developer that specializes in interactive design and React JS from Pittsburgh, PA.</p>
-        <p>I am a tinkerer and always will be. You may catch me messing with a Raspberry Pi to modify my graduation cap or building apps for Google Glass. I'm currently starting my own company, <a href="https://www.riive.net" target="_blank" style="color: #b260bb; text-decoration: underline;">Riive</a>, a shareparking app.</p>
-        <p>Most of my inspiration for my designs are a mix between my synesthesia and my conservation photography. Both are so beautiful and raw in their own way.</p>
+            <h3>I'm Chris, and I am a product designer and front-end engineer. 👋</h3>
+    </div> -->
+    <!-- <img src="WaveBackground.jpg" id="waveImg" /> -->
+    <div style="display: flex; align-items: flex-end; height: 90%;">
+      <!-- <img src="WaveBackground.jpg" id="waveImg" /> -->
+        <span>
+          <h2 id="wordChange">Hello</h2>
+          <h1 style="width: 45vw">My name is Christopher and I am a product designer and front-end engineer in Boulder, Colorado.</h1>
+        </span>
+        
     </div>
 </div>
 
-<div id="portfolioDiv">
-    <h2 id="portfolioHead">My Portfolio.</h2>
+<div class="main-container">
+  <div id="portfolioDiv">
+    <!-- <h2 id="portfolioHead">My Portfolio.</h2> -->
     <div class="portfolioItems">
 
               <span class="tile">
@@ -122,11 +119,67 @@
                             <img class="HT-image" src="./img/HTPhoto-backgroundTile.jpg">
                         </a>
                         </span>
+
+                        <a class="card" href="Riive.html">
+                          <div class="image" style="background: url('./img/Valet-backgroundTile.jpg')
+                          no-repeat 
+                          center center/cover;"></div>
+                          <!-- Categories include Des, Dev, Res, Tool  -->
+                          
+                                  <div class="overline">
+                                    <p class="cat des">UI/UX</p>
+                                    <p class="cat dev">React Native</p>
+                                    <p class="cat res">Research</p>
+                                    <p class="cat des">Figma</p>
+                                    <p class="cat tool">Stripe</p>
+                                    <p class="cat tool">Firebase</p>
+                                  </div>
+                                  <div class="contentPad">
+                                  
+                                  <h4>Riive Parking App</h4>
+                                  <p class="body">Riive is a shareparking network that connects hosts with open driveway or parking space with riders looking for a place to park. Think of it as AirBnB for parking...</p>
+                            
+                              
+                          </div>
+                        </a>
+                        <a class="card" href="OrchidDS.html">
+                          <div class="image" style="background: url('./img/OrchidHero.png')
+                          no-repeat 
+                          center center/cover;"></div>
+                          <!-- Categories include Des, Dev, Res, Tool  -->
+                          
+                                  <div class="overline">
+                                    <p class="cat des">UI/UX</p>
+                                    <p class="cat dev">React.js</p>
+                                    <p class="cat tool">Testing</p>
+                                  </div>
+                                  <div class="contentPad">
+                                  
+                                  <h4>Orchid Design System</h4>
+                                  <p class="body">Orchid is UPMC Health Plan's design system that includes everything from color and typography, to pattern designs for components including tables, toggle switches, dropdowns and much more...</p>
+                            
+                              
+                          </div>
+                        </a>
+                      
                         
             
     </div>
 
 </div>
+
+
+
+<div id="aboutDiv">
+    <img  id="aboutPic" src="./img/biopicture2.jpg" alt="A bio picture of me">
+    <div id="aboutText">
+        <p>My name is Christopher, but most of my friends call me Fred. I am a designer and developer that specializes in interactive design and React.</p>
+        <p>I am a tinkerer and always will be. You may catch me messing with a Raspberry Pi to modify my graduation cap or building apps for Google Glass. I'm currently starting my own company, <a href="https://www.riive.net" target="_blank" style="color: #b260bb; text-decoration: underline;">Riive</a>, a shareparking app.</p>
+        <p>Most of my inspiration for my designs are a mix between my synesthesia and my conservation photography. Both are so beautiful and raw in their own way.</p>
+    </div>
+</div>
+
+
  
 
     <div id="contactDiv">
