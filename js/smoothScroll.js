@@ -32,15 +32,173 @@
 		var rand = colorArray[Math.floor(Math.random() * colorArray.length)];
 	  	$(this).text( helloArray[(i === helloArray.length-1) ? i = 0 : i += 1 ]).fadeIn(800).css('color', rand);
 	  });
-	}, 3500);
+  }, 3500);
+  
+
+var skills = [
+  {
+    name: "HTML",
+    className: "dev"
+  },
+  {
+    name: "CSS",
+    className: "dev"
+  },
+  {
+    name: "Javascript (ES7)",
+    className: "dev"
+  },
+  {
+    name: "React",
+    className: "dev"
+  },
+  {
+    name: "React Native",
+    className: "dev"
+  },
+  {
+    name: "Java",
+    className: "dev"
+  },
+  {
+    name: "MySQL",
+    className: "dev"
+  },
+  {
+    name: "Firebase",
+    className: "dev"
+  },
+  {
+    name: "UX design",
+    className: "des"
+  },
+  {
+    name: "UI design",
+    className: "des"
+  },
+  {
+    name: "Interaction design",
+    className: "des"
+  },
+  {
+    name: "Wireframing",
+    className: "des"
+  },
+  {
+    name: "Rapid prototyping",
+    className: "des"
+  },
+  {
+    name: "Photography",
+    className: "des"
+  },
+  {
+    name: "Usability testing",
+    className: "res"
+  },
+  {
+    name: "Stakeholder mapping",
+    className: "res"
+  },
+  {
+    name: "A/B testing",
+    className: "res"
+  },
+  {
+    name: "Sketch",
+    className: "tool"
+  },
+  {
+    name: "Figma",
+    className: "tool"
+  },
+  {
+    name: "Axure RP",
+    className: "tool"
+  },
+  {
+    name: "Adobe XD",
+    className: "tool"
+  },
+  {
+    name: "Origami Studio",
+    className: "tool"
+  },
+  {
+    name: "Zeplin",
+    className: "tool"
+  },
+  {
+    name: "Abstract",
+    className: "tool"
+  },
+  {
+    name: "Invision",
+    className: "tool"
+  },
+  {
+    name: "Adobe Photoshop",
+    className: "tool"
+  },
+  {
+    name: "Adobe Illustrator",
+    className: "tool"
+  },
+  {
+    name: "Adobe InDesign",
+    className: "tool"
+  },
+  {
+    name: "Adobe After Effects",
+    className: "tool"
+  },
+  {
+    name: "XCode",
+    className: "tool"
+  },
+  {
+    name: "Android Studio",
+    className: "tool"
+  },
+]
+var skillsAlphabetical = skills.sort((a, b) => a.name.toUpperCase() > b.name.toUpperCase() ? 1 : a.name.toUpperCase() < b.name.toUpperCase() ? -1 : 0)
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  let returnVal = "";
+ 
+  for(let i = 0; i < skillsAlphabetical.length; i++){
+    returnVal += `<a onclick="return filterSkills('${skillsAlphabetical[i].className}');" class="${skillsAlphabetical[i].className}">${skillsAlphabetical[i].name}</a>`
+  }
+
+  document.getElementById('skillsList').innerHTML = returnVal
+})
+
+function filterSkills(skill){
+  let returnarr = null;
+  let returnVal = "";
+  if(skill === "all"){
+    returnarr = skillsAlphabetical
+  }else{
+    returnarr = skillsAlphabetical.filter(x => x.className === skill);
+  }
+  document.getElementById('skillsList').innerHTML = ""
+
+  document.querySelectorAll(".tab").forEach(x => x.classList.remove('active'))
+  document.querySelectorAll(`.tab.${skill}`)[0].classList.add('active')
+
+  for(let i = 0; i < returnarr.length; i++){
+    returnVal += `<a onclick="return filterSkills('${skillsAlphabetical[i].className}');" class="${returnarr[i].className}">${returnarr[i].name}</a>`
+  }
+  document.getElementById('skillsList').innerHTML = returnVal;
+
+
+}
+
 
 
 $(document).ready(function() {
   var showing = false;
-
-  
-
-  
 
   $('.mobile-toggle').click(function() {
     if (showing == false) {

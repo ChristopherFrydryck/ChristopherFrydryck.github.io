@@ -48,7 +48,7 @@ a {
 
 
 .intro h3{
-	font-family: 'Questrial', sans-serif;
+	font-family: 'Nunito Sans', sans-serif;
     font-size: 1.25em;
     color: #575757
 	
@@ -94,7 +94,7 @@ a {
 }
 
 #aboutText p {
-    font-family: 'Questrial', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
 	font-size: 1.25em;
 }
 
@@ -242,9 +242,10 @@ a {
     grid-column-start: span 2;
     grid-row-end: span 1;
 }
+
 .card:hover{
     cursor: pointer;
-    transform: scale(1.009);
+    transform: scale(1.015);
     box-shadow: rgba(37, 37, 37, 0.26) 0px 0px 4px 1px;
     text-decoration: none;
     color: black;
@@ -277,7 +278,7 @@ a {
     margin: 0 4px 4px 4px;
     padding: 1px 8px;
   
-    font-family: 'Questrial', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 
@@ -317,7 +318,7 @@ a {
 
   .card .body{
     width: 100%; 
-    font-family: 'Questrial', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
     line-height: 1.2em;
     height: 3.5em;
     overflow: hidden;
@@ -325,6 +326,126 @@ a {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3
   }
+
+  #skillsList{
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -8px;
+      margin-top: 16px;
+  }
+
+  #skillsList a{
+    width: auto !important;
+    margin: 0 8px !important;
+    font-size: 1.3em;
+    font-family: 'Nunito Sans', sans-serif !important;
+    color: #a1a1a1 !important;
+    cursor: pointer;
+
+    transition: color .3s, transform .3s;
+    -webkit-transition: color .3s, transform .3s;
+    -moz-transition: color .3s, transform .3s;
+    -o-transition: color  .3s, transform .3s;
+  }
+
+  #skillsList .des:hover{
+    color: #4a75c7 !important;
+}
+#skillsList .dev:hover{
+  color: #b260bb !important;
+}
+#skillsList .res:hover{
+  color: #4ac7a1 !important;
+}
+#skillsList .tool:hover{
+  color: #c70f0f !important;
+}
+
+
+
+
+  #skills ul{
+      padding: 0;
+      max-width: 600px;
+  }
+
+  #skills ul li {
+    display: inline;
+    text-align: center;
+  }
+  
+  #skills a {
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Nunito Sans', sans-serif;
+    width: 18.5%;
+    padding: .5rem 0;
+    margin: 0;
+    text-decoration: none;
+    color: #333;
+  }
+  #skills .all.active ~ hr {
+    margin-left: 0%;
+    background: black;
+  }
+
+  #skills .des.active ~ hr {
+    margin-left: 18.25%;
+    background: #4a75c7;
+  }
+
+  #skills .dev.active ~ hr {
+    margin-left: calc(18.5% * 2);
+    background: #b260bb;
+  }
+
+  #skills .res.active ~ hr {
+    margin-left: calc(18.5% * 3);
+    background: #4ac7a1;
+  }
+
+  #skills .tool.active ~ hr {
+    margin-left: calc(18.5% * 4);
+    background:  #c70f0f;
+  }
+
+  #skills .all:hover ~ hr{
+    margin-left: 0%;
+    background: black;
+  }
+
+  #skills .des:hover ~ hr {
+    margin-left: 18.5%;
+    background: #4a75c7;
+  }
+  
+  #skills .dev:hover ~ hr {
+    margin-left: calc(18.5% * 2);
+    background: #b260bb;
+  }
+  
+  #skills .res:hover ~ hr {
+    margin-left: calc(18.5% * 3);
+    background: #4ac7a1;
+  }
+  
+  #skills .tool:hover ~ hr {
+    margin-left: calc(18.5% * 4);
+    background:  #c70f0f;
+  }
+  
+  #skills hr {
+    height: .25rem;
+    width: 18.5%;
+    margin: 0;
+    border: none;
+    transition: .3s ease-in-out;
+  }
+
+
+
+
+
 
 
 
@@ -371,7 +492,7 @@ a {
 
 .contactPreLink{
     color: white;
-    font-family: 'Questrial', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
     font-size: 1.5em;
     width: 300px;
     
@@ -388,7 +509,7 @@ a {
 .contactResume a{
     text-decoration: none;
     color:   #b260bb;
-    font-family: "Questrial", sans-serif;
+    font-family: "Nunito Sans", sans-serif;
     font-weight: 700;
     cursor: pointer;
 }
@@ -460,7 +581,7 @@ a {
 }
 
 .footer{
-    font-family: 'Questrial', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
 	font-size: .8em;
 	font-style: normal;
 	font-variant: normal;

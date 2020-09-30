@@ -12,7 +12,7 @@ nav{
     background-color: white;
     top: 0;
     position: fixed;
-    font-family: 'Questrial', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
 	font-size: 1.25em;
     padding: 15px 5%;
     z-index: 10;
@@ -102,7 +102,7 @@ nav{
 }
 
 .lists p{
-    font-family: 'Questrial', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
     color: #aaaaaa;
 }
 
@@ -135,7 +135,7 @@ blockquote{
     padding-top: 25px !important;
     flex: 1;
     color: #575757;
-    font-family: 'Questrial', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
     position: relative;
     border-left: none !important;
     box-shadow: 3px 3px 6px #aaaaaa;
@@ -151,7 +151,7 @@ blockquote{
 
 blockquote:before{
     content: '"';
-    font-family: 'Questrial', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
     font-weight: 900;
     opacity: 0.5;
     top: -65px;
@@ -165,7 +165,7 @@ blockquote:before{
 }
 
 .postHeroImage p{
-    font-family: 'Questrial', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
     max-width: 600px;
     font-size: 1.25em;
     flex: 1;
@@ -211,14 +211,14 @@ blockquote:before{
 }
 
 .text .subHead{
-    font-family: 'Questrial', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
     padding-bottom: 10px;
     border-bottom: 2px solid;
     font-weight: 500;
 }
 
 .text p{
-    font-family: 'Questrial', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
     font-size: 1.25em;
 }
 
@@ -242,7 +242,7 @@ blockquote:before{
 }
 
 .footer{
-    font-family: 'Questrial', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
 	font-size: .8em;
 	font-style: normal;
 	font-variant: normal;

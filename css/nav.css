@@ -17,7 +17,7 @@
         white-space: nowrap;
         align-self: flex-start;
         color: #575757;
-        font-family: 'Questrial', sans-serif;
+        font-family: 'Nunito Sans', sans-serif;
         font-size: 1.25em;
         -webkit-transition: color 200ms ease-in;
         -moz-transition: color 200ms ease-in;
@@ -37,7 +37,7 @@
         display: flex;
         visibility: visible;
         align-content: center;
-        font-family: 'Questrial', sans-serif;
+        font-family: 'Nunito Sans', sans-serif;
         font-size: 1.25em;
         text-align: right;
         
