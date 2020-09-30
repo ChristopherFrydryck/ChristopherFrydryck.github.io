@@ -188,7 +188,7 @@ function filterSkills(skill){
   document.querySelectorAll(`.tab.${skill}`)[0].classList.add('active')
 
   for(let i = 0; i < returnarr.length; i++){
-    returnVal += `<a onclick="return filterSkills('${skillsAlphabetical[i].className}');" class="${returnarr[i].className}">${returnarr[i].name}</a>`
+    returnVal += `<a onclick="return filterSkills('all');" class="${returnarr[i].className}">${returnarr[i].name}</a>`
   }
   document.getElementById('skillsList').innerHTML = returnVal;
 
