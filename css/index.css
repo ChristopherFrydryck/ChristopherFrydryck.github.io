@@ -189,14 +189,15 @@ a {
 
 .card{
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: flex-start;
     justify-self: flex-start;
     background-color: #FFFFFF;
     border-radius: 4px;
     box-shadow: rgba(37, 37, 37, 0.26) 0px 0px 4px 0px;
-    width: 33.3333%;
-    grid-column: span 3;
+    width: 100%;
+    height: auto;
     position: relative;
     z-index: 11;
     overflow: hidden;
@@ -209,6 +210,38 @@ a {
 	-o-transition: box-shadow  .3s;
 }
 
+.card:nth-child(1){
+    grid-column-start: span 6;
+    grid-row-end: span 6;
+}
+.card:nth-child(2){
+    grid-column-start: span 3;
+    grid-row-end: span 3;
+}
+.card:nth-child(3){
+    grid-column-start: span 3;
+    grid-row-end: span 3;
+}
+.card:nth-child(4){
+    grid-column-start: span 6;
+    grid-row-end: span 6;
+}
+.card:nth-child(5){
+    grid-column-start: span 4;
+    grid-row-end: span 3;
+}
+.card:nth-child(6){
+    grid-column-start: span 2;
+    grid-row-end: span 3;
+}
+.card:nth-child(7){
+    grid-column-start: span 3;
+    grid-row-end: span 1;
+}
+.card:nth-child(8){
+    grid-column-start: span 2;
+    grid-row-end: span 1;
+}
 .card:hover{
     cursor: pointer;
     box-shadow: rgba(37, 37, 37, 0.26) 0px 0px 4px 1px;
@@ -221,7 +254,7 @@ a {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .card .image{
@@ -241,25 +274,23 @@ a {
 
 .card .overline .cat{
     margin: 0 4px 4px 4px;
-    padding: 4px 8px;
-    border-radius: 20px;
+    padding: 1px 8px;
+  
+    font-family: 'Questrial', sans-serif;
 }
 
+
 .card .overline .cat.des{
-    color: white;
-    background-color: rgb(38, 117, 236);
+    background: linear-gradient(to top, rgba(38, 117, 236, 0.2) 50%, transparent 50%);
 }
 .card .overline .cat.dev{
-    color: white;
-    background-color: rgb(41, 165, 16);
+    background: linear-gradient(to top,  rgba(41, 165, 16, 0.2) 50%, transparent 50%);
 }
 .card .overline .cat.res{
-    color: white;
-    background-color: rgb(147, 9, 189);
+    background: linear-gradient(to top,  rgba(147, 9, 189, 0.2) 50%, transparent 50%);
 }
 .card .overline .cat.tool{
-    color: white;
-    background-color: rgb(231, 2, 14);
+    background: linear-gradient(to top,  rgba(231, 2, 14, 0.2) 50%, transparent 50%);
 }
 
 
@@ -279,10 +310,15 @@ a {
     box-shadow: 0 -4px 1px #a1a1a1;    
   }
 
+  .card h4{
+    font-family: 'Montserrat', sans-serif;
+  }
+
   .card .body{
     width: 100%; 
+    font-family: 'Questrial', sans-serif;
     line-height: 1.2em;
-    height: 3.6em;
+    height: 3.5em;
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
