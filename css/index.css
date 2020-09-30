@@ -204,10 +204,10 @@ a {
     text-decoration: none;
     color: black;
 
-    transition: box-shadow .3s;
-    -webkit-transition: box-shadow .3s;
-	-moz-transition: box-shadow .3s;
-	-o-transition: box-shadow  .3s;
+    transition: box-shadow .3s, transform .3s;
+    -webkit-transition: box-shadow .3s, transform .3s;
+	-moz-transition: box-shadow .3s, transform .3s;
+	-o-transition: box-shadow  .3s, transform .3s;
 }
 
 .card:nth-child(1){
@@ -244,6 +244,7 @@ a {
 }
 .card:hover{
     cursor: pointer;
+    transform: scale(1.009);
     box-shadow: rgba(37, 37, 37, 0.26) 0px 0px 4px 1px;
     text-decoration: none;
     color: black;
