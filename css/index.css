@@ -84,9 +84,9 @@ a {
 }
 
 #aboutBody{
-    -webkit-flex: 1;  /* Safari 6.1+ */
-    -ms-flex: 1;  /* IE 10 */  
-    flex: 1; 
+    -webkit-flex: 2;  /* Safari 6.1+ */
+    -ms-flex: 2;  /* IE 10 */  
+    flex: 2; 
 }
 
 #aboutBody p{
@@ -95,9 +95,9 @@ a {
 }
 
 #aboutText{
-    -webkit-flex: 2;  /* Safari 6.1+ */
-    -ms-flex: 2;  /* IE 10 */  
-    flex: 2;
+    -webkit-flex: 3;  /* Safari 6.1+ */
+    -ms-flex: 3;  /* IE 10 */  
+    flex: 3;
     padding-left: 5%;
     /* align-self: center; */
 }
@@ -220,35 +220,35 @@ a {
 }
 
 .card:nth-child(1){
-    grid-column-start: span 6;
-    grid-row-end: span 6;
+    grid-column-start: span 4;
+    grid-row-end: span 4;
 }
 .card:nth-child(2){
-    grid-column-start: span 3;
-    grid-row-end: span 3;
-}
-.card:nth-child(3){
-    grid-column-start: span 3;
-    grid-row-end: span 3;
-}
-.card:nth-child(4){
-    grid-column-start: span 6;
-    grid-row-end: span 6;
-}
-.card:nth-child(5){
     grid-column-start: span 4;
     grid-row-end: span 3;
 }
-.card:nth-child(6){
-    grid-column-start: span 2;
+.card:nth-child(3){
+    grid-column-start: span 4;
     grid-row-end: span 3;
+}
+.card:nth-child(4){
+    grid-column-start: span 5;
+    grid-row-end: span 2;
+}
+.card:nth-child(5){
+    grid-column-start: span 3;
+    grid-row-end: span 2;
+}
+.card:nth-child(6){
+    grid-column-start: span 4;
+    grid-row-end: span 2;
 }
 .card:nth-child(7){
     grid-column-start: span 3;
     grid-row-end: span 1;
 }
 .card:nth-child(8){
-    grid-column-start: span 2;
+    grid-column-start: span 3;
     grid-row-end: span 1;
 }
 
@@ -262,7 +262,7 @@ a {
 
 .card .contentPad{
     padding: 4px 8px 8px 8px;
-    height: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -270,6 +270,10 @@ a {
 
 .card .image{
     width: 100%;
+    height:100%;
+    height: -moz-available;
+    height: -webkit-fill-available;
+    height: fill-available;
     padding-bottom: 56.25%;
     align-self: flex-start;
     
@@ -292,16 +296,16 @@ a {
 
 
 .card .overline .cat.des{
-    background: linear-gradient(to top, rgba(38, 117, 236, 0.2) 50%, transparent 50%);
+    background: linear-gradient(to top, #4a76c736 50%, transparent 50%);
 }
 .card .overline .cat.dev{
-    background: linear-gradient(to top,  rgba(41, 165, 16, 0.2) 50%, transparent 50%);
+    background: linear-gradient(to top,   #b260bb36 50%, transparent 50%);
 }
 .card .overline .cat.res{
-    background: linear-gradient(to top,  rgba(147, 9, 189, 0.2) 50%, transparent 50%);
+    background: linear-gradient(to top,  #4ac7a136 50%, transparent 50%);
 }
 .card .overline .cat.tool{
-    background: linear-gradient(to top,  rgba(231, 2, 14, 0.2) 50%, transparent 50%);
+    background: linear-gradient(to top,  #c70f0f36 50%, transparent 50%);
 }
 
 
