@@ -244,11 +244,11 @@ a {
     grid-row-end: span 2;
 }
 .card:nth-child(7){
-    grid-column-start: span 3;
+    grid-column-start: span 4;
     grid-row-end: span 1;
 }
 .card:nth-child(8){
-    grid-column-start: span 3;
+    grid-column-start: span 4;
     grid-row-end: span 1;
 }
 
@@ -262,7 +262,8 @@ a {
 
 .card .contentPad{
     padding: 4px 8px 8px 8px;
-    height: auto;
+    min-height: 175px;
+    max-height: 175px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -279,12 +280,30 @@ a {
     
 }
 
+.card .image::after{
+    content: "";
+    position: absolute;
+    width: 98%;
+    height: calc(100% - 175px);
+    top: 0.25%;
+    left: 0%;
+    z-index: -1;
+    border-radius: 15px;
+    background: inherit;
+    filter: blur(6px);
+    opacity: 1;
+    box-shadow: 0 -4px 1px #a1a1a1;    
+  }
+
 .card .overline{
     margin: 12px 4px 0px 4px;
     font-size: .85em;
     display: flex;
     flex-direction: row;
+    height: 2em;
     flex-wrap: wrap;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .card .overline .cat{
@@ -310,20 +329,7 @@ a {
 
 
 
-.card .image::after{
-    content: "";
-    position: absolute;
-    width: 98%;
-    padding-bottom: 56.25%;
-    top: 0.5%;
-    left: 0%;
-    z-index: -1;
-    border-radius: 15px;
-    background: inherit;
-    filter: blur(6px);
-    opacity: 1;
-    box-shadow: 0 -4px 1px #a1a1a1;    
-  }
+
 
   .card h4{
     font-family: 'Montserrat', sans-serif;
