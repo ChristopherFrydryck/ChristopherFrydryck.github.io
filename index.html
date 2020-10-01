@@ -120,7 +120,7 @@
                         </a>
                         </span> -->
 
-                        <div style="display: grid; grid-gap: 10px;
+                        <div style="display: grid; grid-gap: 16px;
                         grid-template-columns: repeat(12,1fr);
                         grid-auto-rows: auto;">
 
@@ -293,26 +293,30 @@
 
 
 <div id="aboutDiv">
-    <img  id="aboutPic" src="./img/biopicture2.jpg" alt="A bio picture of me">
+    <div style="flex: 1;">
+      <!-- <img  id="aboutPic" src="./img/biopicture2.jpg" alt="A bio picture of me"> -->
+       <h2>About</h2>
+      <p>My name is Christopher, but most of my friends call me Fred. I am a designer and developer that specializes in interactive design and React.</p>
+      <p>Most of my inspiration for my designs are a mix between my synesthesia and my conservation photography. Both are so beautiful and raw in their own way.</p>
+      <p>In my spare time, you can catch me hiking, playing guitar or working on my company, Riive.</p>
+    </div>
     <div id="aboutText">
-        <p>My name is Christopher, but most of my friends call me Fred. I am a designer and developer that specializes in interactive design and React.</p>
-        <p>I am a tinkerer and always will be. You may catch me messing with a Raspberry Pi to modify my graduation cap or building apps for Google Glass. I'm currently starting my own company, <a href="https://www.riive.net" target="_blank" style="color: #b260bb; text-decoration: underline;">Riive</a>, a shareparking app.</p>
-        <p>Most of my inspiration for my designs are a mix between my synesthesia and my conservation photography. Both are so beautiful and raw in their own way.</p>
+        <div id="skills">
+          <!-- <h2>Skills</h2> -->
+          <ul>
+            <li class="all tab active"><a onclick="return filterSkills('all');">All Skills</a></li>
+            <li class="des tab"><a onclick="return filterSkills('des');">Design</a></li><!--
+         --><li class="dev tab"><a onclick="return filterSkills('dev');">Development</a></li><!--
+         --><li class="res tab"><a onclick="return filterSkills('res');">Research</a></li><!--
+         --><li class="tool tab"><a onclick="return filterSkills('tool');">Tools</a></li>
+            <hr />
+          </ul>
+          <div id="skillsList"></div>
+        </div>
     </div>
 </div>
 
-<div id="skills">
-  <h2>Skills</h2>
-  <ul>
-    <li class="all tab active"><a onclick="return filterSkills('all');">All Skills</a></li>
-    <li class="des tab"><a onclick="return filterSkills('des');">Design</a></li><!--
- --><li class="dev tab"><a onclick="return filterSkills('dev');">Development</a></li><!--
- --><li class="res tab"><a onclick="return filterSkills('res');">Research</a></li><!--
- --><li class="tool tab"><a onclick="return filterSkills('tool');">Tools</a></li>
-    <hr />
-  </ul>
-  <div id="skillsList"></div>
-</div>
+
 
  
 
