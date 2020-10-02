@@ -16,12 +16,14 @@
         text-decoration: none;
         white-space: nowrap;
         align-self: flex-start;
+        padding: 0 8px;
         color: #575757;
         font-family: 'Nunito Sans', sans-serif;
         font-size: 1.25em;
+        transition: color 200ms ease-in;
         -webkit-transition: color 200ms ease-in;
         -moz-transition: color 200ms ease-in;
-        transition: color 200ms ease-in;
+        
     }
     .name:hover {
         text-decoration: none;

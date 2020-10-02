@@ -60,8 +60,7 @@ a {
 }
 
 #wordChange{
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: bold;
+	font-family: 'Montserrat', sans-serif;
 	font-size: 7em;
 	color: #b260bb;
 }
@@ -510,10 +509,13 @@ a {
   
 }
 
-#contactContainer{
-    
+#contactContainer{  
     width: 100%;
-    
+}
+
+#contactContainer p{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: gray;
 }
 
 #contactBgDiv{
@@ -572,38 +574,61 @@ a {
     margin-left: 20px;
 }
 
-.contactLink{
+#contactBubbles{
+    margin-top: 24px;
+}
+
+.contactBubble{
     text-decoration: none;
     text-align: center;
-    fill:  #cc1c85;
-    align-self: center;
-    width: 92px;
-    height: 92px;
-    padding: 25px;
-    background-color: white;
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    padding: 12px;
+    background-color: #efefef;
     border-radius: 50%;
     text-decoration: none;
-    margin-top: -30px;
-    margin-right: 20px;
-    box-shadow: 5px 10px #efefef;
+    margin: 0 4px;
     
-    transition: margin-top .3s;
-    -webkit-transition: margin-top .3s;
-	-moz-transition: margin-top .3s;
-	-o-transition:margin-top  .3s;
+    transition: transform .3s;
+    -webkit-transition: transform .3s;
+	-moz-transition: transform .3s;
+	-o-transition: transform .3s;
+    
 
 }
 
-#contactLinks a{
-    text-decoration: none;
-    color: #cc1c85;
+.contactBubble:nth-child(1){
+    margin-left: 0px;
 }
 
-#contactLinks .contactLink:hover {
+.contactLink{
     text-decoration: none;
-    color: #cc1c85;
-    margin-top: -50px;
-    cursor: pointer;
+    fill: #6b6b6b;
+
+    transition: fill .3s;
+    -webkit-transition: fill .3s;
+	-moz-transition: fill .3s;
+	-o-transition: fill .3s;
+}
+
+.contactBubble:hover{
+    transform: scale(1.1)
+}
+
+.contactBubble:hover .contactLink{
+    text-decoration: none;
+    fill: #cc1c85;
+}
+
+.contactBubble:nth-child(2):hover .contactLink{
+    text-decoration: none;
+    fill: #b260bb;
+}
+
+.contactBubble:nth-child(3):hover .contactLink{
+    text-decoration: none;
+    fill: #4a75c7;
 }
 
 
@@ -703,6 +728,7 @@ a {
     .intro{
         height: 100vh;
         min-height: 550px;
+        width: 90%;
     }
 
     .intro h1{
@@ -729,38 +755,14 @@ a {
         grid-auto-rows: auto;
     }
 
+    .card{
+        grid-column-start: span 4 !important;
+        grid-row-end: span 3 !important;
+    }
     .card:nth-child(1){
-        grid-column-start: span 4;
-        grid-row-end: span 4;
+        grid-row-end: span 4 !important;
     }
-    .card:nth-child(2){
-        grid-column-start: span 4;
-        grid-row-end: span 3;
-    }
-    .card:nth-child(3){
-        grid-column-start: span 4;
-        grid-row-end: span 3;
-    }
-    .card:nth-child(4){
-        grid-column-start: span 4;
-        grid-row-end: span 3;
-    }
-    .card:nth-child(5){
-        grid-column-start: span 4;
-        grid-row-end: span 3;
-    }
-    .card:nth-child(6){
-        grid-column-start: span 4;
-        grid-row-end: span 3;
-    }
-    .card:nth-child(7){
-        grid-column-start: span 4;
-        grid-row-end: span 3;
-    }
-    .card:nth-child(8){
-        grid-column-start: span 4;
-        grid-row-end: span 3;
-    }
+   
 
 
 
@@ -842,6 +844,32 @@ a {
     .intro{
         height: 100vh;
         min-height: 500px;
+        width: 90%;
+    }
+
+    .intro h1{
+        font-size: 2em;
+        width: 80vw;
+        min-width: auto;
+    }
+
+    #cardGrid{
+        display: grid; grid-gap: 16px;
+        grid-template-columns: repeat(4,1fr);
+        grid-auto-rows: auto;
+    }
+
+    .card{
+        grid-column-start: span 2 !important;
+        grid-row-end: span 3 !important;
+    }
+    .card:nth-child(1){
+        grid-column-start: span 4 !important;
+        grid-row-end: span 4 !important;
+    }
+    .card:nth-child(6){
+        grid-column-start: span 4 !important;
+        grid-row-end: span 4 !important;
     }
 
     #contactLinks{
