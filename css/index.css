@@ -77,17 +77,6 @@ a {
     padding-top: 100px;
 }
 
-#aboutPic{
- 
-   
-    /* width: 300px; */
-    /* border-radius: 50%; */
-
-    /* max-width: 350px; */
-    height: auto;
-    width: 100%
-}
-
 #aboutBody{
     -webkit-flex: 2;  /* Safari 6.1+ */
     -ms-flex: 2;  /* IE 10 */  
@@ -122,11 +111,6 @@ a {
     
 }
 
-#portfolioHead{
-    font-family: 'Montserrat', sans-serif;
-	font-size: 4em;
-	color: #b260bb;
-}
 
 .portfolioItems{
     display: flex;
@@ -135,69 +119,6 @@ a {
     flex-wrap: wrap;
 }
 
-.tile{
-    
-    width: 48.5%;
-    height: 250px;
-    align-self: flex-start;
-    overflow: hidden;
-    margin: 20px 0;
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
-    transition: filter .75s, box-shadow .25s;
-    -webkit-transition: filter .75s, box-shadow .25s;
-	-moz-transition: filter .75s, box-shadow .25s;
-	-o-transition: filter 0.75, box-shadow .25s;
-    
-}
-
-.tile:hover{
-    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
-    filter: none;
-    box-shadow: 3px 3px 3px lightgray;
-}
-
-
-
-.tile h2{
-    color: #4a75c7;
-    position: absolute;
-    margin-left: 20px;
-    background-color: white;
-    padding: 20px;
-    font-family: 'Montserrat', sans-serif;
-	font-size: 2em;
-	text-decoration: none;
-}
-
-
-.tile h2::after{
-    content:"Learn More ➜";
-    font-size: .75em;
-    font-family: 'Questrial', sans-serif;
-
-    background: -webkit- linear-gradient(#4a75c7, #b260bb);
-	background: linear-gradient(#4a75c7, #b260bb);
-	-webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  	color: #b260bb;
-}
-
-.soon{
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
-}
-
-.soon h2::after{
-    content:"Coming Soon" !important;
-}
-
-
-.tile img{
-    height: 300px; 
-    width: auto;
-    overflow: hidden;
-}
 
 #cardGrid{
     display: grid; grid-gap: 16px;
@@ -518,62 +439,6 @@ a {
     color: gray;
 }
 
-#contactBgDiv{
-    padding: 20px 20px 60px 20px;
-    background-color: #cc1c85;
-}
-
-
-
-.contactPreLinkDiv{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.contactPreLink{
-    color: white;
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 1.5em;
-    width: 300px;
-    
-}
-
-.contactResume{
-    background-color: white;
-    text-align: center;
-    border-radius: 20px;
-    padding: 10px;
-    align-self: flex-start;
-}
-
-.contactResume a{
-    text-decoration: none;
-    color:   #b260bb;
-    font-family: "Nunito Sans", sans-serif;
-    font-weight: 700;
-    cursor: pointer;
-}
-
-.contactResume a:hover{
-    text-decoration: none;
-    color:  #b260bb;
-    cursor: pointer;
-}
-
-.contactBorder{
-    height: 10px;
-    width: 40px;
-    border-top: 2px solid white;
-}
-
-#contactLinks{
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    margin-left: 20px;
-}
-
 #contactBubbles{
     margin-top: 24px;
 }
@@ -736,18 +601,10 @@ a {
         min-width: 355px;
     }
 
-    .intro h3{
-        text-align: center;
-        line-height: 25px;
-    }
-
     .main-container{
         width: 90%;
     }
     
-    #waveImg{
-        margin-top: 10vh;
-    }
 
     #cardGrid{
         display: grid; grid-gap: 16px;
@@ -783,38 +640,7 @@ a {
         align-self: center;
     }
 
-    #portfolioHead{
-        font-size: 3em;
-    }
-
-    .tile{
     
-        width: 100%;
-        height: 175px;
-        align-self: flex-start;
-        overflow: hidden;
-        margin: 20px 0;
-        -webkit-filter: none; /* Safari 6.0 - 9.0 */
-        filter: none;
-        
-    }
-
-    .tile h2{
-        align-self: center;
-        margin: 7.5px 0 0 7.5px;
-        box-shadow: 6px 6px lightgray;
-    }
-
-    .tile img{
-        height: auto;
-        width: 768px;
-        max-width: 768px;
-        object-fit: cover;
-        object-position: 90px -120px;
-        
-    }
-    
-    .tile:hover{}
 
     #bottomDiv{
         padding: 0 20px;
