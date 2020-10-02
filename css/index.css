@@ -697,16 +697,5 @@ a {
         grid-column-start: span 4 !important;
         grid-row-end: span 4 !important;
     }
-
-    #contactLinks{
-        margin-left: 10px;
-    }
-
-    .contactLink{
-        width: 75px;
-        height: 75px;
-        padding: 15px;
-    }
-
 	
 }
