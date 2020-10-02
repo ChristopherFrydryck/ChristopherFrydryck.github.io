@@ -60,7 +60,8 @@ a {
 }
 
 #wordChange{
-	font-family: 'Montserrat', sans-serif;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
 	font-size: 7em;
 	color: #b260bb;
 }
@@ -197,6 +198,12 @@ a {
     height: 300px; 
     width: auto;
     overflow: hidden;
+}
+
+#cardGrid{
+    display: grid; grid-gap: 16px;
+    grid-template-columns: repeat(12,1fr);
+    grid-auto-rows: auto;
 }
 
 
@@ -337,7 +344,8 @@ a {
 
 
   .card h4{
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
     line-height: 1.2em;
     max-height: 2.3em;
     overflow: hidden;
@@ -697,6 +705,11 @@ a {
         min-height: 550px;
     }
 
+    .intro h1{
+        width: 20vw;
+        min-width: 355px;
+    }
+
     .intro h3{
         text-align: center;
         line-height: 25px;
@@ -709,6 +722,47 @@ a {
     #waveImg{
         margin-top: 10vh;
     }
+
+    #cardGrid{
+        display: grid; grid-gap: 16px;
+        grid-template-columns: repeat(8,1fr);
+        grid-auto-rows: auto;
+    }
+
+    .card:nth-child(1){
+        grid-column-start: span 4;
+        grid-row-end: span 4;
+    }
+    .card:nth-child(2){
+        grid-column-start: span 4;
+        grid-row-end: span 3;
+    }
+    .card:nth-child(3){
+        grid-column-start: span 4;
+        grid-row-end: span 3;
+    }
+    .card:nth-child(4){
+        grid-column-start: span 4;
+        grid-row-end: span 3;
+    }
+    .card:nth-child(5){
+        grid-column-start: span 4;
+        grid-row-end: span 3;
+    }
+    .card:nth-child(6){
+        grid-column-start: span 4;
+        grid-row-end: span 3;
+    }
+    .card:nth-child(7){
+        grid-column-start: span 4;
+        grid-row-end: span 3;
+    }
+    .card:nth-child(8){
+        grid-column-start: span 4;
+        grid-row-end: span 3;
+    }
+
+
 
     #aboutDiv{
         flex-direction: column;

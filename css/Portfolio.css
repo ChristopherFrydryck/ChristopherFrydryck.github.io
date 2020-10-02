@@ -82,7 +82,7 @@ nav{
 
 .topInfo .main-head{
     font-size: 4em;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: bold;
     width: auto;
     max-width: 400px;
@@ -108,11 +108,12 @@ nav{
 
 .lists h6{
     color: #575757;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
 }
 
 .topInfo .sub-head{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
     color: #aaaaaa;
     font-size: 1.5em;
 }
