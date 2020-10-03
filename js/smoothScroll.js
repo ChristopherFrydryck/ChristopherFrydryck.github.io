@@ -41,11 +41,15 @@ var skills = [
     className: "dev"
   },
   {
-    name: "CSS",
+    name: "CSS/SCSS",
     className: "dev"
   },
   {
     name: "Javascript (ES7)",
+    className: "dev"
+  },
+  {
+    name: "Typescript",
     className: "dev"
   },
   {
@@ -54,6 +58,14 @@ var skills = [
   },
   {
     name: "React Native",
+    className: "dev"
+  },
+  {
+    name: "Node.js",
+    className: "dev"
+  },
+  {
+    name: "Git",
     className: "dev"
   },
   {
@@ -159,6 +171,38 @@ var skills = [
   {
     name: "Android Studio",
     className: "tool"
+  },
+  {
+    name: "UserZoom",
+    className: "tool"
+  },
+  {
+    name: "Stripe API",
+    className: "tool"
+  },
+  {
+    name: "Journey mapping",
+    className: "res"
+  },
+  {
+    name: "Persona validation",
+    className: "res"
+  },
+  {
+    name: "User surveys",
+    className: "res"
+  },
+  {
+    name: "System usability scale (SUS)",
+    className: "res"
+  },
+  {
+    name: "User interviews",
+    className: "res"
+  },
+  {
+    name: "Ethnographic field studies",
+    className: "res"
   },
 ]
 var skillsAlphabetical = skills.sort((a, b) => a.name.toUpperCase() > b.name.toUpperCase() ? 1 : a.name.toUpperCase() < b.name.toUpperCase() ? -1 : 0)

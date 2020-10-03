@@ -279,6 +279,7 @@ a {
     width: 100%; 
     font-family: 'Nunito Sans', sans-serif;
     line-height: 1.2em;
+    color: gray;
     height: 3.5em;
     overflow: hidden;
     display: -webkit-box;
