@@ -223,6 +223,11 @@ nav{
     font-size: 1.25em;
 }
 
+.text ul li{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.25em;
+}
+
 .contentDiv .mediaCont video{
     width: 80vw;
     max-width: 1440px;
@@ -414,6 +419,10 @@ nav{
     }
 
     .text p{
+        font-size: 16px;
+    }
+
+    .text ul li{
         font-size: 16px;
     }
 
