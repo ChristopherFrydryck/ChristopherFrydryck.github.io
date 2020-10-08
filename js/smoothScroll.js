@@ -22,12 +22,18 @@
       });
     } // End if
   });
+
 });
 
 	var helloArray = ['Hello','Bonjour','Hola','Nǐ hǎo','Ciao','Dobrý den','Guten Tag','Namasté','Kon\'nichiwa','Olá','Aloha','Xin chào','Shalom','Hallo','Dia duit', 'Ahlan', 'Yassas'], i = 0;
-	var colorArray = ['#4d69a0', '#4a75c7', '#b260bb', '#85348e', '#d66691', '#e892c1', '#cc1c85', '#a675d1'], i = 0;
+  var colorArray = ['#4d69a0', '#4a75c7', '#b260bb', '#85348e', '#d66691', '#e892c1', '#cc1c85', '#a675d1'], i = 0;
+  
+  setTimeout(function () {
+    document.getElementById('wordChange').style.cssText = "top: 0; opacity: 1;"
+  }, 500)
+
 	//console.log(helloArray);
-	setInterval(function () {       // \/ \/ callback function
+	setInterval(function () {     // \/ \/ callback function
 		$('#wordChange').fadeOut(800, function() {
 		var rand = colorArray[Math.floor(Math.random() * colorArray.length)];
 	  	$(this).text( helloArray[(i === helloArray.length-1) ? i = 0 : i += 1 ]).fadeIn(800).css('color', rand);

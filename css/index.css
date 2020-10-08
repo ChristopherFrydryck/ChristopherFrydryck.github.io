@@ -45,6 +45,8 @@ a {
 	
 }
 
+
+
 .intro h1{
     width: 20vw;
     min-width: 500px;
@@ -60,10 +62,16 @@ a {
 }
 
 #wordChange{
-	font-family: 'Montserrat', sans-serif;
-	font-size: 7em;
-	color: #b260bb;
-}
+    font-family: 'Montserrat', sans-serif;
+    font-size: 6.5em;
+    width: 100%;
+    color: #b260bb;
+    
+    /* transition: top .3s ease-out, opacity 1s ease-out; */
+    /* -webkit-transition: top .3s ease-in, display 1s ease-out;
+	-moz-transition: top .3s ease-in, display .3s ease-out;
+	-o-transition: top .3s ease-in, display .3s ease-out;*/
+} 
 .main-container{
     width: 80%;
     max-width: 1400px;
@@ -585,10 +593,11 @@ a {
 		background-size: 100%;
 		background-color: #f2f2f2;
 		overflow-x: hidden !important;
-	}
+    }
+
 
     #wordChange{
-        font-size: 5em;
+        font-size: 4.5em;
     }
 
     .intro{
@@ -662,7 +671,9 @@ a {
 		background-size: 100%;
 		background-color: #f2f2f2;
 		overflow-x: hidden !important;
-	}
+    }
+    
+
     
     #wordChange{
         font-size: 3em;
