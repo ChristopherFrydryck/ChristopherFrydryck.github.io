@@ -47,17 +47,35 @@ a {
 
 
 
+.intro h1{
+    width: 20vw;
+    min-width: 500px;
+}
+
+
+
 .intro h3{
-	font-family: 'Questrial', sans-serif;
+	font-family: 'Nunito Sans', sans-serif;
     font-size: 1.25em;
     color: #575757
 	
 }
 
 #wordChange{
-	font-family: 'Montserrat', sans-serif;
-	font-size: 8em;
-	color: #b260bb;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 6.5em;
+    width: 100%;
+    color: #b260bb;
+    
+    /* transition: top .3s ease-out, opacity 1s ease-out; */
+    /* -webkit-transition: top .3s ease-in, display 1s ease-out;
+	-moz-transition: top .3s ease-in, display .3s ease-out;
+	-o-transition: top .3s ease-in, display .3s ease-out;*/
+} 
+.main-container{
+    width: 80%;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 #aboutDiv{
@@ -67,29 +85,27 @@ a {
     padding-top: 100px;
 }
 
-#aboutPic{
-    -webkit-flex: 1;  /* Safari 6.1+ */
-    -ms-flex: 1;  /* IE 10 */  
-    flex: 1;
-    display: -webkit-flex; /* Safari */
-    /* width: 300px; */
-    border-radius: 50%;
-    max-height: 350px;
-    max-width: 350px;
-    height: 45%;
-    width: auto;
+#aboutBody{
+    -webkit-flex: 2;  /* Safari 6.1+ */
+    -ms-flex: 2;  /* IE 10 */  
+    flex: 2; 
+}
+
+#aboutBody p{
+    font-family: 'Nunito Sans', sans-serif;
+	font-size: 1.25em;
 }
 
 #aboutText{
-    -webkit-flex: 1;  /* Safari 6.1+ */
-    -ms-flex: 1;  /* IE 10 */  
-    flex: 1;
+    -webkit-flex: 3;  /* Safari 6.1+ */
+    -ms-flex: 3;  /* IE 10 */  
+    flex: 3;
     padding-left: 5%;
-    align-self: center;
+    /* align-self: center; */
 }
 
 #aboutText p {
-    font-family: 'Questrial', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
 	font-size: 1.25em;
 }
 
@@ -103,11 +119,6 @@ a {
     
 }
 
-#portfolioHead{
-    font-family: 'Montserrat', sans-serif;
-	font-size: 4em;
-	color: #b260bb;
-}
 
 .portfolioItems{
     display: flex;
@@ -116,69 +127,294 @@ a {
     flex-wrap: wrap;
 }
 
-.tile{
-    
-    width: 48.5%;
-    height: 250px;
+
+#cardGrid{
+    display: grid; grid-gap: 16px;
+    grid-template-columns: repeat(12,1fr);
+    grid-auto-rows: auto;
+}
+
+
+
+.card{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-start;
+    justify-self: flex-start;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    box-shadow: rgba(37, 37, 37, 0.26) 0px 0px 4px 0px;
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 11;
+    overflow: hidden;
+    text-decoration: none;
+    color: black;
+
+    transition: box-shadow .3s, transform .3s;
+    -webkit-transition: box-shadow .3s, transform .3s;
+	-moz-transition: box-shadow .3s, transform .3s;
+	-o-transition: box-shadow  .3s, transform .3s;
+}
+
+.card:nth-child(1){
+    grid-column-start: span 4;
+    grid-row-end: span 4;
+}
+.card:nth-child(2){
+    grid-column-start: span 4;
+    grid-row-end: span 3;
+}
+.card:nth-child(3){
+    grid-column-start: span 4;
+    grid-row-end: span 3;
+}
+.card:nth-child(4){
+    grid-column-start: span 5;
+    grid-row-end: span 2;
+}
+.card:nth-child(5){
+    grid-column-start: span 3;
+    grid-row-end: span 2;
+}
+.card:nth-child(6){
+    grid-column-start: span 4;
+    grid-row-end: span 2;
+}
+.card:nth-child(7){
+    grid-column-start: span 4;
+    grid-row-end: span 1;
+}
+.card:nth-child(8){
+    grid-column-start: span 4;
+    grid-row-end: span 1;
+}
+
+.card:hover{
+    cursor: pointer;
+    transform: scale(1.02);
+    box-shadow: rgba(37, 37, 37, 0.26) 0px 0px 4px 1px;
+    text-decoration: none;
+    color: black;
+}
+
+.card .contentPad{
+    padding: 4px 8px 8px 8px;
+    min-height: 175px;
+    max-height: 175px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.card .image{
+    width: 100%;
+    height:100%;
+    height: -moz-available;
+    height: -webkit-fill-available;
+    height: fill-available;
+    padding-bottom: 56.25%;
     align-self: flex-start;
-    overflow: hidden;
-    margin: 20px 0;
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
-    transition: filter .75s, box-shadow .25s;
-    -webkit-transition: filter .75s, box-shadow .25s;
-	-moz-transition: filter .75s, box-shadow .25s;
-	-o-transition: filter 0.75, box-shadow .25s;
     
 }
 
-.tile:hover{
-    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
-    filter: none;
-    box-shadow: 3px 3px 3px lightgray;
-}
-
-
-
-.tile h2{
-    color: #4a75c7;
+.card .image::after{
+    content: "";
     position: absolute;
-    margin-left: 20px;
-    background-color: white;
-    padding: 20px;
-    font-family: 'Montserrat', sans-serif;
-	font-size: 2em;
-	text-decoration: none;
-}
+    width: 98%;
+    height: calc(100% - 175px);
+    top: 0.25%;
+    left: 0%;
+    z-index: -1;
+    border-radius: 15px;
+    background: inherit;
+    filter: blur(6px);
+    opacity: 1;
+    box-shadow: 0 -4px 1px #a1a1a1;    
+  }
 
-
-.tile h2::after{
-    content:"Learn More ➜";
-    font-size: .75em;
-    font-family: 'Questrial', sans-serif;
-
-    background: -webkit- linear-gradient(#4a75c7, #b260bb);
-	background: linear-gradient(#4a75c7, #b260bb);
-	-webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  	color: #b260bb;
-}
-
-.soon{
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
-}
-
-.soon h2::after{
-    content:"Coming Soon" !important;
-}
-
-
-.tile img{
-    height: 300px; 
-    width: auto;
+.card .overline{
+    margin: 12px 0px 0px 0px;
+    font-size: .85em;
+    display: flex;
+    flex-direction: row;
+    height: 2em;
+    flex-wrap: wrap;
+    white-space: nowrap;
     overflow: hidden;
 }
+
+.card .overline .cat{
+    margin: 0 4px 4px 4px;
+    padding: 1px 8px;
+  
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+
+.card .overline .cat.des{
+    background: linear-gradient(to top, #4a76c736 50%, transparent 50%);
+}
+.card .overline .cat.dev{
+    background: linear-gradient(to top,   #b260bb36 50%, transparent 50%);
+}
+.card .overline .cat.res{
+    background: linear-gradient(to top,  #4ac7a136 50%, transparent 50%);
+}
+.card .overline .cat.tool{
+    background: linear-gradient(to top,  #c70f0f36 50%, transparent 50%);
+}
+
+
+
+
+
+  .card h4{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    line-height: 1.2em;
+    max-height: 2.3em;
+    overflow: hidden;
+    display: -webkit-box;
+  
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2
+  }
+
+  .card .body{
+    width: 100%; 
+    font-family: 'Nunito Sans', sans-serif;
+    line-height: 1.2em;
+    color: gray;
+    height: 3.5em;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3
+  }
+
+  #skillsList{
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -8px;
+      margin-top: 16px;
+  }
+
+  #skillsList a{
+    width: auto !important;
+    margin: 0 8px !important;
+    font-size: 1.3em;
+    font-family: 'Nunito Sans', sans-serif !important;
+    color: #a1a1a1 !important;
+    cursor: pointer;
+
+    transition: color .3s, transform .3s;
+    -webkit-transition: color .3s, transform .3s;
+    -moz-transition: color .3s, transform .3s;
+    -o-transition: color  .3s, transform .3s;
+  }
+
+  #skillsList .des:hover{
+    color: #4a75c7 !important;
+}
+#skillsList .dev:hover{
+  color: #b260bb !important;
+}
+#skillsList .res:hover{
+  color: #4ac7a1 !important;
+}
+#skillsList .tool:hover{
+  color: #c70f0f !important;
+}
+
+
+
+
+  #skills ul{
+      padding: 0;
+      max-width: 600px;
+  }
+
+  #skills ul li {
+    display: inline;
+    text-align: center;
+  }
+  
+  #skills a {
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Nunito Sans', sans-serif;
+    width: 18.5%;
+    padding: .5rem 0;
+    margin: 0;
+    text-decoration: none;
+    color: #333;
+  }
+  #skills .all.active ~ hr {
+    margin-left: 0%;
+    background: black;
+  }
+
+  #skills .des.active ~ hr {
+    margin-left: 18.25%;
+    background: #4a75c7;
+  }
+
+  #skills .dev.active ~ hr {
+    margin-left: calc(18.5% * 2);
+    background: #b260bb;
+  }
+
+  #skills .res.active ~ hr {
+    margin-left: calc(18.5% * 3);
+    background: #4ac7a1;
+  }
+
+  #skills .tool.active ~ hr {
+    margin-left: calc(18.5% * 4);
+    background:  #c70f0f;
+  }
+
+  #skills .all:hover ~ hr{
+    margin-left: 0%;
+    background: black;
+  }
+
+  #skills .des:hover ~ hr {
+    margin-left: 18.5%;
+    background: #4a75c7;
+  }
+  
+  #skills .dev:hover ~ hr {
+    margin-left: calc(18.5% * 2);
+    background: #b260bb;
+  }
+  
+  #skills .res:hover ~ hr {
+    margin-left: calc(18.5% * 3);
+    background: #4ac7a1;
+  }
+  
+  #skills .tool:hover ~ hr {
+    margin-left: calc(18.5% * 4);
+    background:  #c70f0f;
+  }
+  
+  #skills hr {
+    height: .25rem;
+    width: 18.5%;
+    margin: 0;
+    border: none;
+    transition: .3s ease-in-out;
+  }
+
+
+
+
+
+
 
 
 
@@ -203,100 +439,70 @@ a {
   
 }
 
-#contactContainer{
-    
+#contactContainer{  
     width: 100%;
-    
 }
 
-#contactBgDiv{
-    padding: 20px 20px 60px 20px;
-    background-color: #cc1c85;
+#contactContainer p{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: gray;
 }
 
-
-
-.contactPreLinkDiv{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+#contactBubbles{
+    margin-top: 24px;
 }
 
-.contactPreLink{
-    color: white;
-    font-family: 'Questrial', sans-serif;
-    font-size: 1.5em;
-    width: 300px;
-    
-}
-
-.contactResume{
-    background-color: white;
+.contactBubble{
+    text-decoration: none;
     text-align: center;
-    border-radius: 20px;
-    padding: 10px;
-    align-self: flex-start;
-}
-
-.contactResume a{
-    text-decoration: none;
-    color:   #b260bb;
-    font-family: "Questrial", sans-serif;
-    font-weight: 700;
     cursor: pointer;
-}
-
-.contactResume a:hover{
+    width: 48px;
+    height: 48px;
+    padding: 12px;
+    background-color: #efefef;
+    border-radius: 50%;
     text-decoration: none;
-    color:  #b260bb;
-    cursor: pointer;
+    margin: 0 4px;
+    
+    transition: transform .3s;
+    -webkit-transition: transform .3s;
+	-moz-transition: transform .3s;
+	-o-transition: transform .3s;
+    
+
 }
 
-.contactBorder{
-    height: 10px;
-    width: 40px;
-    border-top: 2px solid white;
-}
-
-#contactLinks{
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    margin-left: 20px;
+.contactBubble:nth-child(1){
+    margin-left: 0px;
 }
 
 .contactLink{
     text-decoration: none;
-    text-align: center;
-    fill:  #cc1c85;
-    align-self: center;
-    width: 92px;
-    height: 92px;
-    padding: 25px;
-    background-color: white;
-    border-radius: 50%;
-    text-decoration: none;
-    margin-top: -30px;
-    margin-right: 20px;
-    box-shadow: 5px 10px #efefef;
-    
-    transition: margin-top .3s;
-    -webkit-transition: margin-top .3s;
-	-moz-transition: margin-top .3s;
-	-o-transition:margin-top  .3s;
+    fill: #6b6b6b;
 
+    transition: fill .3s;
+    -webkit-transition: fill .3s;
+	-moz-transition: fill .3s;
+	-o-transition: fill .3s;
 }
 
-#contactLinks a{
-    text-decoration: none;
-    color: #cc1c85;
+.contactBubble:hover{
+    transform: scale(1.1)
 }
 
-#contactLinks .contactLink:hover {
+.contactBubble:hover .contactLink{
     text-decoration: none;
-    color: #cc1c85;
-    margin-top: -50px;
-    cursor: pointer;
+    fill: #cc1c85;
+}
+
+.contactBubble:nth-child(2):hover .contactLink{
+    text-decoration: none;
+    fill: #b260bb;
+}
+
+.contactBubble:nth-child(3):hover .contactLink{
+    text-decoration: none;
+    fill: #4a75c7;
 }
 
 
@@ -313,7 +519,7 @@ a {
 }
 
 .footer{
-    font-family: 'Questrial', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
 	font-size: .8em;
 	font-style: normal;
 	font-variant: normal;
@@ -387,28 +593,53 @@ a {
 		background-size: 100%;
 		background-color: #f2f2f2;
 		overflow-x: hidden !important;
-	}
+    }
+
 
     #wordChange{
-        font-size: 5em;
+        font-size: 4.5em;
     }
 
     .intro{
         height: 100vh;
         min-height: 550px;
+        width: 90%;
     }
 
-    .intro h3{
-        text-align: center;
-        line-height: 25px;
+    .intro h1{
+        width: 20vw;
+        min-width: 355px;
+    }
+
+    .main-container{
+        width: 90%;
     }
     
-    #waveImg{
-        margin-top: 10vh;
+
+    #cardGrid{
+        display: grid; grid-gap: 16px;
+        grid-template-columns: repeat(8,1fr);
+        grid-auto-rows: auto;
     }
+
+    .card{
+        grid-column-start: span 4 !important;
+        grid-row-end: span 3 !important;
+    }
+    .card:nth-child(1){
+        grid-row-end: span 4 !important;
+    }
+   
+
+
 
     #aboutDiv{
         flex-direction: column;
+    }
+
+    #aboutText{
+        margin-top: 16px;
+        padding-left: 0;
     }
 
     #aboutPic{
@@ -419,38 +650,7 @@ a {
         align-self: center;
     }
 
-    #portfolioHead{
-        font-size: 3em;
-    }
-
-    .tile{
     
-        width: 100%;
-        height: 175px;
-        align-self: flex-start;
-        overflow: hidden;
-        margin: 20px 0;
-        -webkit-filter: none; /* Safari 6.0 - 9.0 */
-        filter: none;
-        
-    }
-
-    .tile h2{
-        align-self: center;
-        margin: 7.5px 0 0 7.5px;
-        box-shadow: 6px 6px lightgray;
-    }
-
-    .tile img{
-        height: auto;
-        width: 768px;
-        max-width: 768px;
-        object-fit: cover;
-        object-position: 90px -120px;
-        
-    }
-    
-    .tile:hover{}
 
     #bottomDiv{
         padding: 0 20px;
@@ -471,7 +671,9 @@ a {
 		background-size: 100%;
 		background-color: #f2f2f2;
 		overflow-x: hidden !important;
-	}
+    }
+    
+
     
     #wordChange{
         font-size: 3em;
@@ -480,17 +682,32 @@ a {
     .intro{
         height: 100vh;
         min-height: 500px;
+        width: 90%;
     }
 
-    #contactLinks{
-        margin-left: 10px;
+    .intro h1{
+        font-size: 2em;
+        width: 80vw;
+        min-width: auto;
     }
 
-    .contactLink{
-        width: 75px;
-        height: 75px;
-        padding: 15px;
+    #cardGrid{
+        display: grid; grid-gap: 16px;
+        grid-template-columns: repeat(4,1fr);
+        grid-auto-rows: auto;
     }
 
+    .card{
+        grid-column-start: span 2 !important;
+        grid-row-end: span 3 !important;
+    }
+    .card:nth-child(1){
+        grid-column-start: span 4 !important;
+        grid-row-end: span 4 !important;
+    }
+    .card:nth-child(6){
+        grid-column-start: span 4 !important;
+        grid-row-end: span 4 !important;
+    }
 	
 }

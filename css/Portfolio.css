@@ -12,7 +12,7 @@ nav{
     background-color: white;
     top: 0;
     position: fixed;
-    font-family: 'Questrial', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
 	font-size: 1.25em;
     padding: 15px 5%;
     z-index: 10;
@@ -77,12 +77,13 @@ nav{
 
 .topInfo .head{
     flex-direction: column;
-    margin-right: 10vw;
+    margin-right: 5vw;
+    flex: 1
 }
 
 .topInfo .main-head{
     font-size: 4em;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: bold;
     width: auto;
     max-width: 400px;
@@ -90,9 +91,10 @@ nav{
 
 .topInfo .lists{
     display: flex;
+    justify-content: flex-end;
     flex-direction: row;
     align-content: flex-end;
-    flex: 1;
+    flex: 3;
     width: 100%;
 }
 
@@ -102,17 +104,18 @@ nav{
 }
 
 .lists p{
-    font-family: 'Questrial', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
     color: #aaaaaa;
 }
 
 .lists h6{
     color: #575757;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
 }
 
 .topInfo .sub-head{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
     color: #aaaaaa;
     font-size: 1.5em;
 }
@@ -130,42 +133,40 @@ nav{
     
 }
 
-blockquote{
+
+.quote{
     font-size: 2em !important;
-    padding-top: 25px !important;
     flex: 1;
-    color: #575757;
-    font-family: 'Questrial', sans-serif;
+    color: #aaaaaa;
+    font-family: 'Nunito Sans', sans-serif;
     position: relative;
     border-left: none !important;
-    box-shadow: 3px 3px 6px #aaaaaa;
     margin-right: 35px !important;
     margin-left: 25px !important;
     max-width: 350px;
     width: 350px;
-    top: -200px;
     background-color: white;
     z-index: 5;
     min-width: 300px;
 }
 
-blockquote:before{
+.quote:before{
     content: '"';
-    font-family: 'Questrial', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
     font-weight: 900;
-    opacity: 0.5;
-    top: -65px;
-    left: -10px;
-    transform: rotate(-15deg);
-    color: #b4b4b4;
+    top: -70px;
+    left: -25px;
+    transform: rotate(-25deg);
+    color: #d1d1d1;
     position: absolute;
-    font-size: 5em;
+    font-size: 4em;
     z-index: -5;
     margin-top: auto;
 }
 
-.postHeroImage p{
-    font-family: 'Questrial', sans-serif;
+
+.postHeroImage span p{
+    font-family: 'Nunito Sans', sans-serif;
     max-width: 600px;
     font-size: 1.25em;
     flex: 1;
@@ -211,14 +212,19 @@ blockquote:before{
 }
 
 .text .subHead{
-    font-family: 'Questrial', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
     padding-bottom: 10px;
     border-bottom: 2px solid;
     font-weight: 500;
 }
 
 .text p{
-    font-family: 'Questrial', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.25em;
+}
+
+.text ul li{
+    font-family: 'Nunito Sans', sans-serif;
     font-size: 1.25em;
 }
 
@@ -242,7 +248,7 @@ blockquote:before{
 }
 
 .footer{
-    font-family: 'Questrial', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
 	font-size: .8em;
 	font-style: normal;
 	font-variant: normal;
@@ -320,22 +326,23 @@ blockquote:before{
 
     .postHeroImage{
         display: block;
+        margin-top: 4vh;
     }
 
-    blockquote{
+    .quote{
         max-width: none;
         width: 90%;
         position: relative;
         font-size: 1.5em !important;
         margin-left: 5% !important;
         top: 0;
-        margin-top: -120px !important;
+        /* margin-top: -120px !important; */
         margin-bottom: 30px !important;
     }
 
-    blockquote::before{
-        top: -40px;
-        left: 5px;
+    .quote::before{
+        top: -55px;
+        left: -20px;
     }
     
 
@@ -382,16 +389,16 @@ blockquote:before{
         margin-bottom: 0;
     }
 
-    blockquote{
+    .quote{
         font-size: 1.25em !important;
         min-width: none;
         width: 80vw;
         min-width: auto;
     }
 
-    blockquote::before{
-        top: -35px;
-        left: 0px;
+    .quote::before{
+        top: -45px;
+        left: -15px;
     }
 
     .postHeroImage span p{
@@ -412,6 +419,10 @@ blockquote:before{
     }
 
     .text p{
+        font-size: 16px;
+    }
+
+    .text ul li{
         font-size: 16px;
     }
 

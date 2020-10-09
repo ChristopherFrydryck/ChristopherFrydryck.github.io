@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <title>Christopher Frydryck</title>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="Christopher Frydryck" name="author">
+  <meta content="Welcome to my portfolio. Kick back, relax and enjoy." name="description">
+  <meta content="Christopher Frydryck, Frydryck, Photography, Portfolio, Human Intrusion" name="keywords">
+  <meta content="index, follow" name="robots">
+  <!-- Linking CSS -->
+  <!-- Style for homepage -->
+  <link href="../css/Portfolio.css" rel="stylesheet" type="text/css">
+  <!-- <link href="./css/nav.css" rel="stylesheet" type="text/css"> -->
+  <!-- Style for hover animation -->
+  <link href="../css/hover.css" rel="stylesheet" type="text/css">
+  <!-- Style for Bootstrap -->
+  <link href="../css/bootstrap/bootstrap.css" rel="stylesheet" type="text/css">
+  <!-- Linking JS -->
+  <!-- Linking Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;1,200;1,300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet">
+  <script src="https://use.fontawesome.com/17f20be63e.js"></script>
+</head>
+<body id='top'>
+  <nav>
+      <a href="#top" class="name">Christopher Frydryck</a>
+      <a href="../index.html" class="back">< Back</a>
+  </nav>
+  
+  <div id="intro">
+      <div class="flexCont">
+
+  <div class="topInfo">
+    <div class="head">
+      <h1 class="main-head" style="color: #ffa600; 	background: -webkit- linear-gradient(#6b2b59, #af4591);
+      background: linear-gradient(#d88c00, #ffa600); 	-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;">Freedom Transit</h1>
+      <h3 class="sub-head">A live tracking system for <br>commuters.</h3>
+    </div>
+    <div class="lists">
+      <span class="list">
+        <p>Roles</p>
+        <h6>UI/UX, Project Mgmt, Front-end Dev </h6>
+      </span>
+      <span class="list">
+          <p>Duration</p>
+          <h6>Feb. 2018 - May 2018</h6>
+        </span>
+      <span class="list">
+          <p>Tools</p>
+          <h6>Adobe XD, HTML, CSS, JS, Java, Firebase</h6>
+        </span>
+    </div>
+  </div>
+  <image class="heroImg" src="../img/FT-backgroundTile.jpg" alt="A map view of where the bus is on the map"></image>
+  <div class="postHeroImage">
+    <p class="quote">The biggest problem users face is if their bus is early or late, they will never know until they catch the next bus and arrive late to their 
+        destination.</p>
+    <span>
+        <p>Freedom Transit approached myself and two of my peers to design and develop a live bus tracker for our senior capstone project. We had under three months to 
+          design, test and develop both a web app and a native Android app and ship it out. Long nights and 23 highly caffenated espressos later, we had a final
+          capstone completed and spent none of our $10,000 budget.
+        </p>
+        <p>Going into the project, we were graciously handed a 30+ page packet of their recent research they conducted on their current riders. From demographic
+          information to route rider count, we were very pleased to have this data that was recently conducted one month prior to our involvement. 
+        </p>
+    </span>
+  </div>
+  </div>
+</div>
+<div class="contentDiv" style="background-color: #ffa600;">
+  <div class="mainCont">
+    <div class="flexCont">
+      <h2 style="color: #d47c18;">Defining <br>The User.</h2>
+      <div class="text">
+        <h3 style="color: #d47c18;" class="subHead">Even though we had a large packet of research, that wasn't enough...</h3>
+        <p>It isn't uncommon to stumble upon a multiple user market. Sure, there is a primary user in mind, but others also take up a portion 
+          of the usership. One key demographic was international students, however our primary focus was their loyal riders.
+        </p>
+        <p>Freedom Transit is the top transit authority in Washington, PA. It is no surpsie that apart from nine-to-five workers, students 
+          without vehicles are the next largest demographic, since Washington & Jefferson College is at the epicenter of the city.  With limited 
+          college shuttles and foreign students staying on campus during holiday break, their best escape is taking the shuttle to the downtown Pittsburgh
+          area.
+        </p>
+      </div>
+    </div> 
+    </div>
+    <div class="mediaCont" style="margin: 0 auto; width: 100vw; display: flex; justify-content: center;">
+          <div class="mediaCont" style="margin: 0 auto; width: 100vw; display: flex; justify-content: center;">
+              <img src="../img/FT-userpersona.jpg" alt="A user persona I constructed from our research"></img>
+          </div>
+    </div>
+ </div>
+ <div class="contentDiv" style="background-color:white">
+    <div class="mainCont">
+      <div class="flexCont">
+        <h2 style="color: rgb(194, 194, 194)">The<br>Problem.</h2>
+        <div class="text">
+          <h3 style="color: #aaaaaa" class="subHead">Imagine Queueing Theory, but like, forever...</h3>
+          <p>Picture this: you are going through your morning routine. You think to yourself, wake up, shower, change, eat breakfast and get out the door. 
+            But once you get up and get in the shower, your water doesn't turn on, and you can't leave your shower until the water turns back on.  That 
+            is the frustration their riders are facing daily. They have a routine they like to go through only to have something entirely out of 
+            their control mess up their entire routine. 
+          </p>
+          <p>We are creatures of habit. We like to eat the same breakfast, get out the door by a certain time and walk that same path to work each day. 
+            When something impedes our ability to perform our daily practices, we get frustrated. Sadly, the answer to this isn't "become more flexible." 
+            Instead, we should ask ourselves "how might we make people's daily variables more predictable?" We knew now what our problem was.  
+          </p>
+          <p>From here, we devised a mental model of how we might do this. We would need two apps. One web app that is user facing, and one native app on 
+            the tablets on the busses that pings its GPS coordinates every three to five seconds.  Then, our web app would gather this data and display it 
+            in the UI.  
+            </p>
+        </div>
+      </div> 
+      </div>
+      <div class="mediaCont" style="margin: 0 auto; width: 100vw; display: flex; justify-content: center;">
+          <img src="../img/FT-softwarestack.png" alt="We used javascript, Java and Firebase for this project"></img>
+      </div>
+   </div>
+   <div class="contentDiv" style="background-color: rgb(63, 63, 63)">
+      <div class="mainCont">
+        <div class="flexCont">
+          <h2 style="color: #7f7b7d">Paper<br>Prototype.</h2>
+          <div class="text">
+            <h3 style="color: #7f7b7d" class="subHead">Who said flat design goes out of style?</h3>
+            <p style="color: white;">All kidding aside, we had brainstormed, researched live trackers, devised a mental model and wanted to create a lo-fi 
+              paper prototype.  We designed it knowing our constraints and user's low tech savvyness. </p>
+              <p style="color: white;">After synthesizing our findings and clustering them, we found where our opportunities are and we aligned it with our 
+              skillset. I focused heavily on the design (HTML & CSS) as well as programming the tablets in Java, while my teammate put together the logic 
+              of the bus routes using Firebase, Google Maps and GIS data we had collected on the bus routes.
+            </p>
+          </div>
+        </div> 
+        </div>
+        <!-- <div class="mediaCont" style="margin: 0 auto; width: 100vw; display: flex; justify-content: center;">
+            <img src="img/FT-softwarestack.png"></img>
+        </div> -->
+     </div>
+     <div class="contentDiv" style="background-color:white">
+        <div class="mainCont">
+          <div class="flexCont">
+            <h2 style="color: rgb(194, 194, 194)">Closer To<br>The End.</h2>
+            <div class="text">
+              <h3 style="color: #aaaaaa" class="subHead">Don't panic. Don't panic. Don't panic.</h3>
+              <p>At this point, my fellow teammate and I got to business with the final product. I first took the results from 
+                our paper prototyping session and constructed a rough design in Adobe XD. The overall goal of this was to help 
+                align my design with my code. While the designs I put together were not pretty, we had to ensure that it 
+                had large touch targets for older users, met the current design of Freedom Transit's website and was 
+                able to be completed in a few weeks.
+              </p>
+              <p>While I began the design session and also the Java app that ran on the bus tablets, my teammate began hooking
+                up the web app to Firebase and setting up Google Maps API to showcase the routes using GIS data we had collected
+                for Freedom Transit.  This task was daunting for the two of us, but we found that coffee and
+                fresh air did the trick to keep us sane.
+              </p>
+            </div>
+          </div> 
+          </div>
+          <div class="mediaCont" style="margin: 0 auto; width: 100vw; display: flex; justify-content: center;">
+              <img src="../img/FreedomMockup.JPG" alt="Early stage high-fidelity designs we tested with users"></img>
+          </div>
+        </div>
+        <div class="contentDiv" style="background-color: #ffa600;">
+            <div class="mainCont">
+              <div class="flexCont">
+                <h2 style="color: #d47c18;">The<br>Handoff.</h2>
+                <div class="text">
+                  <h3 style="color: #d47c18;" class="subHead">Let's future proof this thing!</h3>
+                  <p>Before we delivered the final product, we knew we had one final step: documentation. We know, this isn't the most exciting work,
+                    but it is important nonetheless. 
+                  </p>
+                  <p>Together we crafted several documents including a budget breakdown, installation guide for new tablets, adding a new route guide 
+                    and other artifacts along the way from our risk analysis to early designs. Handing off the project smoothly is something 
+                    even large design and development firms have issues with. We wanted to ensure that when we graduated, their lead developer 
+                    could take over without needing to call us at a moment's notice. You can view our entire project report <a style="color: #d47c18;; text-decoration: underline;" href="artifacts/Freedom_ProjectReport.pdf" target="_blank">here</a>.
+                  </p>
+                </div>
+              </div> 
+              </div>
+              <div class="mediaCont" style="margin: 0 auto; width: 100vw; display: flex; justify-content: center;">
+                    <div class="mediaCont" style="margin: 0 auto; width: 100vw; display: flex; justify-content: center;">
+                        <img src="../img/FT-guide.jpg" alt="A photo of our 'Adding A Route Guide' we handed off to Freedom Transit"></img>
+                    </div>
+              </div>
+           </div> 
+           <div class="contentDiv" style="background-color:white">
+              <div class="mainCont">
+                <div class="flexCont">
+                  <h2 style="color: rgb(194, 194, 194)">And<br> Voila!</h2>
+                  <div class="text">
+                    <h3 style="color: #aaaaaa" class="subHead">We did it!</h3>
+                    <p>After our final presentation in front of a panel of professors at the college, we were excited to hear we 
+                      passed with flying colors. Afterwards we had a short retrospective on our journey and how much we accomplished 
+                      in such a short time.
+                    </p>
+                    <p>I'm very glad to have taken on the most technical capstone project offered during my final semester at Washington 
+                      & Jefferson College. It truly paid off in the end because it further reassured that I love both UX and coding, 
+                      and I should use both of those skills to continue making stuff of my own. But for now, here is a quick demo video of our 
+                      final product: 
+                    </p>
+                  </div>
+                </div> 
+                </div>
+                <div class="mediaCont" style="margin: 0 auto; width: 100vw; display: flex; justify-content: center;">
+                    <video aria-label="A video demo of our final prototype" no-controls autoPlay loop>
+                        <source src="../img/FT-FinalDemo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                </div>
+              </div>
+       <div id="bottomDiv">
+          <p class="footer">Copyright <script type="text/javascript">document.write(new Date().getFullYear());</script> &copy; All Rights Reserved.</p>
+          <div style="display: flex; flex-direction: row;"><p class="footer">This website was written by hand with love from Christopher<span class="floatAnimate">❤️</span></p></div>
+        </div>
+  
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+  </script> 
+  <script src="../js/bootstrap.min.js">
+  </script>
+
+  
+</body>
+<script>
+
+  $(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+
+ $('.list').each(function(i) {
+    $(this).delay(300*(i+1)).fadeTo(600, 1); //Uses the each methods index+1 to create a multiplier on the delay
+});
+
+$(window).scroll(function(){
+  $('.contentDiv').each(function(){
+    var bottomOfDiv = $(this).offset().top + $(this).outerHeight();
+    var bottomWindow = $(window).scrollTop() + $(window).height();
+    if(bottomWindow > bottomOfDiv - $(window).height()){
+      $(this).fadeTo(300, 1);
+    }
+  })
+})
+   
+});
+</script>
+<script>
+      console.log("%c Hey you!", "font-size: 2em; color: red; font-family: 'Montserrat', sans-serif; font-weight: 700; width: 100%;");
+      console.log("%c Yeah, I am talking to you!", "font-size: 1.25em; color: red; font-family: 'Montserrat', sans-serif; font-weight: 700; text-decoration: underline; width: 100%;");
+      console.log("%c Seeing you made it here, I am guessing you are either", "font-size: 1.25em; color: #333333; font-family: 'Questrial', sans-serif;");
+      console.log("%c 1.) A developer that stumbled upon my website", "font-size: 1.25em; color: #333333; font-family: 'Questrial', sans-serif;");
+      console.log("%c 2.) A recruiter or HR looking to hire me", "font-size: 1.25em; color: #333333; font-family: 'Questrial', sans-serif;");
+      console.log("%c 3.) A master of finding easter eggs", "font-size: 1.25em; color: #333333; font-family: 'Questrial', sans-serif;");
+      console.log("%c 4.) All of the above", "font-size: 1.25em; color: #333333; font-family: 'Questrial', sans-serif;");
+      console.log('');
+      console.log("%c Anyways, thanks for finding my easter egg! I'm always looking for work and side projects.  Email me at cfrydryck@gmail.com and tell me you found my easter egg :).", "font-size: 1.25em; color: #333333; font-family: 'Questrial', sans-serif;");
+
+  </script>
+
+</html>
+  
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+  </script> 
+  <script src="js/bootstrap.min.js">
+  </script> 
+
+  
+</body>
+<script>
+  var vid = document.getElementById('video-FT');
+  
+
+  $('.iphoneTemplate').click(function(){
+    if(vid.paused == true){
+      vid.play();
+    }else{
+      vid.pause();
+    }
+  });
+
+  $('.iphoneTemplate').hover(function(event){
+    if(event.type === "mouseenter") {
+        $(vid).attr("controls", "");
+    } else if(event.type === "mouseleave") {
+        $(vid).removeAttr("controls");
+    }
+  });
+
+  $(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+
+</html>

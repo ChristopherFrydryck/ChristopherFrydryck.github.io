@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <title>Christopher Frydryck</title>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="Christopher Frydryck" name="author">
+  <meta content="Welcome to my portfolio. Kick back, relax and enjoy." name="description">
+  <meta content="Christopher Frydryck, Frydryck, Photography, Portfolio, Human Intrusion" name="keywords">
+  <meta content="index, follow" name="robots">
+  <!-- Linking CSS -->
+  <!-- Style for homepage -->
+  <link href="../css/Portfolio.css" rel="stylesheet" type="text/css">
+  <!-- <link href="./css/nav.css" rel="stylesheet" type="text/css"> -->
+  <!-- Style for hover animation -->
+  <link href="../css/hover.css" rel="stylesheet" type="text/css">
+  <!-- Style for Bootstrap -->
+  <link href="../css/bootstrap/bootstrap.css" rel="stylesheet" type="text/css">
+  <!-- Linking JS -->
+  <!-- Linking Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;1,200;1,300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet">
+  <script src="https://use.fontawesome.com/17f20be63e.js"></script>
+</head>
+<body id='top'>
+  <nav>
+      <a href="#top" class="name">Christopher Frydryck</a>
+      <a href="../index.html" class="back">< Back</a>
+  </nav>
+  
+  <div id="intro">
+      <div class="flexCont">
+
+  <div class="topInfo">
+    <div class="head">
+      <h1 class="main-head" style="color: #41B768; 	background: -webkit- linear-gradient(#378852, #41B768);
+      background: linear-gradient(#378852, #41B768); 	-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;">Gloo Design System</h1>
+      <h3 class="sub-head">Built for data.</h3>
+    </div>
+    <div class="lists">
+      <span class="list">
+        <p>Roles</p>
+        <h6>UI/UX, Interaction Design, Researcher</h6>
+      </span>
+      <span class="list">
+          <p>Duration</p>
+          <h6>Apr. 2020 - Sept. 2020</h6>
+        </span>
+      <span class="list">
+          <p>Tools</p>
+          <h6>Sketch, React.js, Abstract</h6>
+        </span>
+    </div>
+  </div>
+  <image class="heroImg" src="../img/Gloo-DS-Snackbar-Anatomy.png" alt="The final product."></image>
+  <div class="postHeroImage">
+    <p class="quote">Early on, we need to drive consistency over flexibility and improve new features as we go.</p>
+    <span>
+        <p>Gloo Design System is an unnamed project at Gloo to help drive context and consistency 
+          across all of our products.  Building a design system is a very deliberate process that I 
+          have had experience in the past with <a href="/pages/OrchidDS.html" style="color:#41B768" target="_blank">Orchid</a>, and took a deeper leadership role in the 
+          decision making process that was to build Gloo Design System.  As of late September 2020, 
+          the project has been on hold during a corporate restructure, and should resume in the near future.
+        </p>
+        <strong>To view an example PDF of our documentation, <a href="../img/Gloo-DS-Documentation.pdf" style="color:#41B768" target="_blank">click here</a>.</strong>
+    </span>
+  </div>
+  </div>
+</div>
+<div class="contentDiv" style="background-color: #cbecd6">
+  <div class="mainCont">
+    <div class="flexCont">
+      <h2 style="color: #41B768">Let's Design...<br> Snacks?</h2>
+      <div class="text">
+        <h3 style="color: #3b744e;" class="subHead">We decided to test a build on Snackbars, so I hope you aren't hungry!</h3>
+        <p>Throughout the process of this writeup, I am going to cover the 
+          build process of our snackbar and uncover from the inception of the project to the build of the Snackbar 
+          the decisions we made to get to this point.  Building the snackbar component was a part of our second proof 
+          of concept before jumping into our component backlog.</p>
+      </div>
+    </div> 
+    </div>
+    <div class="mediaCont" style="margin: 0 auto; width: 100vw; display: flex; justify-content: center;">
+          <div class="mediaCont" style="margin: 0 auto; width: 100vw; max-width: 800px; display: flex; justify-content: center;">
+              <img src="../img/Snackbar-Timeout.gif" alt="Snackbar animation example"></img>
+          </div>
+    </div>
+ </div>
+ <div class="contentDiv" style="background-color:white">
+    <div class="mainCont">
+      <div class="flexCont">
+        <h2 style="color: rgb(194, 194, 194)">So Many Products</h2>
+        <div class="text">
+          <h3 style="color: #aaaaaa" class="subHead">Designing for 8+ products is rough!</h3>
+          <p>Contrary to what my portfolio may show, I don’t believe every company needs a design system. In fact it has 
+            somewhat lost the grandeur of a design system once companies that are notoriously not design forward began 
+            appropriating the word as a way to build a component library.  However, at Gloo this was not the case.
+          </p>
+          <p>At Gloo, there was approximately 8+ products upon joining the team, and the only central alignment of components, 
+            primitives and other design decisions were all hosted in a style sheet that was well organized, but lacked anything 
+            outside of being a central host of design decisions that may or may not have had reasoning behind the assets provided 
+            to designers.  Designers ultimately pulled designs from other products and eventually each product became a patchwork 
+            of other products with a lack of UX research behind the design of each component.
+          </p>
+          <p>I was hired by leadership to bring to the design team a well organized design system that carries over to the engineering 
+            team as a tool that will eventually be public facing for third-party designers and engineers.</p>
+        </div>
+      </div> 
+      </div>
+      <!-- <div class="mediaCont" style="margin: 0 auto; width: 100vw; display: flex; justify-content: center;">
+          <img src="../img/old-provider-search.png" alt="An older version of UPMC Provider Search."></img>
+      </div> -->
+   </div>
+   <div class="contentDiv" style="background-color: rgb(63, 63, 63)">
+      <div class="mainCont">
+        <div class="flexCont">
+          <h2 style="color: #7f7b7d">Taking the Lead</h2>
+          <div class="text">
+            <h3 style="color: #7f7b7d" class="subHead">I joined leadership to help jump start the project from idea to reality.</h3>
+            <p style="color: white;">I worked closely with leadership to take on some early project management and lead our efforts in 
+              the right direction. This began with identifying who will be involved, if they are internal or external to the project, 
+              how critical they are to the early process and what role they will play.  This process helped us streamline meetings and 
+              know who needs to be involved where in the process.</p>
+          </div>
+        </div> 
+        </div>
+        <div class="mediaCont" style="margin: 0 auto; width: 100vw; display: flex; justify-content: center;">
+            <img src="../img/Gloo-DS-Stakeholders.png"></img>
+        </div>
+     </div>
+     <div class="contentDiv" style="background-color:white">
+        <div class="mainCont">
+          <div class="flexCont">
+            <h2 style="color: rgb(194, 194, 194)">The Who's Who</h2>
+            <div class="text">
+              <h3 style="color: #aaaaaa" class="subHead">We need to understand our users, even when it is more of an internal tool than any other external product.</h3>
+              <p>
+                In the design ops space, designs for your fellow co-designers and engineers is really engaging, fun and easy to get 
+                feedback.  We want to create an experience and product that empowers our designers to focus on deeper problems than 
+                “what color should I use” and help improve the speed and consistency of our code with the help of Gloo’s engineers.
+              </p>
+              <p>We broke our users down to four groups with five disciplines. All of these can be interchangeable as both a group 
+                and discipline. Our groups were:</p>
+                <ul>
+                  <li><strong>Leader</strong>: someone who steers the design system in the right direction</li>
+                  <li><strong>System team</strong>: builders of our design system</li>
+                  <li><strong>Contributor</strong>: outside of the design team, but contributors to the system</li>
+                  <li><strong>Adopter</strong>: a direct consumer of the design system
+                  </li>
+                </ul>
+                <p>On top of this, we also feature disciplines inside of these groups, where someone’s traditional role takes place. These include:</p>
+                <ul>
+                  <li>Engineer</li>
+                  <li>Designer</li>
+                  <li>Content Writer</li>
+                  <li>Researcher</li>
+                  <li>QA</li>
+                </ul>
+                <p>All of these roles can play hand-in-hand with our groups. For instance, you can have an engineer that is a member of the system team, 
+                  a designer that is an adopter and a content writer that is a contributor. All of these users have different motives to using the design 
+                  system, and some may be more involved in our decision making than others, but it is important to understand the “who” just as much as 
+                  the “why” in this case.</p>
+            </div>
+          </div> 
+          </div>
+          <!-- <div class="mediaCont" style="margin: 0 auto; width: 100vw; display: flex; justify-content: center;">
+              <img src="../img/UPMC-Provider-Search-Flows.png" alt="Flow diagram of user in specific scenario."></img>
+          </div> -->
+        </div>
+        <div class="contentDiv" style="background-color: #cbecd6;">
+            <div class="mainCont">
+              <div class="flexCont">
+                <h2 style="color: #41B768;">Auditing Every <br/>Product</h2>
+                <div class="text">
+                  <h3 style="color: #3b744e;" class="subHead">Auditing products isn't fun, but is much needed.</h3>
+                  <p>Now came the (not so) fun part.  In order to know what we need to accomplish an expansive design system, we need to know what 
+                    products are using.  In this case, I performed an audit through our abstract libraries of each product and got the team engaged on 
+                    joining to help catalog all our components and their usage throughout our platform. The process took approximately a week, and together 
+                    helped identify not only our commonly used components, but also what gaps we are facing for certain use cases.
+                  </p>
+                </div>
+              </div> 
+              </div>
+              <div class="mediaCont" style="margin: 0 auto; width: 100vw; display: flex; justify-content: center;">
+                    <div class="mediaCont" style="margin: 0 auto; width: 100vw; display: flex; justify-content: center;">
+                        <img src="../img/Gloo-DS-Audit.png" alt="A sketch file auditing our products."></img>
+                    </div>
+              </div>
+           </div> 
+           <div class="contentDiv" style="background-color:white">
+              <div class="mainCont">
+                <div class="flexCont">
+                  <h2 style="color: rgb(194, 194, 194)">Important, <br/>Difficult, <br/>or Both?</h2>
+                  <div class="text">
+                    <h3 style="color: #aaaaaa" class="subHead">The audit helped gather our toolbox, but this helped us bring the most important tools to the top.</h3>
+                    <p>Upon better understanding our users, I held a design thinking session with some users with an importance/difficulty matrix. Designers 
+                      helped define the importance of each component, and engineers collaboratively decided the difficulty to build each component from an existing 
+                      library of Material UI for React.  Once coming to a conclusion of each component, I met with the leader group to help vote for certain 
+                      components which should be increased or decreased in priority, and helped guide our next task.
+                    </p>
+                  </div>
+                </div> 
+                </div>
+                <div class="mediaCont" style="margin: 0 auto; width: 100vw; display: flex; justify-content: center;">
+                  <img src="../img/Gloo-DS-Importance-Difficulty.png" alt="A display of mulitple designs in different use cases."></img>
+                </div>
+              </div>
+              <div class="contentDiv" style="background-color: rgb(63, 63, 63)">
+                <div class="mainCont">
+                  <div class="flexCont">
+                    <h2 style="color: #7f7b7d">Improving the Process</h2>
+                    <div class="text">
+                      <h3 style="color: #7f7b7d" class="subHead">Streamlining our workflow can help designers and engineers on the team better make decisions synchronously.</h3>
+                      <p style="color: white;">Based on prior experience with Orchid, we tested many ways to improve the process of synchronizing design and engineering
+                         to one cohesive process. While it can’t be certain that every component will take similar amounts of time, we can do our best to assign timelines 
+                         to each step. This process took multiple iterations of our proof of concept testing, but finally we reached a place that was proven to work well 
+                         for designers and engineers alike.
+                      </p>
+                    </div>
+                  </div> 
+                  </div>
+                  <div class="mediaCont" style="margin: 0 auto; width: 80vw; display: flex; justify-content: center;">
+                      <img src="../img/Gloo-DS-Process.png" alt="Code for the demo pitched to stakeholders."></img>
+                      <!-- <iframe width="100%" height="300" src="//jsfiddle.net/ChrisFred96/n54cpwt0/embedded/result/?accentColor=af4591" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe> -->
+                    </div>
+               </div>
+               <div class="contentDiv" style="background-color:white">
+                <div class="mainCont">
+                  <div class="flexCont">
+                    <h2 style="color: rgb(194, 194, 194)">Priority by Dependency</h2>
+                    <div class="text">
+                      <h3 style="color: #aaaaaa" class="subHead">If a door requires a doorknob, shouldn't we design the doorknob first?</h3>
+                      <p>Once identifying each component’s importance and difficulty while also creating a flow for our build process, we needed one final step before 
+                        building. We needed to discover which components were dependent on others. Since a component like a data table may require buttons, checkboxes, links, 
+                        tooltips, etc, it is certainly not the best place to start.  By organizing our components by dependency, we can do our best to mitigate builds that 
+                        are too ahead of their child components in an atomized building process.
+                      </p>
+                    </div>
+                  </div> 
+                  </div>
+                  <div class="mediaCont" style="margin: 0 auto; width: 100vw; display: flex; justify-content: center;">
+                    <img src="../img/Gloo-DS-Dependencies.png" alt="System usability results from after pushing our new design."></img>
+                </div>
+                  <!-- <div class="mediaCont" style="margin: 0 auto; width: 100vw; display: flex; justify-content: center;">
+                      <video aria-label="A video demo of our final prototype" no-controls autoPlay loop>
+                          <source src="../img/FT-FinalDemo.mp4" type="video/mp4">
+                          Your browser does not support the video tag.
+                        </video>
+                  </div> -->
+                </div>
+                <div class="contentDiv" style="background-color: #cbecd6;">
+                  <div class="mainCont">
+                    <div class="flexCont">
+                      <h2 style="color: #41B768;">Early Design Process</h2>
+                      <div class="text">
+                        <h3 style="color: #3b744e;" class="subHead">Roast my design!</h3>
+                        <p>First starting with research, I would dig deep into both the material/material UI documentation and other design systems to identify both positive 
+                          and negative experiences in the design decisions made that would reflect in our products from the audit performed earlier. After collecting notes on 
+                          topics such as definition, principles, anatomy, themes, states, behavior, do’s and don’ts as well as an early property table for engineers, I would 
+                          go through a review session with a small group to assess questions, comments or concerns about the component.  
+                        </p>
+                        <p>
+                          Once this process was complete, I would begin the early design process on paper and bring the designs to Sketch.  In a design critique session, I 
+                          would get additional feedback and begin the Sketch build upon coming to some key design decisions with other designers and engineers.
+                        </p>
+                      </div>
+                    </div> 
+                    </div>
+
+                          <div class="mediaCont" style="margin: 0 auto; width: 100vw; display: flex; justify-content: center;">
+                              <img src="../img/Gloo-DS-Snackbar-Mocks.png" alt="A screenshot of the final verison of the handoff."></img>
+                              
+                              <!-- <iframe style="margin: 0 auto; width: 100vw; height: 80vh; display: flex; justify-content: center;" src="https://www.christopherfrydryck.cf/UPMC-ProviderSearch-Scroll/"></iframe> -->
+                            </div>
+
+                 </div> 
+                 <div class="contentDiv" style="background-color:white">
+                  <div class="mainCont">
+                    <div class="flexCont">
+                      <h2 style="color: rgb(194, 194, 194)">Sketch Build</h2>
+                      <div class="text">
+                        <h3 style="color: #aaaaaa" class="subHead">Overrides and states and primitives... Oh my!</h3>
+                        <p>From here, I begin building the component in Sketch to align with the feedback and critique I received from the design session.  This includes 
+                          Sketch overrides, color styles, states, etc. Using modern Sketch features like auto sizing and scaling, we can create a flexible component that 
+                          will never need to be detached and prevent further issues down the line for our products going out of sync with component updates.
+                        </p>
+                      </div>
+                    </div> 
+                    </div>
+                    <div class="mediaCont" style="margin: 0 auto; width: 100vw; display: flex; justify-content: center;">
+                      <video aria-label="A final demo of a complex table design I completed" no-controls autoPlay loop>
+                        <source src="../img/Gloo-DS-Snackbar-Stopmotion-Build.mov" alt="Stopmotion Build of the Snackbar." type="video/mp4">
+                            Your browser does not support the video tag.
+                      </video>
+                    </div>
+                 </div>
+                 <div class="contentDiv" style="background-color: rgb(63, 63, 63)">
+                    <div class="mainCont">
+                      <div class="flexCont">
+                        <h2 style="color: #7f7b7d">Design Handoff</h2>
+                        <div class="text">
+                          <h3 style="color: #7f7b7d" class="subHead">Designers who code together, stay together.</h3>
+                          <p style="color: white;">Once the build is complete and QA’d visually by the team, we begin the handoff. I will prepare a handoff 
+                            document with different states and CSS styles to assist in values that Abstract doesn’t support in our handoff. </p>
+                          <p style="color: white;">Since the component is done and approved by the design QA, it is time to get assets together and collect 
+                            early research once again to write the documentation. This can include do’s and don’ts, anatomy, principles, definitions, animation, 
+                            the API and storybook link.  This is the rulebook for the component to guide our design team if they have questions. We used ReadMe 
+                            as a tool to build early documentation and avoid putting too many resources to a custom site.</p>
+                          <p style="color: white;">While imagery is being added to the documentation, the component is being engineered and QA’d visually and 
+                            functionally by two separate teams. Upon passing both QAs, code samples are updated in Storybook and embedded into our documentation.</p>
+                        </div>
+                      </div> 
+                      </div>
+                      <div class="mediaCont" style="margin: 0 auto; width: 100vw; display: flex; justify-content: center;">
+                        <img src="../img/Gloo-DS-Handoff.png" alt="A handoff to developers from the design team."></img>
+                      </div>
+                   </div>
+                   <div class="contentDiv" style="background-color:white">
+                      <div class="mainCont">
+                        <div class="flexCont">
+                          <h2 style="color: rgb(194, 194, 194)">Pushing Changes</h2>
+                          <div class="text">
+                            <h3 style="color: #aaaaaa" class="subHead">Git add. Git commit -m "I couldn't think of a clever subtitle here."</h3>
+                            <p>
+                              Once the work is complete, we merge our design and code at the same time to their respective repo to therefore prevent designers from 
+                              using a component before it is coded and vice versa. We then update our changelog and notify our users of a new change in the design 
+                              system they can upgrade to! Woo hoo!
+                            </p>
+                            <p>All of our designers are informed in the notification of our documentation changes, and can reference them similar to the example below.</p>
+                          </div>
+                        </div> 
+                        </div>
+                        <div class="mediaCont" style="margin: 0 auto; width: 100vw; display: flex; justify-content: center;">
+                          <img src="../img/Gloo-DS-Documentation-Snapshot.png" alt="A snapshot of our documentation."></img>
+                          <!-- <iframe width="100%" height="400px" src="../img/Gloo-DS-Documentation.pdf" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe> -->
+                        </div>
+                      </div>
+                      <div class="contentDiv" style="background-color: #cbecd6;">
+                          <div class="mainCont">
+                            <div class="flexCont">
+                              <h2 style="color: #41B768;">Final Design</h2>
+                              <div class="text">
+                                <h3 style="color: #3b744e;" class="subHead">Weird flex, but okay...</h3>
+                                <p>There isn’t much more to add, but here is a cool demo of me showcasing the Sketch build.</p>
+                              </div>
+                            </div> 
+                            </div>
+                             <div class="mediaCont" style="margin: 0 auto; width: 100vw; display: flex; justify-content: center;">
+                              <video aria-label="A video demo of our final prototype" no-controls autoPlay loop>
+                                  <source src="../img/Gloo-DS-Snackbar-Demo.mov" type="video/mp4">
+                                  Your browser does not support the video tag.
+                              </video>
+                            </div>
+                         </div>               
+       <div id="bottomDiv">
+          <p class="footer">Copyright <script type="text/javascript">document.write(new Date().getFullYear());</script> &copy; All Rights Reserved.</p>
+          <div style="display: flex; flex-direction: row;"><p class="footer">This website was written by hand with love from Christopher<span class="floatAnimate">❤️</span></p></div>
+        </div>
+  
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+  </script> 
+  <script src="../js/bootstrap.min.js">
+  </script>
+
+  
+</body>
+<script>
+
+  $(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+
+ $('.list').each(function(i) {
+    $(this).delay(300*(i+1)).fadeTo(600, 1); //Uses the each methods index+1 to create a multiplier on the delay
+});
+
+$(window).scroll(function(){
+  $('.contentDiv').each(function(){
+    var bottomOfDiv = $(this).offset().top + $(this).outerHeight();
+    var bottomWindow = $(window).scrollTop() + $(window).height();
+    if(bottomWindow > bottomOfDiv - $(window).height()){
+      $(this).fadeTo(300, 1);
+    }
+  })
+})
+   
+});
+</script>
+
+</html>
+  
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+  </script> 
+  <script src="js/bootstrap.min.js">
+  </script> 
+
+  
+</body>
+<script>
+  var vid = document.getElementById('video-FT');
+  
+
+  $('.iphoneTemplate').click(function(){
+    if(vid.paused == true){
+      vid.play();
+    }else{
+      vid.pause();
+    }
+  });
+
+  $('.iphoneTemplate').hover(function(event){
+    if(event.type === "mouseenter") {
+        $(vid).attr("controls", "");
+    } else if(event.type === "mouseleave") {
+        $(vid).removeAttr("controls");
+    }
+  });
+
+  $(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+
+</html>

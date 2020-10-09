@@ -19,7 +19,7 @@
   <link href="css/bootstrap/bootstrap.css" rel="stylesheet" type="text/css">
   <!-- Linking JS -->
   <!-- Linking Font -->
-  <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;1,200;1,300&display=swap" rel="stylesheet">
  <link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet">
   <script src="https://use.fontawesome.com/17f20be63e.js"></script>
 </head>
@@ -38,10 +38,10 @@
           <a class="m-link home active" href="#top">Home</a>
         </li>
         <li>
-          <a class="m-link about" href="#aboutDiv">About</a>
+          <a class="m-link portfolio" href="#portfolioDiv">Portfolio</a>
         </li>
         <li>
-          <a class="m-link portfolio" href="#portfolioDiv">Portfolio</a>
+          <a class="m-link about" href="#aboutDiv">About</a>
         </li>
         <li>
           <a class="m-link contact" href="#contactDiv">Contact</a>
@@ -54,100 +54,256 @@
 
 
 
+
 <div class="intro">
-    <div style="display: flex; flex-direction: column; margin-top: 5vh; align-items: center;">
-            <h2 id="wordChange">Hello</h2>
-            <h3>I'm Chris, and I am a UX designer and front-end developer. 👋</h3>
-    </div>
-    <img src="WaveBackground.jpg" id="waveImg" />
-</div>
-
-<div class="container">
-
-
-
-<div id="aboutDiv">
-    <img  id="aboutPic" src="./img/biopicture2.jpg" alt="A bio picture of me">
-    <div id="aboutText">
-        <p>My name is Christopher, but most of my friends call me Fred. I am a designer and developer that specializes in interactive design and React JS from Pittsburgh, PA.</p>
-        <p>I am a tinkerer and always will be. You may catch me messing with a Raspberry Pi to modify my graduation cap or building apps for Google Glass. I'm currently starting my own company, <a href="https://www.riive.net" target="_blank" style="color: #b260bb; text-decoration: underline;">Riive</a>, a shareparking app.</p>
-        <p>Most of my inspiration for my designs are a mix between my synesthesia and my conservation photography. Both are so beautiful and raw in their own way.</p>
+    <div style="display: flex; align-items: flex-end; height: 90%;">
+        <div id="introContainer">
+          <h2 id="wordChange">Hello</h2>
+          <h1>My name is Christopher and I am a product designer and front-end engineer in Boulder, Colorado.</h1>
+        </div>
+        
     </div>
 </div>
 
-<div id="portfolioDiv">
-    <h2 id="portfolioHead">My Portfolio.</h2>
+<div class="main-container">
+  <div id="portfolioDiv">
+    <!-- <h2 id="portfolioHead">My Portfolio.</h2> -->
     <div class="portfolioItems">
 
-              <span class="tile">
-                  <a href="Riive.html">
-                      <h2 class="ftHead red">Riive <br>Parking <br>App</br></h2>
-                      <img src="./img/Valet-backgroundTile.jpg">
-                  </a>
-              </span>
-    
+             
+                        <div id="cardGrid">
 
-                <span class="tile">
-                        <a href="OrchidDS.html">
-                    <h2 class="ftHead purple">Orchid <br>Design <br>System</br></h2>
-                    <img src="./img/OrchidHero.png">
-                </a>
-                </span>
-
-                <span class="tile">
-                    <a href="UPMC-Chatbot.html">
-                <h2 class="ftHead purple">Chatbot <br>Research <br></h2>
-                <img src="./img/Chatbot-hero.png">
-            </a>
-            </span>
-                
-                <span class="tile">
-                        <a href="FreedomTransit.html">
-                    <h2 class="ftHead orange">Freedom <br>Transit <br>Project</br></h2>
-                    <img src="./img/FT-backgroundTile.jpg">
-                </a>
-                </span>
-
-                <span class="tile">
-                    <a href="https://jsfiddle.net/user/ChrisFred96/fiddles/">
-                    <h2 class="ftHead blue">Misc. <br>JsFiddles <br></h2>
-                    <img src="./img/JS-backgroundTile.jpg">
-                </a>
-                </span>
-                
-                
-                        <span class="tile soon">
-                                <a>
-                            <h2 class="ftHead purple">UPMC <br>EmployerPlace</br></h2>
-                            <img class="HT-image" src="./img/HTPhoto-backgroundTile.jpg">
+                        <a class="card" href="pages/OrchidDS.html">
+                          <div class="image" style="background: url('./img/OrchidHero.png')
+                          no-repeat 
+                          center center/cover;"></div>
+                          <!-- Categories include Des, Dev, Res, Tool  -->
+                              <div class="contentPad">
+                                  <div class="overline">
+                                    <p class="cat des">UI/UX</p>
+                                    <p class="cat dev">React.js</p>
+                                    <p class="cat tool">Usability Testing</p>
+                                  </div>
+                                  
+                                  
+                                  <h4>Orchid Design System</h4>
+                                  <p class="body">Orchid is UPMC Health Plan's design system that includes everything from color and typography, to pattern designs for components including tables, toggle switches, dropdowns and much more.</p>
+                                </div>
                         </a>
-                        </span>
+                        <a class="card" href="pages/Riive.html">
+                          <div class="image" style="background: url('./img/Valet-backgroundTile.jpg')
+                          no-repeat 
+                          center center/cover;"></div>
+                          <!-- Categories include Des, Dev, Res, Tool  -->
+                              <div class="contentPad">
+                                  <div class="overline">
+                                    <p class="cat des">UI/UX</p>
+                                    <p class="cat dev">React Native</p>
+                                    <p class="cat dev">Node.js</p>
+                                    <p class="cat res">Market Research</p>
+                                    <p class="cat res">User Research</p>
+                                  </div>
+                                  
+                                  
+                                  <h4>Riive Parking App</h4>
+                                  <p class="body">Riive is a shareparking network that connects hosts with open driveway or parking space with riders looking for a place to park. Think of it as AirBnB for parking.</p>
+                            
+                              
+                          </div>
+                        </a>
+                        <a class="card" href="pages/Gloo-Design-System.html">
+                          <div class="image" style="background: url('./img/Snackbar-Timeout.gif')
+                          no-repeat 
+                          center center/cover;"></div>
+                          <!-- Categories include Des, Dev, Res, Tool  -->
+                          <div class="contentPad">
+                                  <div class="overline">
+                                    <p class="cat des">UI/UX</p>
+                                    <p class="cat dev">React.js</p>
+                                    <p class="cat res">UX Research</p>
+                                    <p class="cat tool">Sketch</p>
+                                  </div>
+                                
+                                  
+                                  <h4>Gloo Design System</h4>
+                                  <p class="body">Gloo Design System is an unnamed project at Gloo to help drive context and consistency across all of our products. Building a design system is a very deliberate process that I have had experience in the past with Orchid, and took a deeper leadership role in the decision making process that was to build Gloo Design System. As of late September 2020, the project has been on hold during a corporate restructure, and should resume in the near future.</p>
+
+                          </div>
+                        </a>
+                        
+                       
+
+
+
+
+
+
+
+                        <a class="card" href="pages/UPMC-Chatbot.html">
+                          <div class="image" style="background: url('./img/Chatbot-hero.png')
+                          no-repeat 
+                          center center/cover;"></div>
+                          <!-- Categories include Des, Dev, Res, Tool  -->
+                            <div class="contentPad">
+                                  <div class="overline">
+                                    <p class="cat des">UI/UX</p>
+                                    <p class="cat res">Usability Testing</p>
+                                    <p class="cat tool">InVision</p>
+                                    <p class="cat tool">Sketch</p>
+                                    <p class="cat tool">UserZoom</p>
+                                  </div>
+                                  
+                                  
+                                  <h4>UPMC Chatbot Research</h4>
+                                  <p class="body">In September of 2019, I was involved in a two week research and design sprint called "Airplane Mode." The thought was to turn your phone off or on airplane mode in the afternoon and focus solely on research and design to bring back to our team. Unlike Google Venture's Design Sprints, research into the problem had already be addressed by other team members and business stakeholders. It was our job to test with our health plan members how they interact with a Chatbot.</p>
+                            
+                              
+                          </div>
+                        </a>
+                        <a class="card" href="pages/FreedomTransit.html">
+                          <div class="image" style="background: url('./img/FT-backgroundTile.jpg')
+                          no-repeat 
+                          center center/cover;"></div>
+                          <!-- Categories include Des, Dev, Res, Tool  -->
+                          <div class="contentPad">
+                                  <div class="overline">
+                                    <p class="cat des">UI/UX</p>
+                                    <p class="cat dev">HTML/CSS</p>
+                                    <p class="cat dev">Javascript</p>
+                                    <p class="cat res">User Personas</p>
+                                    <p class="cat res">Usability Testing</p>
+                                  </div>
+                                
+                                  
+                                  <h4>Freedom Transit Bus Tracker</h4>
+                                  <p class="body">Freedom Transit approached myself and two of my peers to design and develop a live bus tracker for our senior capstone project. We had under three months to design, test and develop both a web app and a native Android app and ship it out. Long nights and 23 highly caffenated espressos later, we had a final capstone completed and spent none of our $10,000 budget.</p>
+                            
+                              
+                          </div>
+                        </a>
+
+                        <a class="card" href="pages/UPMC-Provider-Search.html">
+                          <div class="image" style="background: url('../img/UPMC-Provider-Search-Hero.png')
+                          no-repeat 
+                          center center/cover;"></div>
+                          <!-- Categories include Des, Dev, Res, Tool  -->
+                          <div class="contentPad">
+                                  <div class="overline">
+                                    <p class="cat des">UI/UX</p>
+                                    <p class="cat dev">HTML/CSS</p>
+                                    <p class="cat dev">Javascript</p>
+                                    <p class="cat res">A/B Testing</p>
+                                    <p class="cat tool">UserZoom</p>
+                                  </div>
+                               
+                                  
+                                  <h4>UPMC Provider Search</h4>
+                                  <p class="body">UPMC Provider Search is a search tool for UPMC’s millions of members. With over 50,000 unique visitors monthly and over 3,000,000 
+                                    unique visitors as of March 2020, We know that our members need to discover new doctors, nurse practitioners and health providers alike.  
+                                    I was brought on the project with a fellow UX designer on the team to address usability issues and improve our users to become more 
+                                    powerful in their search.</p>
+                            
+                              
+                          </div>
+                        </a>
+                        <!-- <a class="card" href="https://jsfiddle.net/user/ChrisFred96/fiddles/">
+                          <div class="image" style="background: url('./img/JS-backgroundTile.jpg')
+                          no-repeat 
+                          center center/cover;"></div>
+                         
+                          <div class="contentPad">
+                                  <div class="overline">
+                                    <p class="cat des">UI/UX</p>
+                                    <p class="cat dev">React.js</p>
+                                    <p class="cat tool">Testing</p>
+                                  </div>
+                               
+                                  
+                                  <h4>Daily Buns</h4>
+                                  <p class="body">In my spare time or sometimes for a project, I will throw together a mini demo in JSFiddle to help translate the design to engineering workload.  Don't judge too hard!</p>
+                            
+                              
+                          </div>
+                        </a> -->
+                        <a class="card" href="https://jsfiddle.net/user/ChrisFred96/fiddles/">
+                          <div class="image" style="background: url('./img/JS-backgroundTile.jpg')
+                          no-repeat 
+                          center center/cover;"></div>
+                          <!-- Categories include Des, Dev, Res, Tool  -->
+                          <div class="contentPad">
+                                  <div class="overline">
+                                    <p class="cat des">UI/UX</p>
+                                    <p class="cat dev">HTML/CSS</p>
+                                    <p class="cat dev">React.js</p>
+                                  </div>
+                                
+                                  
+                                  <h4>Miscellaneous Code Snippets</h4>
+                                  <p class="body">In my spare time or sometimes for a project, I will throw together a mini demo in JSFiddle to help translate the design to engineering workload.  Don't judge too hard!</p>
+                            
+                              
+                          </div>
+                        </a>
+                        
+
+                      </div>
+                      
                         
             
     </div>
 
 </div>
+
+
+
+<div id="aboutDiv">
+    <div id="aboutBody">
+       <h2>About</h2>
+      <p>My name is Christopher, but most of my friends call me Fred. I am a designer and developer that specializes in interactive design and React.</p>
+      <p>Most of my inspiration for my designs are a mix between my synesthesia and my conservation photography. Both are so beautiful and raw in their own way.</p>
+      <p>In my spare time, you can catch me hiking, playing guitar or working on my company, Riive.</p>
+    </div>
+    <div id="aboutText">
+        <h2>Skills</h2>
+        <div id="skills">
+          <ul>
+            <li class="all tab active"><a onclick="return filterSkills('all');">All</a></li>
+            <li class="des tab"><a onclick="return filterSkills('des');">Design</a></li><!--
+         --><li class="dev tab"><a onclick="return filterSkills('dev');">Code</a></li><!--
+         --><li class="res tab"><a onclick="return filterSkills('res');">Research</a></li><!--
+         --><li class="tool tab"><a onclick="return filterSkills('tool');">Tools</a></li>
+            <hr />
+          </ul>
+          <div id="skillsList"></div>
+        </div>
+    </div>
+</div>
+
+
+
  
 
     <div id="contactDiv">
         <div id="contactContainer">
-            <div id="contactBgDiv">
-            <div class="contactPreLinkDiv">
-                <p class="contactPreLink">Want to get in touch? Let's collab <b>together</b>.</p>
-                <!-- <div class="contactResume"><a href="CFrydryck-Resume.pdf" target="_blank">View My Résumé</a></div> -->
-            </div> 
-            <div class="contactBorder"></div>
-        </div>
-            <div id="contactLinks">
-                <div class="contactLink"><a href="mailto:cfrydryck@gmail.com?subject=Hey Chris!" aria-label="Email me" target="_blank"><svg style="fill:#cc1c85;" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/></svg></a></div>
-                <div class="contactLink"><a href="https://www.linkedin.com/in/chrisfrydryck/" aria-label="View my Linkedin page" target="_blank"><svg style="fill:#cc1c85;" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a></div>
-                <div class="contactLink"><a href="https://github.com/ChristopherFrydryck" aria-label="View my GitHub" target="_blank"><svg style="fill:#cc1c85;" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></a></div>
-            </div> 
-                <!-- <p class="contactLink"><a href="mailto:cfrydryck@gmail.com?Subject=Hello%20Christopher" style="color: white;"><i class="fa fa-envelope" aria-hidden="true" style="color: white; padding-right: 5px;"></i> Email &#187;</a></p>
-                <p class="contactLink"><a href="ChristopherFrydryckResume.pdf" target="_blank" style="color: white;"><i class="fa fa-file-text" aria-hidden="true" style="color: white; padding-right: 5px;"></i> Resume &#187;</a></p>
-                <p class="contactLink"><a href="https://www.linkedin.com/in/christopher-frydryck-857171a5/" target="_blank" style="color: white;"><i class="fa fa-linkedin-square" aria-hidden="true" style="color: white; padding-right: 5px;"></i> Linkedin &#187;</a></p>
-                <p class="contactLink" ><a href="https://github.com/ChristopherFrydryck" target="_blank" style="color: white;"><i class="fa fa-github-square" aria-hidden="true" style="color: white; padding-right: 5px;"></i> Github &#187;</a></p> -->
+          <h2>Come find me!</h2>
+          <p>But seriously, I'm pretty good at hide and seek.</p>
+          <div id="contactBubbles" style="display: flex; flex-direction: row;">
+            <div class="contactBubble">
+              <a class="contactLink" href="mailto:cfrydryck@gmail.com?subject=Hey Chris!" aria-label="Email me" target="_blank">
+                <svg role="presentation" focusable="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/></svg>
+              </a>
             </div>
+            <div class="contactBubble">
+              <a class="contactLink" href="https://github.com/ChristopherFrydryck" aria-label="View my GitHub" target="_blank">
+                <svg role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+              </a>
+            </div>
+            <div class="contactBubble">
+              <a class="contactLink" href="https://www.linkedin.com/in/chrisfrydryck/" aria-label="View my Linkedin page" target="_blank">
+                <svg role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+              </a>
+            </div>
+          </div>
     </div>
 
     </div>
@@ -169,15 +325,11 @@
   <script src="js/smoothScroll.js">
   </script>
   <script>
-  		console.log("%c Hey you!", "font-size: 2em; color: red; font-family: 'Montserrat', sans-serif; font-weight: 700; width: 100%;");
-  		console.log("%c Yeah, I am talking to you!", "font-size: 1.25em; color: red; font-family: 'Montserrat', sans-serif; font-weight: 700; text-decoration: underline; width: 100%;");
-  		console.log("%c Seeing you made it here, I am guessing you are either", "font-size: 1.25em; color: #333333; font-family: 'Questrial', sans-serif;");
-  		console.log("%c 1.) A developer that stumbled upon my website", "font-size: 1.25em; color: #333333; font-family: 'Questrial', sans-serif;");
-  		console.log("%c 2.) A recruiter or HR looking to hire me", "font-size: 1.25em; color: #333333; font-family: 'Questrial', sans-serif;");
-  		console.log("%c 3.) A master of finding easter eggs", "font-size: 1.25em; color: #333333; font-family: 'Questrial', sans-serif;");
-  		console.log("%c 4.) All of the above", "font-size: 1.25em; color: #333333; font-family: 'Questrial', sans-serif;");
+      console.log('%c ', 'width: 100%; height: 100%; font-size: 700px; backdround-size: contain; background:url(https://github.com/ChristopherFrydryck/ChristopherFrydryck.github.io/blob/Update-2.1.0/img/IMG_0132%20CF%20Lake.jpg?raw=true) no-repeat; background-position: 75% 60%;')
+  		console.log("%c To my fellow curious web surfer...", "font-size: 2em; color: red; font-family: 'Nunito Sans', sans-serif; font-weight: 700; width: 100%;");
+  		console.log("%c Welcome to my website, and congratulations on finding me as I hid somewhere on my website. I like you.", "font-size: 1.25em; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;");
   		console.log('');
-  		console.log("%c Anyways, thanks for finding my easter egg! I'm always looking for work and side projects.  Email me at cfrydryck@gmail.com and tell me you found my easter egg :).", "font-size: 1.25em; color: #333333; font-family: 'Questrial', sans-serif;");
+  		console.log("%c If anyone is reading this, email me at cfrydryck@gmail.com and tell me you find my easter egg!", "font-size: 1.25em; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;");
 
   </script>
 </body>
