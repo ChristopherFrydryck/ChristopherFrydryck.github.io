@@ -228,13 +228,19 @@ nav{
     font-size: 1.25em;
 }
 
+.mediaCont{
+    align-items: flex-start;
+}
+
 .contentDiv .mediaCont video{
+    object-fit: contain;
     width: 80vw;
     max-width: 1440px;
     height: auto;
 }
 
 .contentDiv .mediaCont img{
+    object-fit: contain;
     width: 80vw;
     max-width: 1440px;
     height: auto;
