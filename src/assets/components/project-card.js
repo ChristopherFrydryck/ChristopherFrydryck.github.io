@@ -22,7 +22,7 @@ function ProjectCard(props) {
         // top: '33%',
         marginTop: '-25%',
         right: '10%',
-        boxShadow: 'rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;' 
+        boxShadow: 'rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px' 
     } :
     {
         position: 'relative' ,
@@ -31,14 +31,14 @@ function ProjectCard(props) {
         // height: '20%',
         width: '50%',
         // padding: '0 20%',
-        boxShadow: 'rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;' 
+        boxShadow: 'rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px' 
     }
 
     
     return(
         <AnimatePresence>
         <motion.div initial={{ opacity: 0}} animate={{ opacity: 1 }} exit={{opacity: 0}} transition={{ duration: .5, delay: props.delay || 0 }} >
-        <Link className={styles.link} to={props.destination} style={{textDecoration: 'none'}}>
+        <Link state={props.state} className={styles.link} to={props.destination} style={{textDecoration: 'none'}}>
             <div className={styles.card}>
 
             {props.locked ? 

@@ -5,7 +5,7 @@ import { AnimatePresence } from "framer-motion";
 
 // Pages
 import Home from './assets/pages/home'
-import RiivePage from './assets/pages/projects/riive'
+import Project from './assets/pages/projects/riive'
 import Test from './assets/pages/test';
 import Test2 from './assets/pages/test2'
 
@@ -20,31 +20,15 @@ function App() {
     <div className="App">
       <AnimatePresence exitBeforeEnter initial={false}>
         <Routes key={location.pathname} location={location}>
-          <Route path="/" element={ <Home/> } />
-          <Route path="/kkQQCkiCxhH5ZcnzUdHR" element={ <RiivePage/> } />
-          <Route path="/test" element={ <Test/> } />
-          <Route path="test2" element={ <Test2/> } />
+          <Route index path={"/"} element={ <Home/> } />
+          <Route path={"/kkQQCkiCxhH5ZcnzUdHR"} element={ <Project/> } />
+          <Route path={"/test"} element={ <Test/> } />
+          <Route path={"test2"} element={ <Test2/> } />
           {/* <Route path="about" element={ <About/> } />
           <Route path="contact" element={ <Contact/> } /> */}
         </Routes>
       </AnimatePresence>
     </div>
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p className='syneFont'>
-    //     👋  Hey, my name is Christopher. I am a product designer, software engineer, musician & explorer.
-    //     </p>
-    //     <a
-    //       id="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
   );
 }
 

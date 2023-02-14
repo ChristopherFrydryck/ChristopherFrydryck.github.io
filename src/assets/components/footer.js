@@ -4,7 +4,7 @@ import styles from '../components/footer.module.css'
 function Footer() {
     return(
         <div className={styles.container}>
-             {/* <p class="footer">Copyright {document.write(new Date().getFullYear())} All Rights Reserved.</p> */}
+             {/* <p footer">Copyright {document.write(new Date().getFullYear())} All Rights Reserved.</p> */}
                 <p>Copyright {new Date().getFullYear()} All Rights Reserved</p>
                 <p>This website was written by hand with love from Christopher <span class={styles.heart}>❤️</span></p>
   

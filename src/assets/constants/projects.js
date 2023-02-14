@@ -39,7 +39,7 @@ var projects = [
         hero: null,
         password_protected: false,
         visible: true,
-        hash: 'kkQQCkiCxhH5ZcnzUdHR',
+        hash: 'test',
         devices: ['phone', 'computer']
     },
     {
