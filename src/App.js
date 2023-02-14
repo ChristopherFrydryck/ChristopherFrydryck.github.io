@@ -5,11 +5,9 @@ import { AnimatePresence } from "framer-motion";
 
 // Pages
 import Home from './assets/pages/home'
+import RiivePage from './assets/pages/projects/riive'
 import Test from './assets/pages/test';
 import Test2 from './assets/pages/test2'
-
-// Components
-import Navbar from "./assets/components/navbar";
 
 // Fonts
 import "./assets/fonts/Inter-VariableFont_slnt_wght.ttf"
@@ -23,6 +21,7 @@ function App() {
       <AnimatePresence exitBeforeEnter initial={false}>
         <Routes key={location.pathname} location={location}>
           <Route path="/" element={ <Home/> } />
+          <Route path="/kkQQCkiCxhH5ZcnzUdHR" element={ <RiivePage/> } />
           <Route path="/test" element={ <Test/> } />
           <Route path="test2" element={ <Test2/> } />
           {/* <Route path="about" element={ <About/> } />

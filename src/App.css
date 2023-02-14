@@ -48,6 +48,8 @@
   --Green_Dark: #387D18;
 }
 
+
+
 /* Home Screen */
 
 .intro{
@@ -70,6 +72,7 @@
   text-decoration: none;
   position: relative;
   white-space: nowrap;
+  cursor: pointer;
 }
 
 .intro .product-designer-link:before{
@@ -140,3 +143,66 @@
   z-index: 9;
 }
 
+.container{
+  padding: 0 4rem;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.projectList{
+    display: grid; 
+    grid-gap: 1.5rem;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: 1fr;
+    margin-bottom: 2rem;
+}
+
+.aboutBubble{
+  box-shadow: 2px 4px 12px 0px hsla(0, 0%, 0%, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--Gray800);
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+}
+
+@media screen and  (max-width: 1024px) {
+  .container{
+    padding: 0 1rem;
+  }
+
+  .projectList{
+  
+    grid-gap: 1rem;
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .aboutBubble{
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .projectList{
+  
+    grid-gap: 1rem;
+    grid-template-columns: repeat(1,1fr);
+  }
+
+  .intro{
+    height: 40vh;
+    min-height: 240px;
+  }
+
+  .intro h1{
+    font-size: 2rem;
+  }
+}

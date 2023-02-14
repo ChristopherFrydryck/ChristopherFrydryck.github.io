@@ -64,13 +64,12 @@
 
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: var(--Gray900);
   margin: 0 auto;
-  padding: 0 4rem;
-  max-width: 1920px;
   font-family: var(--font-inter);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -89,7 +88,7 @@ p, caption pre, li, dt, dl, strong, i, b, sup, sub, del, ins, mark{
   font-family: var(--font-inter);
   font-weight: 400;
   margin: 0;
-  line-height: 115%;
+  line-height: 120%;
   margin-bottom: .5rem;
 }
 
@@ -151,6 +150,42 @@ h6{
   flex-direction: row;
 }
 
+
+@media screen and (max-width: 1024px) {
+  html{
+    font-size: 14px;
+  }
+
+  h1{
+    font-size: 3rem;
+    margin: 2rem 0;
+  }
+  
+  h2{
+    font-size: 2.5rem;
+    margin: 1.75rem 0;
+  }
+  
+  h3{
+    font-size: 2rem;
+    margin: 1.375rem 0;
+  }
+  
+  h4{
+    font-size: 1.5rem;
+    margin: 1rem 0;
+  }
+  
+  h5{
+    font-size: 1rem;
+    margin: .75rem 0;
+  }
+  
+  h6{
+    font-size: .75rem;
+    margin: .5rem 0;
+  }
+}
 
 
 
