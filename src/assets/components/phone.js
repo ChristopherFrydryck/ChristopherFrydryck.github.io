@@ -13,7 +13,7 @@ function iPhone (props){
                 <img src={frame} alt="Apple iPhone 13" />
                 {props.contentType == "video" ? 
 
-                    <video className={styles.content} style={{backgroundImage: props.content, backgroundPosition: props.contentPosition || '50% 50%'}}  src={props.content} autoplay="autoplay" loop="loop" muted></video> 
+                    <video className={styles.content} style={{backgroundImage: props.content, backgroundPosition: props.contentPosition || '50% 50%'}}  src={props.content} autoPlay="autoPlay" loop="loop" muted></video> 
                 :
                     <div className={styles.content} style={{backgroundImage: props.content, backgroundPosition: props.contentPosition || '50% 50%'}} />
                 }

@@ -3,7 +3,8 @@ var projects = [
         name: 'Eng + PD',
         about: 'alksjdf sadlkjfaja sdkfljlfjasd flkasdjk lfj lkasjdfklasdlkf asdlkfj asldkfj asdflk',
         type: ["eng", "pd"],
-        hero: null,
+        hero: 'url(https://placekitten.com/640/360)',
+        heroType: 'image',
         password_protected: false,
         visible: true,
         hash: 'kkQQCkiCxhH5ZcnzUdHR',
@@ -77,11 +78,11 @@ var projects = [
         name: 'Exp',
         about: 'alksjdf sadlkjfaja sdkfljlfjasd flkasdjk lfj lkasjdfklasdlkf asdlkfj asldkfj asdflk',
         type: ["exp"],
-        hero: null,
+        hero: 'url(https://placekitten.com/640/360)',
         password_protected: false,
         visible: true,
         hash: 'kkQQCkiCxhH5ZcnzUdHR',
-        devices: ['phone', 'computer']
+        devices: ['phone']
     },
 ]
 

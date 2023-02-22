@@ -24,12 +24,15 @@ function Home() {
 
     const { height, width } = useWindowDimensions();
 
+
     useEffect(() => {
         if(sidebarVisible){
             document.body.style.overflow = 'hidden';
         }else{
             document.body.style.overflow = 'visible';
         }
+
+        
     })
 
     useEffect(() => {
@@ -54,7 +57,7 @@ function Home() {
                         type={x.type}
                         colorFirst={false}
                         locked={x.password_protected}
-                        state={{projectID: x.hash, locked: x.password_protected}}
+                        state={{projectID: x.hash, locked: x.password_protected, type: x.type, heroType: x.heroType}}
 
                         devices={x.devices} 
                         phoneContent="url(https://picsum.photos/200/300)"
@@ -64,7 +67,8 @@ function Home() {
                         computerContentType="image"
                         computerContentPostion="50% 50%" 
                         
-                        sideImg={x.hero}  
+                        sideImg={x.hero} 
+                        heroType={"computer"} 
 
                         delay={n * .1}
                     />

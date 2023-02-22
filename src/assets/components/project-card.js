@@ -22,7 +22,6 @@ function ProjectCard(props) {
         // top: '33%',
         marginTop: '-25%',
         right: '10%',
-        boxShadow: 'rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px' 
     } :
     {
         position: 'relative' ,
@@ -31,7 +30,6 @@ function ProjectCard(props) {
         // height: '20%',
         width: '50%',
         // padding: '0 20%',
-        boxShadow: 'rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px' 
     }
 
     
