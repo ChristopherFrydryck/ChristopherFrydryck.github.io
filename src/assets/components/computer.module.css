@@ -10,10 +10,10 @@
 }
 .computer .content {
     position: absolute;
-    top: 10%;
+    top: 11%;
     left: 50%;
-    width: 70%;
-    height:120%;
+    width: 68.75%;
+    height: 115%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     background-size: cover;
@@ -21,7 +21,7 @@
     z-index: 0;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
-    /* background-image: url('https://www.bebold.ch/img/home/presentation-anim.gif'); */
+    background-color: black;
 }
 
 .computer .videoContent{

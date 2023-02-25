@@ -26,17 +26,18 @@
   transition: all 0.3s ease; */
 
   position: absolute;
-  margin-top: 18%;
-  width: 98%;
-  height: 85%;
+  margin-top: 19%;
+  width: 88%;
+  height: 84%;
   aspect-ratio: 9/19.9;
-  border-radius: 10%;
+  border-radius: 5%;
   z-index: 15;
   z-index: 0;
-  padding-left: 2%;
+  /* padding-left: 2%; */
+  margin-left: 6%;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  background: black;
+  background-color: black;
   background-repeat: no-repeat;
   background-size: cover;
   object-fit: cover;

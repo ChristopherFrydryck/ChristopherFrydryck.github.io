@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore'
 
+import styles from '../pages/home.module.css'
+
 // Components
 import Navbar from '../components/navbar';
 import Sidebar from '../components/sidebar'
@@ -46,33 +48,39 @@ function Home() {
         
         let n = 0;
         return projects.map((x, i) => {
-            if(x.visible && x.type.includes(filter) || filter == 'all'){
-                n++;
-                return(    
-                    <ProjectCard
-                        key={n}
-                        title={x.name} 
-                        subtitle={x.about} 
-                        destination={`/${x.hash}`}
-                        type={x.type}
-                        colorFirst={false}
-                        locked={x.password_protected}
-                        state={{projectID: x.hash, locked: x.password_protected, type: x.type, heroType: x.heroType}}
+            if(x.type.includes(filter) || filter == 'all'){
+                if(x.visible){
+                    n++;
+                    return(    
+                        <ProjectCard
+                            key={n}
+                            title={x.name} 
+                            subtitle={x.about} 
+                            destination={`/project`}
+                            type={x.type}
+                            colorFirst={false}
+                            locked={x.password_protected}
+                            state={{projectID: x.hash, locked: x.password_protected, type: x.type, heroType: x.heroType}}
 
-                        devices={x.devices} 
-                        phoneContent="url(https://picsum.photos/200/300)"
-                        phoneContentType="image"
-                        phoneContentPosition="50% 50%"
-                        computerContent="url(https://picsum.photos/200/300)"
-                        computerContentType="image"
-                        computerContentPostion="50% 50%" 
-                        
-                        sideImg={x.hero} 
-                        heroType={"computer"} 
+                            devices={x.devices} 
 
-                        delay={n * .1}
-                    />
-                )
+                            phoneContent={x.phoneContentType == 'image' ? `url("${x.phoneContent}")` : x.phoneContent}
+                            phoneContentType={x.phoneContentType}
+                            phoneContentPosition="50% 50%"
+
+                            computerContent={x.computerContentType == 'image' ? `url("${x.computerContent}")` : x.computerContent}
+                            computerContentType={x.computerContentType}
+                            computerContentPostion="50% 50%" 
+                            
+                            sideImg={x.heroType == 'image' ? `url("${x.hero}")` : x.hero} 
+                            heroType={x.heroType} 
+
+                            delay={n * .1}
+                        />
+                    )
+                }else{
+                    return null
+                }
             }else{
                 return null
             }
@@ -83,7 +91,7 @@ function Home() {
 
 
     return (
-        <motion.div initial={{ opacity: 0}} animate={{ opacity: 1 }} exit={{opacity: 0}} transition={{ duration: .5 }} className="flex-container-vert">
+        <motion.div initial={{ opacity: 0}} animate={{ opacity: 1 }} exit={{opacity: 0}} transition={{ duration: .5 }} className={styles.flexContainerVert}>
             <Sidebar 
                 closeHandler={() => showSidebar(false)} 
                 visible={sidebarVisible} 
@@ -91,8 +99,8 @@ function Home() {
             />
             
 
-            <div className='intro'>
-                <h1>👋 Hey, my name is Christopher. I am a <motion.a onClick={() => setHomeActiveTab("pd")} className="product-designer-link" initial={{ opacity: 0}} animate={{ opacity: 1 }} transition={{ duration: .5, delay: .1 }}>product designer</motion.a>, <motion.a onClick={() => setHomeActiveTab("eng")} className="software-engineer-link" initial={{ opacity: 0}} animate={{ opacity: 1 }} transition={{ duration: .5, delay: .25 }}>software engineer</motion.a>, <motion.a onClick={() => setHomeActiveTab("mus")} href="#" className="musician-link" initial={{ opacity: 0}} animate={{ opacity: 1 }} transition={{ duration: .5, delay: .45 }}>musician</motion.a> & <motion.a onClick={() => setHomeActiveTab("exp")} href="#" className="explorer-link" initial={{ opacity: 0}} animate={{ opacity: 1 }} transition={{ duration: .5, delay: .65 }}>explorer</motion.a>.</h1>
+            <div className={styles.intro}>
+                <h1>👋 Hey, my name is Christopher. I am a <motion.a onClick={() => setHomeActiveTab("pd")} className={styles.productDesignerLink} initial={{ opacity: 0}} animate={{ opacity: 1 }} transition={{ duration: .5, delay: .1 }}>product designer</motion.a>, <motion.a onClick={() => setHomeActiveTab("eng")} className={styles.softwareEngineerLink} initial={{ opacity: 0}} animate={{ opacity: 1 }} transition={{ duration: .5, delay: .25 }}>software engineer</motion.a>, <motion.a onClick={() => setHomeActiveTab("mus")} href="#" className={styles.musicianLink} initial={{ opacity: 0}} animate={{ opacity: 1 }} transition={{ duration: .5, delay: .45 }}>musician</motion.a> & <motion.a onClick={() => setHomeActiveTab("exp")} href="#" className={styles.explorerLink} initial={{ opacity: 0}} animate={{ opacity: 1 }} transition={{ duration: .5, delay: .65 }}>explorer</motion.a>.</h1>
             </div>
 
             <Navbar 
@@ -101,7 +109,7 @@ function Home() {
                 active={homeActiveTab}
             />
 
-            <div className='container'>
+            <div className={styles.container}>
                 
 
             {/* <Computer /> */}
@@ -112,7 +120,7 @@ function Home() {
             {/* <Link to="/test">Hello</Link>
             <h2>Hello {homeActiveTab} ♥️</h2> */}
             {projectsVisible ? 
-            <motion.div initial={{ opacity: 0}} animate={{ opacity: 1 }} exit={{opacity: 0}} transition={{ duration: .2 }}  className="projectList">
+            <motion.div initial={{ opacity: 0}} animate={{ opacity: 1 }} exit={{opacity: 0}} transition={{ duration: .2 }}  className={styles.projectList}>
                 {myProjects(homeActiveTab)}
                 
                 {/* <ProjectCard 
@@ -131,7 +139,7 @@ function Home() {
                 <ProjectCard devices={[]}type={["eng"]} title="Akasjldf asjdklf " subtitle="aklsdf kladskjfj jlkasdfj lkadsfj lakdsjf jlkadsfj laskdfj lkadsfj lkasdfj "destination="/test" sideImg="url(https://picsum.photos/200)"/> */}
             </motion.div> : <div style={{height: '100vh'}}/>}
             </div>
-            <div onClick={() => showSidebar(true)} className="aboutBubble">
+            <div onClick={() => showSidebar(true)} className={styles.aboutBubble}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z" stroke="#ECECEC" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     <path d="M12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6Z" stroke="#ECECEC" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>

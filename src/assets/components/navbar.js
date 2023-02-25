@@ -49,7 +49,7 @@ function useNavbar(props) {
  
             <div className={styles.tabContainer}>
                 <ul id="nav-ul">
-                    <li className={props.active == "all" ? `all ${styles.all} ${styles.tab} ${styles.active}` : `all ${styles.all} ${styles.tab}`}><a onClick={props.onPress}>All{ width > 400 ? " Categories" : null}</a></li>
+                    <li className={props.active == "all" ? `all ${styles.all} ${styles.tab} ${styles.active}` : `all ${styles.all} ${styles.tab}`}><a onClick={props.onPress}>All{ width > 480 ? " Categories" : null}</a></li>
                     <li className={props.active == "pd" ? `pd ${styles.pd} ${styles.tab} ${styles.active}` : `pd ${styles.pd} ${styles.tab}`}><a onClick={props.onPress}>Design</a></li>
                     <li className={props.active == "eng" ? `eng ${styles.eng} ${styles.tab} ${styles.active}` : `eng ${styles.eng} ${styles.tab}`}><a onClick={props.onPress}>Code</a></li>
                     <li className={props.active == "mus" ? `mus ${styles.mus} ${styles.tab} ${styles.active}` : `mus ${styles.mus} ${styles.tab}`}><a onClick={props.onPress}>Music</a></li>

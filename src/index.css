@@ -73,7 +73,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 120%;
 }
 
-p, caption pre, li, dt, dl, strong, i, b, sup, sub, del, ins, mark{
+p, caption pre, li, dt, dl, strong, i, b, sup, sub, del, ins, mark, label, button{
   color: var(--Gray100);
   font-family: var(--font-inter);
   font-weight: 400;

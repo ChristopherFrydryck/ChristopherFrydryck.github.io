@@ -5,7 +5,7 @@ import { AnimatePresence } from "framer-motion";
 
 // Pages
 import Home from './assets/pages/home'
-import Project from './assets/pages/projects/riive'
+import Project from './assets/pages/projects/project'
 import Test from './assets/pages/test';
 import Test2 from './assets/pages/test2'
 
@@ -21,7 +21,7 @@ function App() {
       <AnimatePresence exitBeforeEnter initial={false}>
         <Routes key={location.pathname} location={location}>
           <Route index path={"/"} element={ <Home/> } />
-          <Route path={"/kkQQCkiCxhH5ZcnzUdHR"} element={ <Project/> } />
+          <Route path={"/project"} element={ <Project/> } />
           <Route path={"/test"} element={ <Test/> } />
           <Route path={"test2"} element={ <Test2/> } />
           {/* <Route path="about" element={ <About/> } />

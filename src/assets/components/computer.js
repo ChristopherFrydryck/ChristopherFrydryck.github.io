@@ -9,9 +9,9 @@ function Computer(props){
         <div style={props.style} className={`${styles.computer} ${props.className}`}>
                 <img src={frame} alt="MacBook Computer Apple" />
                 {props.contentType == "video" ? 
-                    <video className={styles.videoContent} src={props.content} style={{backgroundPosition: props.contentPosition || '50%'}}autoPlay="autoPlay" loop="loop" muted></video> 
+                    <video className={styles.videoContent} src={props.content} style={{backgroundPosition: props.contentPosition || '50% 0%'}} autoPlay="autoPlay" loop="loop" muted></video> 
                 :
-                    <div className={styles.content} style={{backgroundPosition: props.contentPosition || '50%', backgroundImage: props.content}} />
+                    <div className={styles.content} style={{backgroundPosition: props.contentPosition || '50% 0%', backgroundImage: props.content }} />
                 }
         </div>
     )
