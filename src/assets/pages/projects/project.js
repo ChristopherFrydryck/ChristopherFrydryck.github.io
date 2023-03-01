@@ -22,12 +22,13 @@ import useWindowDimensions from '../../functions/getWindowDimensions';
 import { getRoles } from '@testing-library/react';
 
 function Project(){
+
     const [loadingPage, loadingPageStatus] = useState(false)
     const [projectData, setProjectData] = useState(null)
     const [projectIndex, setProjectIndex] = useState(null)
 
-    const [userName, setUserName] = useState('cfrydryck@gmail.com')
-    const [password, setPassword] = useState('Fallon430')
+    const [userName, setUserName] = useState('')
+    const [password, setPassword] = useState('')
     const [loginValid, setLoginValid] = useState(false)
     const [authenticating, setAuthenticating] = useState(false)
     const [error, setError] = useState(null)
@@ -83,18 +84,6 @@ function Project(){
         return scrollYProgress.onChange(p => setYProgress(p));
     }, [scrollYProgress]);
 
-
-    // getRoles(() => {
-    //     if(projectData){
-    //         projectData.roles.map((x, i) => {
-    //             if(i == projectData.roles.length){
-    //                 return(x)
-    //             }else{
-    //                 return(`${x}, `)
-    //             }
-    //         })
-    //     }
-    // })
 
     let signInAttempt = ((userName, password) => {
         setAuthenticating(true);
@@ -164,7 +153,7 @@ function Project(){
                     <ContentComponent 
                         contentType={content.contentType}
                         contentMediaType={content.contentMediaType}
-                        contentMedia={content.contentMediaType == 'image' ? `url("${content.contentMedia}")` : content.contentMedia }
+                        contentMedia={content.contentMediaType == 'image' ? `${content.contentMedia}` : content.contentMedia }
                         contentPosition={content.contentPosition ? content.contentPosition : '50% 0%'}
                         number={index + 1}
                         title={content.title}
@@ -199,9 +188,9 @@ function Project(){
                 </div>
             </header>
             <div className={styles.loadingContainer}>
-                <div style={{flex: 1, columnGap: '2rem'}} className='flex-container-horz'>
+                <div style={width > 480 ? {flex: 1, columnGap: '2rem'} : {flex: 1, columnGap: '2rem', flexDirection: 'column'}} className='flex-container-horz'>
                     <div className={styles.left} style={{height: '100%'}}>
-                        <div className={styles.shimmerContainer} style={{width: '40%', height: 64, maxWidth: 320}}>
+                        <div className={styles.shimmerContainer} style={{width: '70%', height: 64, maxWidth: 320}}>
                             <div className={styles.shimmer}></div>
                         </div>
                         <div className={styles.shimmerContainer} style={{width: '55%', height: 24, maxWidth: 475, marginTop: 24}}>
@@ -210,6 +199,19 @@ function Project(){
                         <div className={styles.shimmerContainer} style={{width: '55%', height: 24, maxWidth: 475, marginTop: 12}}>
                             <div className={styles.shimmer}></div>
                         </div>
+                        { width <= 768?
+                        <div style={{padding: '24px 0'}}>
+                            <div className={styles.shimmerContainer} style={{width: '70%', height: 24, maxWidth: 475, marginTop: 12}}>
+                                <div className={styles.shimmer}></div>
+                            </div>
+                            <div className={styles.shimmerContainer} style={{width: '80%', height: 24, maxWidth: 475, marginTop: 12}}>
+                                <div className={styles.shimmer}></div>
+                            </div>
+                            <div className={styles.shimmerContainer} style={{width: '55%', height: 24, maxWidth: 475, marginTop: 12}}>
+                                <div className={styles.shimmer}></div>
+                            </div>
+                        </div>
+                        : null }
                         <div className={styles.shimmerContainer} style={{width: '100%', height: 250 , marginTop: 80}}>
                             <div className={styles.shimmer}></div>
                         </div>

@@ -16,7 +16,7 @@ function ContentComponent(props){
             <div className={styles.left}>
                 <h4 className={styles.number}>{props.number ? props.number.toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false}) : null}</h4>
                 <h2 className={styles.title}>{props.title || null}</h2>
-                <p className={styles.bio} style={{whiteSpace: 'pre-line', lineBreak: 'anywhere'}}>{props.description || null}</p>
+                <p className={styles.bio} style={{whiteSpace: 'pre-line', lineBreak: 'loose'}}>{props.description || null}</p>
             </div>
             {props.contentType === 'phone' ?
             <div className={styles.right}>

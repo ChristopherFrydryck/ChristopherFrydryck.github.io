@@ -24,7 +24,9 @@ function Home() {
     const [sidebarVisible, showSidebar] = useState(false);
     const [projectsVisible, showProjects] = useState(false);
 
+
     const { height, width } = useWindowDimensions();
+
 
 
     useEffect(() => {
@@ -45,15 +47,14 @@ function Home() {
     }, [homeActiveTab])
 
     const myProjects = (filter) => {
-        
-        let n = 0;
+        let numResults = 0;
         return projects.map((x, i) => {
             if(x.type.includes(filter) || filter == 'all'){
                 if(x.visible){
-                    n++;
+                    numResults++;
                     return(    
                         <ProjectCard
-                            key={n}
+                            key={numResults}
                             title={x.name} 
                             subtitle={x.about} 
                             destination={`/project`}
@@ -75,7 +76,7 @@ function Home() {
                             sideImg={x.heroType == 'image' ? `url("${x.hero}")` : x.hero} 
                             heroType={x.heroType} 
 
-                            delay={n * .1}
+                            delay={numResults * .1}
                         />
                     )
                 }else{
@@ -84,7 +85,7 @@ function Home() {
             }else{
                 return null
             }
-         })}
+         }).filter(x => x !== null)}
 
         
     
@@ -95,7 +96,8 @@ function Home() {
             <Sidebar 
                 closeHandler={() => showSidebar(false)} 
                 visible={sidebarVisible} 
-                width={width > 767 ? 400 : width * .75}
+                width={width > 480 ? width * .5 : width * .85}
+                maxWidth={325}
             />
             
 
@@ -119,25 +121,26 @@ function Home() {
 
             {/* <Link to="/test">Hello</Link>
             <h2>Hello {homeActiveTab} ♥️</h2> */}
-            {projectsVisible ? 
+            {projectsVisible  &&  myProjects(homeActiveTab).length > 0 ? 
+
+
             <motion.div initial={{ opacity: 0}} animate={{ opacity: 1 }} exit={{opacity: 0}} transition={{ duration: .2 }}  className={styles.projectList}>
-                {myProjects(homeActiveTab)}
+                { myProjects(homeActiveTab) }
                 
-                {/* <ProjectCard 
-                    phoneContent="url(https://picsum.photos/200/300)" 
-                    locked={true}
-                    phoneContentPosition="50% 50%"
-                    computerContent="url(https://picsum.photos/200/300)" 
-                    devices={["computer", "phone"]} type={["pd"]} 
-                    title="Akasjldf asjdklf jasdlkfj asdlfkj dsflksadfklasdflk sadf" subtitle="aklsdf kladskjfj jlkasdfj lkadsfj lakdsjf jlkadsfj laskdfj lkadsfj lkasdfj jlaksdfj flksdajf lkdsafj jlkdasf jlkasdfj lkasdfj jlkasd jflkasdjfjlkasdj flkasdj flkasdj flkasjd fjlfkasdjjflkas djflka sjdflka sjdjflkadslkfasdlkfladksfj j" destination="/test" 
-                    sideImg="url(https://picsum.photos/200)"/>
-                <ProjectCard locked={true} devices={["computer"]}
-                computerContent="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"  computerContentType="video" computerContentPostion="20%" colorFirst={true} type={["eng"]} title="Akasjldf asjdklf " subtitle="aklsdf kladskjfj jlkasdfj lkadsfj lakdsjf jlkadsfj laskdfj lkadsfj lkasdfj "destination="/test" sideImg="url(https://picsum.photos/200)"/>
-                <ProjectCard locked={true} phoneContentType="video" devices={["phone"]} type={["mus"]} phoneContent="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4" phoneContentPosition="50% 50%" destination="/test" sideImg="url(https://picsum.photos/200)" title="Akasjldf asjdklf jasdlkfj asdlfkj dsflksadfklasdflk sadf" subtitle="aklsdf kladskjfj jlkasdfj lkadsfj lakdsjf jlkadsfj laskdfj lkadsfj lkasdfj jlaksdfj flksdajf lkdsafj jlkdasf jlkasdfj lkasdfj jlkasd jflkasdjfjlkasdj flkasdj flkasdj flkasjd fjlfkasdjjflkas djflka sjdflka sjdjflkadslkfasdlkfladksfj j"/>
-                <ProjectCard locked={true} devices={["phone", "computer"]} computerContent="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" phoneContent="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" computerContentType="video" phoneContentType="video" type={["exp"]} destination="/test" sideImg="url(https://picsum.photos/200)"/>
-                <ProjectCard colorFirst={true} devices={["phone"]}type={["pd"]} title="Akasjldf asjdklf jasdlkfj asdlfkj dsflksadfklasdflk sadf" subtitle="aklsdf kladskjfj jlkasdfj lkadsfj lakdsjf jlkadsfj laskdfj lkadsfj lkasdfj jlaksdfj flksdajf lkdsafj jlkdasf jlkasdfj lkasdfj jlkasd jflkasdjfjlkasdj flkasdj flkasdj flkasjd fjlfkasdjjflkas djflka sjdflka sjdjflkadslkfasdlkfladksfj j" destination="/test" sideImg="url(https://picsum.photos/200)"/>
-                <ProjectCard devices={[]}type={["eng"]} title="Akasjldf asjdklf " subtitle="aklsdf kladskjfj jlkasdfj lkadsfj lakdsjf jlkadsfj laskdfj lkadsfj lkasdfj "destination="/test" sideImg="url(https://picsum.photos/200)"/> */}
-            </motion.div> : <div style={{height: '100vh'}}/>}
+            </motion.div> 
+            
+            
+            
+            
+            : <div style={{height: '40vh', width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                {myProjects(homeActiveTab).length == 0 ? <p style={{color: 'var(--Gray600)'}}>Coming Soon...</p> : null}
+            </div>
+            
+            
+
+            
+
+            }
             </div>
             <div onClick={() => showSidebar(true)} className={styles.aboutBubble}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -2,7 +2,7 @@ var projects = [
     {
         name: "Riive",
         about: "Welcome to the world of shareparking. Riive is an app where hosts can lease out driveway space for guests to book parking ahead of time and pay via the app.",
-        type: ["eng", "pd"],
+        type: ["pd", "eng"],
         hash: "kkQQCkiCxhH5ZcnzUdHR",
         password_protected: false,
         visible: true,
@@ -49,35 +49,6 @@ var projects = [
         phoneContent: "https://firebasestorage.googleapis.com/v0/b/christopherfrydryck-website.appspot.com/o/riive%2Fjonas-jaeken-1TmI9BTLmiU-unsplash%20(1).jpg?alt=media&token=9754b49c-f487-43d1-83d3-a715f00fc6fc",
         computerContentType: null,
         computerContent: null,
-    },
-    
-    {
-        name: 'Mus',
-        about: 'alksjdf sadlkjfaja sdkfljlfjasd flkasdjk lfj lkasjdfklasdlkf asdlkfj asldkfj asdflk',
-        type: ["mus"],
-        hero: null,
-        phoneContentType: "image",
-        phoneContent: "https://picsum.photos/200/300",
-        computerContentType: "image",
-        computerContent: "https://picsum.photos/200/300",
-        password_protected: false,
-        visible: true,
-        hash: 'kkQQCkiCxhH5ZcnzUdHR',
-        devices: ['phone', 'computer']
-    },
-    {
-        name: 'Exp',
-        about: 'alksjdf sadlkjfaja sdkfljlfjasd flkasdjk lfj lkasjdfklasdlkf asdlkfj asldkfj asdflk',
-        type: ["exp"],
-        hero: 'url(https://placekitten.com/640/360)',
-        phoneContentType: "image",
-        phoneContent: "https://picsum.photos/200/300",
-        computerContentType: "image",
-        computerContent: "https://picsum.photos/200/300",
-        password_protected: false,
-        visible: true,
-        hash: 'kkQQCkiCxhH5ZcnzUdHR',
-        devices: ['phone']
     },
 ]
 

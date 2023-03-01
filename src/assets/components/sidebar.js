@@ -31,9 +31,9 @@ function Sidebar(props) {
                     <motion.div style={{zIndex: 9999999, position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}} initial={{ opacity: 0}} animate={{ opacity: 1 }} exit={{opacity: 0}} transition={{ duration: .3 }}>
                         <div style={{position: 'fixed', width: '100vw'}}>
                             <div onClick={props.closeHandler} className={styles.overlay}></div>
-                            <motion.div style={{width: props.width, overflow: 'scroll'}} initial={{ right: 0 - props.width }} animate={{ right: 0 }} exit={{ right: 0 - props.width }} transition={{ duration: .3 }} className={styles.container}>
+                            <motion.div style={{width: props.width, overflow: 'scroll', maxWidth: props.maxWidth}} initial={{ right: 0 - props.width }} animate={{ right: 0 }} exit={{ right: 0 - props.width }} transition={{ duration: .3 }} className={styles.container}>
                                 
-                                <img className={styles.profilePic} src="https://picsum.photos/200"/>
+                                <img className={styles.profilePic} src="https://firebasestorage.googleapis.com/v0/b/christopherfrydryck-website.appspot.com/o/B12E7BCD-4718-4CC9-B552-4C0D150D9BA5.JPG?alt=media&token=bca622c4-7a3f-466f-ba09-02b6c3c5d170"/>
                                 <div onClick={props.closeHandler} className={styles.closeSidebarBtn}>
                                     <p>Close</p>
                                 </div>
