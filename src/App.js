@@ -1,4 +1,5 @@
-import { Routes, Route, useLocation } from "react-router-dom"
+import { useEffect } from 'react'
+import { Routes, Route, useLocation} from "react-router-dom"
 import './index.css'
 import './App.css';
 import { AnimatePresence } from "framer-motion";
@@ -14,6 +15,10 @@ import "./assets/fonts/Syne-VariableFont_wght.ttf"
 
 function App() {
   const location = useLocation();
+
+  useEffect(() => {
+    document.title = 'Christopher Frydryck';
+  }, []);
 
   return (
     <div className="App">

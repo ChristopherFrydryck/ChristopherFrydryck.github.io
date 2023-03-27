@@ -175,7 +175,7 @@ function Project(){
         setUserName("");
         setPassword("");
         await getProject(pid)
-        window.history.replaceState(null, null, `/project/${pid}`)
+        window.history.replaceState(null, "Christopher Frydryck", `/project/${pid}`)
         getOtherProjects(pid)
     }
 
