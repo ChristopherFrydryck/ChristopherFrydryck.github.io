@@ -1,0 +1,190 @@
+@font-face {
+  font-family: "Inter";
+  src: local('Inter-VariableFont_slnt_wght'),
+  url('./assets/fonts/Inter-VariableFont_slnt_wght.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: "Syne";
+  src: local('Syne-VariableFont_wght'),
+  url('./assets/fonts/Syne-VariableFont_wght.ttf') format("truetype");
+}
+
+:root{
+  --font-inter: 'Inter', 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  --font-syne: 'Syne', 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+
+
+  --white: '#FFFFFF';
+  --black: '#000000';
+  --Gray900: '#1D1D1D';
+  --Gray800: '#3C3C3C';
+  --Gray700: '#4d4d4d';
+  --Gray600: '#6B6B6B';
+  --Gray300: '#B6B6B6';
+  --Gray200: '#D6D6D6';
+  --Gray100: '#ECECEC';
+  --Purple_Light: '#CCC7FD';
+  --Purple_Medium: '#958FDA';
+  --Purple_Dark: '#5952AA';
+  --Light_Blue_Light: '#8FD1DA';
+  --Light_Blue_Medium: '#32B1C2';
+  --Light_Blue_Dark: '#097D8D';
+  --Blue_Light: '#8FB1E4';
+  --Blue_Medium: '#6181F1';
+  --Blue_Dark: '#304BA8';
+  --Pink_Light: '#FCBAED';
+  --Pink_Medium: '#E971CE';
+  --Pink_Dark: '#A33E8C';
+  --Red_Light: '#FB9B9B';
+  --Red_Medium: '#FF6C6C';
+  --Red_Dark: '#9B2E2E';
+  --Green_Light: '#A7DA8F';
+  --Green_Medium: '#64C138';
+  --Green_Dark: '#387D18';
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  background-color: var(--Gray900);
+  margin: 0 auto;
+  font-family: var(--font-inter);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.stop-scroll {
+  height: 100vh;
+  overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--Gray100);
+  font-family: var(--font-syne);
+  font-weight: 400;
+  font-feature-settings: 'ss01' on, 'ss04' on;
+  line-height: 120%;
+}
+
+p, caption pre, li, dt, dl, strong, i, b, sup, sub, del, ins, mark, label, button{
+  color: var(--Gray100);
+  font-family: var(--font-inter);
+  font-weight: 400;
+  margin: 0;
+  line-height: 120%;
+  margin-bottom: .5rem;
+}
+
+.small{
+  font-size: .8rem;
+}
+
+.regular{
+  font-size: 1rem;
+}
+
+.large{
+  font-size: 1.5rem;
+}
+
+.x-large{
+  font-size: 2rem;
+}
+
+h1{
+  font-size: 4rem;
+  margin: 2rem 0;
+}
+
+h2{
+  font-size: 3.5rem;
+  margin: 1.75rem 0;
+}
+
+h3{
+  font-size: 2.75rem;
+  margin: 1.375rem 0;
+}
+
+h4{
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+h5{
+  font-size: 1.5rem;
+  margin: .75rem 0;
+}
+
+h6{
+  font-size: 1rem;
+  margin: .5rem 0;
+}
+
+
+
+.flex-container-vert{
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-container-horz{
+  display: flex;
+  flex-direction: row;
+}
+
+
+@media screen and (max-width: 1024px) {
+  html{
+    font-size: 14px;
+  }
+
+  h1{
+    font-size: 3rem;
+    margin: 2rem 0;
+  }
+  
+  h2{
+    font-size: 2.5rem;
+    margin: 1.75rem 0;
+  }
+  
+  h3{
+    font-size: 2rem;
+    margin: 1.375rem 0;
+  }
+  
+  h4{
+    font-size: 1.5rem;
+    margin: 1rem 0;
+  }
+  
+  h5{
+    font-size: 1rem;
+    margin: .75rem 0;
+  }
+  
+  h6{
+    font-size: .75rem;
+    margin: .5rem 0;
+  }
+}
+
+
+
+
+
+

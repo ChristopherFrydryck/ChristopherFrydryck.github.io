@@ -1,0 +1,167 @@
+
+
+
+/* Home Screen */
+
+.intro{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  min-height: 480px
+}
+
+.intro h1{
+  width: 70%;
+  max-width: 900px;
+  color: var(--Gray600);
+  text-align: center;
+}
+
+.intro a{
+  color: var(--Gray100);
+  text-decoration: none;
+  position: relative;
+  white-space: nowrap;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.intro .productDesignerLink:before{
+  content: "product designer";
+  position: absolute;
+  color: var(--Purple_Light);
+  top: 1;
+  left: 0;
+  width: 0%;
+  overflow: hidden;
+  transition: all 0.5s;
+  text-decoration: underline;
+}
+
+.intro .productDesignerLink:hover:before{
+  width: 100%;
+  z-index: 9;
+}
+
+.intro .softwareEngineerLink:before{
+  content: "software engineer";
+  position: absolute;
+  color: var(--Pink_Light);
+  top: 1;
+  left: 0;
+  width: 0%;
+  overflow: hidden;
+  transition: all 0.5s;
+  text-decoration: underline;
+}
+
+.intro .softwareEngineerLink:hover:before{
+  width: 100%;
+  z-index: 9;
+}
+
+.intro .musicianLink:before{
+  content: "musician";
+  position: absolute;
+  color: var(--Light_Blue_Light);
+  top: 1;
+  left: 0;
+  width: 0%;
+  overflow: hidden;
+  transition: all 0.5s;
+  text-decoration: underline;
+}
+
+.intro .musicianLink:hover:before{
+  width: 100%;
+  z-index: 9;
+}
+
+.intro .explorerLink:before{
+  content: "explorer";
+  position: absolute;
+  color: var(--Green_Light);
+  top: 1;
+  left: 0;
+  width: 0%;
+  overflow: hidden;
+  transition: all 0.5s;
+  text-decoration: underline;
+}
+
+.intro .explorerLink:hover:before{
+  width: 100%;
+  z-index: 9;
+}
+
+.container{
+  padding: 0 4rem;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.projectList{
+    display: grid; 
+    grid-gap: 1.5rem;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: 1fr;
+    margin-bottom: 2rem;
+}
+
+.aboutBubble{
+  box-shadow: 2px 4px 12px 0px hsla(0, 0%, 0%, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--Gray800);
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+}
+
+@media screen and  (max-width: 1024px) {
+  .container{
+    padding: 0 1rem;
+  }
+
+  .projectList{
+  
+    grid-gap: 1rem;
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .projectList{
+    grid-gap: 1rem;
+    grid-template-columns: repeat(2,1fr);
+    grid-auto-rows: 50vh;
+}
+  
+  .aboutBubble{
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .projectList{
+  
+    grid-gap: 1rem;
+    grid-template-columns: repeat(1,1fr);
+    grid-auto-rows: 40vh;
+  }
+
+  .intro{
+    height: 40vh;
+    min-height: 240px;
+  }
+
+  .intro h1{
+    font-size: 2rem;
+  }
+}
