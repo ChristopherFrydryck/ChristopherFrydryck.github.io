@@ -25,10 +25,10 @@ function ProjectCard(props) {
     } :
     {
         position: 'relative' ,
-        left: '25%',
-        marginTop: '-15%',
+        marginTop: props.sideImg ? '50%' : '35%',
         // height: '20%',
-        width: '50%',
+        width: props.sideImg ? '80%' : '60%',
+        minWidth: 200,
         // padding: '0 20%',
     }
 
@@ -58,7 +58,7 @@ function ProjectCard(props) {
                         hasComp ? <Computer 
                             content={props.computerContent}
                             contentType={props.computerContentType}  
-                            contentPosition={props.computerContentPosition || "50%"}
+                            contentPosition={props.computerContentPosition || null}
                             className={styles.computer} />
                             : null
                         }
@@ -66,10 +66,11 @@ function ProjectCard(props) {
 
                         { hasPhone && !hasComp ?
 
-                        <div style={{width: '100%'}}>
+                        <div style={{width: '100%', marginTop: '0%', display: 'flex', justifyContent: 'center'}}>
                             <Phone 
                                 style={phoneStyle} 
-                                content={props.phoneContent} contentType={props.phoneContentType} 
+                                content={props.phoneContent} 
+                                contentType={props.phoneContentType} 
                                 contentPosition={props.phoneContentPosition}/>
                         </div>
                         
@@ -87,7 +88,7 @@ function ProjectCard(props) {
 
                     {props.sideImg ?
                     <div className={styles.right}>
-                        <div style={{backgroundSize: 'cover', backgroundColor: color, backgroundImage: props.sideImg, width: '100%', height: '100%'}}></div>
+                        <div style={{backgroundSize: 'cover', backgroundColor: color, backgroundImage: props.sideImg, width: '100%', height: '100%', backgroundPosition: '50% 50%'}}></div>
                     </div>
                     : null}
                 </div>

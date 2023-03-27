@@ -1,6 +1,6 @@
 import { React, useEffect, useRef, useState  } from 'react';
 import { motion, useScroll, useAnimation, filterProps } from "framer-motion";
-import { Link, resolvePath, useLocation } from 'react-router-dom';
+import { Link, resolvePath, useLocation, useParams , useNavigate} from 'react-router-dom';
 
 import Phone from '../../components/phone';
 import Computer from '../../components/computer';
@@ -26,12 +26,17 @@ function Project(){
     const [loadingPage, loadingPageStatus] = useState(false)
     const [projectData, setProjectData] = useState(null)
     const [projectIndex, setProjectIndex] = useState(null)
+    const [projectType, setProjectType] = useState(null)
 
+    const [locked, setLocked] = useState(true)
     const [userName, setUserName] = useState('')
     const [password, setPassword] = useState('')
     const [loginValid, setLoginValid] = useState(false)
     const [authenticating, setAuthenticating] = useState(false)
     const [error, setError] = useState(null)
+
+    const { id } = useParams();
+    const navigate = useNavigate();
     
     /* Hook for scroll y */
     const { scrollYProgress } = useScroll();
@@ -44,11 +49,7 @@ function Project(){
 
     
 
-    
-
     const location = useLocation()
-    const { projectID, locked, type } = location.state
-    const color = type[0] === 'pd' ? 'var(--Purple_Medium)' : type[0] === 'eng' ? 'var(--Pink_Medium)' : type[0] === 'mus' ? 'var(--Light_Blue_Medium)' :  type[0] === 'exp' ? 'var(--Green_Light)' : 'white';
 
     const db = firebase.firestore();
 
@@ -58,13 +59,14 @@ function Project(){
             return res.data()
         }).then((data) => {
             setProjectData(data)
-            location.state.projectID = pid;
-            location.state.locked = data.password;
-            location.state.type = data.type;      
+            setLocked(data.password)
+            setProjectType(data.type)
         }).then(() => {
             setTimeout(() => {
                 loadingPageStatus(false)
             }, 1000)
+        }).catch(e => {
+            navigate("*")
         })
     }
 
@@ -89,7 +91,7 @@ function Project(){
         setAuthenticating(true);
         firebase.auth().signInWithEmailAndPassword(userName, password).then((user) => {
             return db.collection("users").doc(user.user.uid).get().then((res) => {
-                return res.data().notPermissive.includes(projectID)
+                return res.data().notPermissive.includes(id)
                
             }).then(res => {
                 if(res == true){
@@ -139,8 +141,8 @@ function Project(){
     // Component Did Mount
     useEffect(() => {
        window.scrollTo(0,0)
-       getProject(projectID);
-       getOtherProjects(projectID)
+       getProject(id);
+       getOtherProjects(id)
        
       }, []);
 
@@ -153,7 +155,7 @@ function Project(){
                     <ContentComponent 
                         contentType={content.contentType}
                         contentMediaType={content.contentMediaType}
-                        contentMedia={content.contentMediaType == 'image' ? `${content.contentMedia}` : content.contentMedia }
+                        contentMedia={content.contentMediaType == 'image' ? `url(${content.contentMedia})` : content.contentMedia }
                         contentPosition={content.contentPosition ? content.contentPosition : '50% 0%'}
                         number={index + 1}
                         title={content.title}
@@ -173,8 +175,8 @@ function Project(){
         setUserName("");
         setPassword("");
         await getProject(pid)
+        window.history.replaceState(null, null, `/project/${pid}`)
         getOtherProjects(pid)
-
     }
 
 
@@ -283,7 +285,7 @@ function Project(){
                         </div>
                         <motion.div
                             className={styles.progress}
-                            style={{background: color}}
+                            style={{background: projectType[0] === 'pd' ? 'var(--Purple_Medium)' : projectType[0] === 'eng' ? 'var(--Pink_Medium)' : projectType[0] === 'mus' ? 'var(--Light_Blue_Medium)' :  projectType[0] === 'exp' ? 'var(--Green_Light)' : 'white'}}
                             animate={{ scaleX: yProgress }}
                             transition={{ duration: 0.2 }}
                         />
@@ -301,7 +303,13 @@ function Project(){
                                         </motion.div>
                                         <motion.div  initial={{ top: '50px', opacity: 0 }} whileInView={{ top: 0, opacity: 1 }} transition={{ duration: .5, delay: .2 }} viewport={{ once: true }} style={{ opacity: 0, top: 50 }} className={styles.metaDataCont}>
                                             <p className={styles.metaTitle}>Duration</p>
-                                            <p className={styles.metaData}>{projectData ? new Intl.DateTimeFormat('en-US', {year: 'numeric', month: 'long', day: '2-digit'}).format(projectData.start_date.seconds+"000") : null} - {projectData && projectData.end_date ? new Intl.DateTimeFormat('en-US', {year: 'numeric', month: 'long', day: '2-digit'}).format(projectData.end_date.seconds+"000") : "Current"}</p>
+                                            <p className={styles.metaData}>{projectData ? new Intl.DateTimeFormat('en-US', {
+                                                year: 'numeric', 
+                                                month: 'long'
+                                            }).format(projectData.start_date.seconds+"000") : null} - {projectData && projectData.end_date ? new Intl.DateTimeFormat('en-US', {
+                                                year: 'numeric',
+                                                 month: 'long'
+                                            }).format(projectData.end_date.seconds+"000") : "Present"}</p>
                                         </motion.div>
                                         <motion.div initial={{ top: '50px', opacity: 0 }} whileInView={{ top: 0, opacity: 1 }} transition={{ duration: .5, delay: .3 }} viewport={{ once: true }} style={{ opacity: 0, top: 50 }} className={styles.metaDataCont}>
                                             <p className={styles.metaTitle}>Tools</p>
@@ -333,7 +341,13 @@ function Project(){
                                         </motion.div>
                                         <motion.div initial={{ top: '50px', opacity: 0 }} whileInView={{ top: 0, opacity: 1 }} transition={{ duration: .5, delay: .2 }} viewport={{ once: true }} style={{ opacity: 0, top: 50 }} className={styles.metaDataCont}>
                                             <p className={styles.metaTitle}>Duration</p>
-                                            <p className={styles.metaData}>{projectData ? new Intl.DateTimeFormat('en-US', {year: 'numeric', month: 'long', day: '2-digit'}).format(projectData.start_date.seconds+"000") : null} - {projectData && projectData.end_date ? new Intl.DateTimeFormat('en-US', {year: 'numeric', month: 'long', day: '2-digit'}).format(projectData.end_date.seconds+"000") : "Current"}</p>
+                                            <p className={styles.metaData}>{projectData ? new Intl.DateTimeFormat('en-US', {
+                                                year: 'numeric', 
+                                                month: 'long',
+                                            }).format(projectData.start_date.seconds+"000") : null} - {projectData && projectData.end_date ? new Intl.DateTimeFormat('en-US', {
+                                                year: 'numeric', 
+                                                month: 'long'
+                                            }).format(projectData.end_date.seconds+"000") : "Present"}</p>
                                         </motion.div>
                                         <motion.div initial={{ top: '50px', opacity: 0 }} whileInView={{ top: 0, opacity: 1 }} transition={{ duration: .5, delay: .3 }} viewport={{ once: true }} style={{ opacity: 0, top: 50 }} className={styles.metaDataCont}>
                                             <p className={styles.metaTitle}>Tools</p>

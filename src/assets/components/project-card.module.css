@@ -46,8 +46,7 @@
 
 
 .card .header .right{
-    flex: 9;
-    background-color: aqua;
+    flex: 6;
 }
 
 
@@ -144,6 +143,8 @@
 }
 
 @media screen and (max-width: 768px) {
+
+
     .card .container .subtitle{
        -webkit-line-clamp: 3; /* number of lines to show */
                line-clamp: 3; 
@@ -161,7 +162,7 @@
 
 @media screen and (max-width: 480px) {
     .card .container .subtitle{
-        -webkit-line-clamp: 2; /* number of lines to show */
-                line-clamp: 2; 
+        -webkit-line-clamp: 4; /* number of lines to show */
+                line-clamp: 4; 
      }
 }

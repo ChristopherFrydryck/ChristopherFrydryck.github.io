@@ -24,6 +24,7 @@
   position: relative;
   white-space: nowrap;
   cursor: pointer;
+  opacity: 0;
 }
 
 .intro .productDesignerLink:before{
@@ -136,6 +137,12 @@
 }
 
 @media screen and (max-width: 768px) {
+  .projectList{
+    grid-gap: 1rem;
+    grid-template-columns: repeat(2,1fr);
+    grid-auto-rows: 50vh;
+}
+  
   .aboutBubble{
     display: flex;
   }
@@ -146,6 +153,7 @@
   
     grid-gap: 1rem;
     grid-template-columns: repeat(1,1fr);
+    grid-auto-rows: 40vh;
   }
 
   .intro{

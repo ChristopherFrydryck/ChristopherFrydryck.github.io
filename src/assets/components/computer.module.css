@@ -8,6 +8,7 @@
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
 }
+
 .computer .content {
     position: absolute;
     top: 11%;

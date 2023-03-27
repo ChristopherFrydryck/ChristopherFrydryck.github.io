@@ -30,7 +30,6 @@ exports.createUser = functions.auth.user().onCreate((user) => {
 exports.deleteUser = functions.auth.user().onDelete((user) => {
     const { uid } = user
     admin.firestore().collection("users").doc(uid).delete().then(() => {
-        console.log("Document deleted") // Document deleted
         return;
     }).catch((error) => {
         console.error("Error deleting document", error);

@@ -185,6 +185,14 @@
 }
 
 @media screen and (max-width: 768px) {
+  .projectList{
+    display: grid; 
+    grid-gap: 1.5rem;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: auto;
+    margin-bottom: 2rem;
+}
+
   .aboutBubble{
     display: flex;
   }

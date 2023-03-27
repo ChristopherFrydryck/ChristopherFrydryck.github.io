@@ -36,9 +36,9 @@
     --Green_Dark: #387D18;
   }
 
-  html, body {
+  /* html, body {
     overflow-x: hidden;
-  }
+  } */
   body {
     position: relative
   }
@@ -144,15 +144,15 @@
     font-family: var(--font-inter);
     font-weight: 700;
     /* font-size: 64px; */
-    line-height: 77px;
-    margin: 0;
+    /* line-height: 64px; */
+    margin: 0 0 1rem 0;
   }
 
   .subtitle{
     font-family: var(--font-inter);
     font-weight: 400;
     /* font-size: 32px; */
-    line-height: 1.5rem;
+    /* line-height: 1.rem; */
     color: var(--Gray600);
     margin: 0;
   }
@@ -416,6 +416,10 @@
   .subtitle{
     font-size: 1.25rem;
     margin: -1rem 0 0 0;
+  }
+
+  .header{
+    margin: 0 0 2rem 0;
   }
 }
 

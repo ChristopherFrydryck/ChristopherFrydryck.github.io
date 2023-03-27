@@ -58,11 +58,17 @@ html {
 }
 
 body {
+  position: relative;
   background-color: var(--Gray900);
   margin: 0 auto;
   font-family: var(--font-inter);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.stop-scroll {
+  height: 100vh;
+  overflow: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {

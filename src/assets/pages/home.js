@@ -1,6 +1,6 @@
 import '../../App.css'
 import { useState, useEffect } from 'react';
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore'
 
@@ -31,13 +31,18 @@ function Home() {
 
     useEffect(() => {
         if(sidebarVisible){
-            document.body.style.overflow = 'hidden';
+            // Disables Background Scrolling whilst the SideDrawer/Modal is open
+                document.body.classList.add("stop-scroll")
+                // document.body.style.overflow = 'hidden';
+                // document.body.style.height = '100%';
         }else{
-            document.body.style.overflow = 'visible';
+            document.body.classList.remove("stop-scroll")
+            // document.body.style.overflow = 'unset';
+            // document.body.style.height = 'auto';
         }
 
         
-    })
+    }, [sidebarVisible])
 
     useEffect(() => {
         showProjects(false)
@@ -57,23 +62,22 @@ function Home() {
                             key={numResults}
                             title={x.name} 
                             subtitle={x.about} 
-                            destination={`/project`}
+                            destination={`/project/${x.hash}`}
                             type={x.type}
-                            colorFirst={false}
+                            colorFirst={x.reversed}
                             locked={x.password_protected}
-                            state={{projectID: x.hash, locked: x.password_protected, type: x.type, heroType: x.heroType}}
 
                             devices={x.devices} 
 
                             phoneContent={x.phoneContentType == 'image' ? `url("${x.phoneContent}")` : x.phoneContent}
                             phoneContentType={x.phoneContentType}
-                            phoneContentPosition="50% 50%"
+                            phoneContentPosition="0% 0%"
 
                             computerContent={x.computerContentType == 'image' ? `url("${x.computerContent}")` : x.computerContent}
                             computerContentType={x.computerContentType}
-                            computerContentPostion="50% 50%" 
+                            computerContentPostion={null}
                             
-                            sideImg={x.heroType == 'image' ? `url("${x.hero}")` : x.hero} 
+                            sideImg={x.heroVisible ? x.heroType == 'image' ? `url("${x.hero}")` : x.hero : null} 
                             heroType={x.heroType} 
 
                             delay={numResults * .1}
@@ -100,10 +104,11 @@ function Home() {
                 maxWidth={325}
             />
             
-
+            <AnimatePresence>
             <div className={styles.intro}>
-                <h1>👋 Hey, my name is Christopher. I am a <motion.a onClick={() => setHomeActiveTab("pd")} className={styles.productDesignerLink} initial={{ opacity: 0}} animate={{ opacity: 1 }} transition={{ duration: .5, delay: .1 }}>product designer</motion.a>, <motion.a onClick={() => setHomeActiveTab("eng")} className={styles.softwareEngineerLink} initial={{ opacity: 0}} animate={{ opacity: 1 }} transition={{ duration: .5, delay: .25 }}>software engineer</motion.a>, <motion.a onClick={() => setHomeActiveTab("mus")} href="#" className={styles.musicianLink} initial={{ opacity: 0}} animate={{ opacity: 1 }} transition={{ duration: .5, delay: .45 }}>musician</motion.a> & <motion.a onClick={() => setHomeActiveTab("exp")} href="#" className={styles.explorerLink} initial={{ opacity: 0}} animate={{ opacity: 1 }} transition={{ duration: .5, delay: .65 }}>explorer</motion.a>.</h1>
+                <h1>👋 Hey, my name is Christopher. I am a <motion.a onClick={() => setHomeActiveTab("pd")} className={styles.productDesignerLink} initial={{ opacity: 0}} animate={{ opacity: 1}} transition={{ duration: .5, delay: .1 }}>product designer</motion.a>, <motion.a onClick={() => setHomeActiveTab("eng")} className={styles.softwareEngineerLink} initial={{ opacity: 0}} animate={{ opacity: 1 }} transition={{ duration: .5, delay: .25 }}>software engineer</motion.a>, <motion.a onClick={() => setHomeActiveTab("mus")} href="#" className={styles.musicianLink} initial={{ opacity: 0}} animate={{ opacity: 1 }} transition={{ duration: .5, delay: .45 }}>musician</motion.a> & <motion.a onClick={() => setHomeActiveTab("exp")} href="#" className={styles.explorerLink} initial={{ opacity: 0}} animate={{ opacity: 1 }} transition={{ duration: .5, delay: .65 }}>explorer</motion.a>.</h1>
             </div>
+            </AnimatePresence>
 
             <Navbar 
                 onPress={(res) => setHomeActiveTab(res.target.parentElement.className.split(" ")[0])} 
