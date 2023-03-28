@@ -16,10 +16,6 @@ import "./assets/fonts/Syne-VariableFont_wght.ttf"
 function App() {
   const location = useLocation();
 
-  useEffect(() => {
-    document.title = 'Christopher Frydryck';
-  }, []);
-
   return (
     <div className="App">
       <AnimatePresence exitBeforeEnter initial={false}>
