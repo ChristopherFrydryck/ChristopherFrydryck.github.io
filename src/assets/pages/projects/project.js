@@ -149,7 +149,7 @@ function Project(){
 
     let getContent = () => {
 
-        if(projectData){
+        if(projectData && projectData.active == true){
             return projectData.content.map((content, index) => {
                 return(
                     <ContentComponent 
@@ -165,6 +165,7 @@ function Project(){
                 )
             })
         }else{
+            console.log("Failed to get content")
             return null
         }
     }
@@ -290,6 +291,7 @@ function Project(){
                             transition={{ duration: 0.2 }}
                         />
                     </header>
+                    { projectData.active ?
                     <div ref={containerRef} className={styles.container}>
                         <div className={styles.intro}>
                             <div style={{flex: 1, columnGap: '2rem'}} className='flex-container-horz'>
@@ -325,8 +327,9 @@ function Project(){
                                         <motion.div initial={{ marginLeft: '-50px', opacity: 0 }} whileInView={{ marginLeft: 0, opacity: 1 }} transition={{ duration: .5 }} viewport={{ once: true }} style={{marginLeft: '-50px', opacity: 0, marginTop: 160, maxWidth: 620 }}>
                                             <Computer contentType={projectData.heroMediaType} content={projectData.heroMediaType == "image" ? `url("${projectData.hero}")` : projectData.hero} contentPosition={projectData.heroContentPosition || "50% 0%"} />
                                         </motion.div>
-                                        : projectData && ( projectData.heroType == 'image' || !projectData.heroType ) ? 
-                                            <motion.img initial={{ marginLeft: '-50px', opacity: 0 }} whileInView={{ marginLeft: 0, opacity: 1 }} transition={{ duration: .5 }} viewport={{ once: true }} style={{width: '95%', maxWidth: 900, maxHeight: 900, height: '90%', objectFit: 'cover', marginLeft: '-50px', opacity: 0}} src={projectData.hero} />
+                                        :     
+                                        projectData && ( projectData.heroType == 'image' || !projectData.heroType ) ? 
+                                            <motion.img initial={{ marginLeft: '-50px', opacity: 0 }} whileInView={{ marginLeft: 0, opacity: 1 }} transition={{ duration: .5 }} viewport={{ once: true }} style={{width: '95%', maxWidth: 900, maxHeight: 900, height: '90%', objectFit: 'cover', objectPosition: projectData.heroPosition ? projectData.heroPosition : 'center', marginLeft: '-50px', opacity: 0}} src={projectData.hero} />
                                         : null }
                                        
                                         <div style={width > 1920 ? {left: (width*-.11 - (width-1920)/2), width: width * .7} : width > 1024 ? {left: '-11vw', width: width * .7} :  width > 768 ? {left: '-11vw', width: width * .8} :  width > 480 ? {left: '-11vw', width: width * .85} : {left: '-11vw', width: width * .85}} className={styles.herobg}/>
@@ -368,10 +371,10 @@ function Project(){
                                 <h4 className={styles.quote}>{projectData ? projectData.quote : ""}</h4>
                             </div>
                             <div  style={{display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
-                                <p style={{whiteSpace: 'pre-line', lineBreak: 'anywhere'}}>{projectData ? projectData.bio.replaceAll(`<br>`, `\n\n`) : ""}</p>
+                                <p style={{whiteSpace: 'pre-line', lineBreak: 'auto'}}>{projectData ? projectData.bio.replaceAll(`<br>`, `\n\n`) : ""}</p>
                             </div>      
                         </div>
-                        {getContent()}
+                        { getContent()}
                         {/* <ContentComponent 
                             contentType="phone"
                             contentMediaType="image"
@@ -445,6 +448,11 @@ function Project(){
                          */}
                        
                     </div>
+                    : 
+                            <div style={{display: 'flex', width: '100vw', height: '100vh', alignItems: 'center', justifyContent: 'center'}}>
+                                <p>Sorry, there was an issue getting this project. If you suspect this to be an error, please contact me at cfrydryck@gmail.com.</p>
+                            </div>
+                    }
                     <RecommendedProjects 
                         prevProj={projects[projectIndex - 1]}
                         nextProj={projects[projectIndex + 1]}
