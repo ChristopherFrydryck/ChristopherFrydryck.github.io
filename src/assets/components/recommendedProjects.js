@@ -16,7 +16,11 @@ function RecommendedProjects(props) {
             {prevProj ? 
             <div onClick={props.prevProjectClick} className={styles.projCont}>
                 <div className={styles.flexHorz}>
-                    <img src={prevProj.hero} />
+                    { prevProj.heroType == "video" ? 
+                        <video src={prevProj.hero} style={{backgroundPosition: props.contentPosition || '50% 0%'}} autoPlay="autoPlay" loop="loop" muted playsInline></video> 
+                        :
+                        <img src={prevProj.hero} />
+                    }
                     <span>
                         <p>Previous</p>
                         <h5>{prevProj.name}</h5>
@@ -29,7 +33,11 @@ function RecommendedProjects(props) {
             {nextProj ? 
             <div onClick={props.nextProjectClick} className={styles.projCont}>
                 <div className={styles.flexHorz}>
-                    <img src={nextProj.hero} />
+                    {nextProj.heroType == "video" ? 
+                        <video src={nextProj.hero} style={{backgroundPosition: props.contentPosition || '50% 0%'}} autoPlay="autoPlay" loop="loop" muted playsInline></video> 
+                    :
+                        <img src={nextProj.hero} />
+                    }
                     <span>
                         <p>Next</p>
                         <h5>{nextProj.name}</h5>
