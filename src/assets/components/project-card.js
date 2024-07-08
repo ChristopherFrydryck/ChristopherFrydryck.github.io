@@ -41,7 +41,7 @@ function ProjectCard(props) {
 
             {props.locked ? 
                         <div style={props.colorFirst ? {right: '8px'} : {left: '8px'}} className={styles.lockedCont}>
-                            <p>Locked</p>
+                            <p>Password Protected</p>
                         </div>
                     : null}
 
@@ -59,7 +59,7 @@ function ProjectCard(props) {
                             content={props.computerContent}
                             contentType={props.computerContentType}  
                             contentPosition={props.computerContentPosition || null}
-                            className={styles.computer} />
+                            className={props.sideImg ? `${styles.computer} ${styles.computerOnly}`: styles.computer} />
                             : null
                         }
 
@@ -87,9 +87,15 @@ function ProjectCard(props) {
                     : null}
 
                     {props.sideImg ?
-                    <div className={styles.right}>
-                        <div style={{backgroundSize: 'cover', backgroundColor: color, backgroundImage: props.sideImg, width: '100%', height: '100%', backgroundPosition: '50% 50%'}}></div>
-                    </div>
+                        props.heroType == 'image' ?
+                            <div className={styles.right}>
+                                <div style={{backgroundSize: 'cover', backgroundColor: color, backgroundImage: props.sideImg, width: '100%', height: '100%', backgroundPosition: '50% 50%'}}></div>
+                            </div>
+                            :
+                            <div className={styles.right}>
+                                {/* <div style={{backgroundSize: 'cover', backgroundColor: color, backgroundImage: props.sideImg, width: '100%', height: '100%', backgroundPosition: '50% 50%'}}></div> */}
+                                <video src={props.sideImg}  style={{objectFit: 'cover', width: '100%', height: '100%', backgroundPosition: '50% 50%'}} autoPlay="autoPlay" loop="loop" muted playsInline></video>
+                            </div>
                     : null}
                 </div>
             
