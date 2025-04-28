@@ -5,7 +5,7 @@ var projects = [
         type: ["eng", "pd"],
         hash: "sB9ez9DYApTwVPAwe023",
         password_protected: false,
-        visible: true,
+        visible: false,
         reversed: false,
 
         hero: "https://firebasestorage.googleapis.com/v0/b/christopherfrydryck-website.appspot.com/o/csg-portal-dashboard%2FIT-Admin-Hero.png?alt=media&token=4cabc608-0862-43c9-b7a6-97212cd8098f",
@@ -17,6 +17,25 @@ var projects = [
         phoneContent: null,
         computerContentType: "video",
         computerContent: "https://firebasestorage.googleapis.com/v0/b/christopherfrydryck-website.appspot.com/o/csg-portal-dashboard%2FScreen%20Recording%202024-07-06%20at%207.22.46%20PM.mp4?alt=media&token=1d9931ff-ade7-44e7-b76a-38bce3ecb95b",
+    },
+    {
+        name: "Dell IT Admin Dashboard",
+        about: "The IT Admin dashboard on the managed admin experience portal was one of many parts of the experience I was fortunate to orchestrate and be a lead in design and engineering.",
+        type: ["eng", "pd"],
+        hash: "ttTWoLquU3AbvfE38Kcq",
+        password_protected: false,
+        visible: true,
+        reversed: false,
+
+        hero: "https://firebasestorage.googleapis.com/v0/b/christopherfrydryck-website.appspot.com/o/csg-portal-dashboard%2FIT-Admin-Hero.png?alt=media&token=4cabc608-0862-43c9-b7a6-97212cd8098f",
+        heroType: "image",
+        heroVisible: true,
+
+        devices: ["computer"],
+        phoneContentType: null,
+        phoneContent: null,
+        computerContentType: "image",
+        computerContent: "https://firebasestorage.googleapis.com/v0/b/christopherfrydryck-website.appspot.com/o/csg-portal-dashboard%2FAtlantis%20Dashboard.png?alt=media&token=eec138ec-3423-4d9d-9299-760b7eb424e6",
     },
     {
         name: "Riive",
@@ -38,6 +57,25 @@ var projects = [
         computerContent: null,
     },
     {
+        name: "Dell Workspaces Mentorship",
+        about: "During the Summer of 2024, I had the pleasure of mentoring a fellow designer who joined Dell’s internship program and we brought an existing idea from the product team on the IT admin portal to life.",
+        type: ["pd", "eng"],
+        hash: "FozA6vje4QzL5ys5Nsej",
+        password_protected: false,
+        visible: true,
+        reversed: true,
+
+        hero: "https://firebasestorage.googleapis.com/v0/b/christopherfrydryck-website.appspot.com/o/workspaces-dell%2FHeroBG.png?alt=media&token=547c44ef-b669-4eb8-8c3f-fcb114140944",
+        heroType: "image",
+        heroVisible: true,
+
+        devices: ["computer"],
+        phoneContentType: null,
+        phoneContent: null,
+        computerContentType: "image",
+        computerContent: "https://firebasestorage.googleapis.com/v0/b/christopherfrydryck-website.appspot.com/o/workspaces-dell%2FWorkspaces-Dashboard.png?alt=media&token=98c60e40-6494-4599-b18e-0053556db745",
+    },
+    {
         name: "Gloo Design System",
         about: "A design system built to supercharge a startup with over a dozen designers and build trust with thousands of churches and new users.",
         type: ["pd", "eng"],
@@ -56,6 +94,7 @@ var projects = [
         computerContentType: null,
         computerContent: null,
     },
+
     {
         name: "U.S. Xpress Carrier Web",
         about: "U.S. Xpress's technology team worked on improving the carrier experience on discovering and booking a load for their drivers.",
