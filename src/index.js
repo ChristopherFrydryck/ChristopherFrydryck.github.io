@@ -7,7 +7,7 @@ import { disableReactDevTools } from '@fvilers/disable-react-devtools';
 import reportWebVitals from './reportWebVitals';
 
 import firebase from 'firebase/compat/app';
-import firebaseConfig from './firebaseconfig';
+import { firebaseConfig } from '../src/firebase';
 
  firebase.initializeApp(firebaseConfig)
 
