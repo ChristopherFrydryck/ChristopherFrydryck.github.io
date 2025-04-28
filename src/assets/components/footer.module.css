@@ -52,6 +52,14 @@
     text-align: center;
 }
 
+.inline{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
 .heart{
     animation: float 1.5s infinite ease-in-out;
     -webkit-animation: float 1.5s infinite ease-in-out; /* Safari 4+ */
